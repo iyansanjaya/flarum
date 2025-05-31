@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'flarum/flarum',
-        'pretty_version' => 'v1.8.1',
-        'version' => '1.8.1.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'e81dca9d729ade4bc2fd889971f70e8305938670',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -200,9 +200,9 @@
             'dev_requirement' => false,
         ),
         'flarum/flarum' => array(
-            'pretty_version' => 'v1.8.1',
-            'version' => '1.8.1.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'e81dca9d729ade4bc2fd889971f70e8305938670',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
