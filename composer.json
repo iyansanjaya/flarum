@@ -41,6 +41,25 @@
         "flarum/suspend": "*",
         "flarum/tags": "*"
     },
+    "scripts": {
+        "post-autoload-dump": [
+            "Flarum\\Composer\\Installer::run"
+        ],
+        "post-install-cmd": [
+            "@post-autoload-dump",
+            "chmod -R 775 storage",
+            "chmod -R 775 public/assets",
+            "chmod 664 composer.json",
+            "chmod 664 composer.lock"
+        ],
+        "post-update-cmd": [
+            "@post-autoload-dump",
+            "chmod -R 775 storage",
+            "chmod -R 775 public/assets",
+            "chmod 664 composer.json",
+            "chmod 664 composer.lock"
+        ]
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
