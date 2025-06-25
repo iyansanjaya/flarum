@@ -15,46 +15,37 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
-        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
         'e6f3bc6883e449ab367280b34158c05b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_protocol_version_from_sapi.php',
-        'd59fbae42019aedf227094ac49a46f50' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.php',
         'de95e0ac670b27c84ef8c5ac41fc1b34' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_server.php',
         'b6c2870932b0250c10334a86dcb33c7f' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.php',
         'd02cf21124526632320d6f20b1bbf905' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.php',
-        'd919fc9d5ad52cfb7f322f7fe36458ab' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.legacy.php',
-        'e397f74f8af3b1e56166a6e99f216ee7' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.legacy.php',
-        'd154b49fab8e4da34fb553a2d644918c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.legacy.php',
-        '9d3db23ca418094bcf0b641a0c9559ed' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_protocol_version_from_sapi.legacy.php',
-        'b0b88a3b89caae681462c58ff19a7059' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_uri_from_sapi.legacy.php',
-        'cc8e14526dc240491e17a838cb78508c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_server.legacy.php',
-        '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
-        '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         '3f8ee9969da604d0f15c841b77b11450' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/double-pass-middleware.php',
         'ee5523a5d51d6d51030227439db1ef74' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/host.php',
         '5f6e29ca023a0bdefa2476adb465d527' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/middleware.php',
         '9cafd472178656835c3361ed18897082' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/path.php',
-        '9bc1a9c6b25234212b0ecc0b82bc7fcd' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/double-pass-middleware.legacy.php',
-        '9ad95be8d1f1c62e52cb995973bf5246' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/host.legacy.php',
-        '44f5a19d6d262baf7ab55c8a8bb56f5a' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/middleware.legacy.php',
-        'dd89a2771fc24829c6aade9a7786bd8f' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/path.legacy.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '04b6576f786ea6b5b4b577af08f8e4d1' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/bootstrap.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
-        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
+        'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
+        '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
+        '246744580d27c90629e59154e0a2e42b' => __DIR__ . '/..' . '/charescape/serialize-closure/functions.php',
+        '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
+        '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
+        '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -68,6 +59,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
+        'e' => 
+        array (
+            'enshrined\\svgSanitize\\' => 22,
+        ),
         'a' => 
         array (
             'axy\\sourcemap\\' => 14,
@@ -78,6 +73,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'W' => 
         array (
+            'Wohali\\OAuth2\\Client\\' => 21,
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
@@ -114,13 +110,13 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Staudenmeir\\EloquentEagerLimit\\' => 31,
-            'Seld\\Signal\\' => 12,
-            'Seld\\PharUtils\\' => 15,
-            'Seld\\JsonLint\\' => 14,
+            'SoftCreatR\\MimeDetector\\' => 24,
+            'SSNepenthe\\ColorUtils\\' => 22,
         ),
         'R' => 
         array (
-            'React\\Promise\\' => 14,
+            'Reflar\\Webhooks\\' => 16,
+            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -134,10 +130,12 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
+            'PhpOption\\' => 10,
         ),
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
+            'Omines\\OAuth2\\Client\\' => 21,
         ),
         'M' => 
         array (
@@ -149,7 +147,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'L' => 
         array (
+            'League\\OAuth2\\Client\\' => 21,
+            'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
+            'League\\Flysystem\\AwsS3v3\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
@@ -161,7 +162,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'J' => 
         array (
-            'JsonSchema\\' => 11,
+            'JmesPath\\' => 9,
             'Jenssegers\\Agent\\' => 17,
             'Jaybizzle\\CrawlerDetect\\' => 24,
         ),
@@ -187,15 +188,48 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
         ),
+        'H' => 
+        array (
+            'Html2Text\\' => 10,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GrahamCampbell\\ResultType\\' => 26,
         ),
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\Webhooks\\' => 13,
+            'FoF\\UserBio\\' => 12,
+            'FoF\\Upload\\' => 11,
+            'FoF\\Subscribed\\' => 15,
+            'FoF\\Sitemap\\' => 12,
+            'FoF\\ShareSocial\\' => 16,
+            'FoF\\SecureHttps\\' => 16,
+            'FoF\\S3Assets\\' => 13,
+            'FoF\\Reactions\\' => 14,
+            'FoF\\ReCaptcha\\' => 14,
+            'FoF\\PwnedPasswords\\' => 19,
+            'FoF\\ProfileImageCrop\\' => 21,
+            'FoF\\Polls\\Migrations\\' => 21,
+            'FoF\\Polls\\' => 10,
+            'FoF\\Pages\\' => 10,
+            'FoF\\OAuth\\' => 10,
+            'FoF\\MergeDiscussions\\' => 21,
+            'FoF\\Links\\' => 10,
+            'FoF\\Formatting\\' => 15,
+            'FoF\\Filter\\' => 11,
+            'FoF\\Extend\\' => 11,
+            'FoF\\Drafts\\' => 11,
+            'FoF\\DiscussionViews\\' => 20,
+            'FoF\\DefaultUserPreferences\\' => 27,
+            'FoF\\DefaultGroup\\' => 17,
+            'FoF\\BestAnswer\\' => 15,
+            'FoF\\BanIPs\\' => 11,
+            'FoF\\AntiSpam\\' => 13,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -207,7 +241,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Flarum\\Lock\\' => 12,
             'Flarum\\Likes\\' => 13,
             'Flarum\\Flags\\' => 13,
-            'Flarum\\ExtensionManager\\' => 24,
             'Flarum\\BBCode\\' => 14,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
@@ -220,6 +253,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'D' => 
         array (
+            'Dotenv\\' => 7,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\DBAL\\' => 14,
@@ -232,20 +266,16 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'C' => 
         array (
             'Cron\\' => 5,
-            'Composer\\XdebugHandler\\' => 23,
-            'Composer\\Spdx\\' => 14,
-            'Composer\\Semver\\' => 16,
-            'Composer\\Pcre\\' => 14,
-            'Composer\\MetadataMinifier\\' => 26,
-            'Composer\\ClassMapGenerator\\' => 27,
-            'Composer\\CaBundle\\' => 18,
-            'Composer\\' => 9,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+        ),
+        'A' => 
+        array (
+            'Aws\\' => 4,
         ),
     );
 
@@ -266,6 +296,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
         ),
+        'enshrined\\svgSanitize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
+        ),
         'axy\\sourcemap\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/sourcemap/src',
@@ -285,6 +319,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace/src',
+        ),
+        'Wohali\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wohali/oauth2-discord-new/src',
         ),
         'Whoops\\' => 
         array (
@@ -406,21 +444,21 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/staudenmeir/eloquent-eager-limit/src',
         ),
-        'Seld\\Signal\\' => 
+        'SoftCreatR\\MimeDetector\\' => 
         array (
-            0 => __DIR__ . '/..' . '/seld/signal-handler/src',
+            0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
         ),
-        'Seld\\PharUtils\\' => 
+        'SSNepenthe\\ColorUtils\\' => 
         array (
-            0 => __DIR__ . '/..' . '/seld/phar-utils/src',
+            0 => __DIR__ . '/..' . '/ssnepenthe/color-utils/src',
         ),
-        'Seld\\JsonLint\\' => 
+        'Reflar\\Webhooks\\' => 
         array (
-            0 => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint',
+            0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
         ),
-        'React\\Promise\\' => 
+        'ReCaptcha\\' => 
         array (
-            0 => __DIR__ . '/..' . '/react/promise/src',
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -440,13 +478,13 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'Psr\\Http\\Server\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
-            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            0 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            1 => __DIR__ . '/..' . '/psr/http-server-handler/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -464,9 +502,17 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
         ),
+        'PhpOption\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
         'Opis\\Closure\\' => 
         array (
-            0 => __DIR__ . '/..' . '/opis/closure/src',
+            0 => __DIR__ . '/..' . '/charescape/serialize-closure/src',
+        ),
+        'Omines\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
         ),
         'Monolog\\' => 
         array (
@@ -490,9 +536,24 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
+        'League\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/oauth2-google/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            2 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
+            3 => __DIR__ . '/..' . '/league/oauth2-client/src',
+        ),
+        'League\\OAuth1\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/oauth1-client/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
+        ),
+        'League\\Flysystem\\AwsS3v3\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem-aws-s3-v3/src',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -526,9 +587,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
         ),
-        'JsonSchema\\' => 
+        'JmesPath\\' => 
         array (
-            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+            0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
         ),
         'Jenssegers\\Agent\\' => 
         array (
@@ -556,9 +617,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/support',
             1 => __DIR__ . '/..' . '/illuminate/collections',
-            2 => __DIR__ . '/..' . '/illuminate/support',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
         ),
         'Illuminate\\Session\\' => 
         array (
@@ -616,6 +677,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
         ),
+        'Html2Text\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/html2text/html2text/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -628,9 +693,125 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'GrahamCampbell\\ResultType\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
         'Franzl\\Middleware\\Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
+        ),
+        'FoF\\Webhooks\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/webhooks/src',
+        ),
+        'FoF\\UserBio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/user-bio/src',
+        ),
+        'FoF\\Upload\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/upload/src',
+        ),
+        'FoF\\Subscribed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/subscribed/src',
+        ),
+        'FoF\\Sitemap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/sitemap/src',
+        ),
+        'FoF\\ShareSocial\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/share-social/src',
+        ),
+        'FoF\\SecureHttps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/secure-https/src',
+        ),
+        'FoF\\S3Assets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/s3-assets/src',
+        ),
+        'FoF\\Reactions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/reactions/src',
+        ),
+        'FoF\\ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
+        ),
+        'FoF\\PwnedPasswords\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pwned-passwords/src',
+        ),
+        'FoF\\ProfileImageCrop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
+        ),
+        'FoF\\Polls\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/migrations',
+        ),
+        'FoF\\Polls\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/src',
+        ),
+        'FoF\\Pages\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pages/src',
+        ),
+        'FoF\\OAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/oauth/src',
+        ),
+        'FoF\\MergeDiscussions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
+        ),
+        'FoF\\Links\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/links/src',
+        ),
+        'FoF\\Formatting\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/formatting/src',
+        ),
+        'FoF\\Filter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/filter/src',
+        ),
+        'FoF\\Extend\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/extend/src',
+        ),
+        'FoF\\Drafts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/drafts/src',
+        ),
+        'FoF\\DiscussionViews\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/discussion-views/src',
+        ),
+        'FoF\\DefaultUserPreferences\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-user-preferences/src',
+        ),
+        'FoF\\DefaultGroup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-group/src',
+        ),
+        'FoF\\BestAnswer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/best-answer/src',
+        ),
+        'FoF\\BanIPs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/ban-ips/src',
+        ),
+        'FoF\\AntiSpam\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/anti-spam/src',
         ),
         'Flarum\\Tags\\' => 
         array (
@@ -676,10 +857,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/flarum/flags/src',
         ),
-        'Flarum\\ExtensionManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flarum/extension-manager/src',
-        ),
         'Flarum\\BBCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/bbcode/src',
@@ -704,13 +881,17 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
         ),
         'Doctrine\\Deprecations\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/src',
         ),
         'Doctrine\\DBAL\\' => 
         array (
@@ -740,38 +921,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
-        'Composer\\XdebugHandler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
-        ),
-        'Composer\\Spdx\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/spdx-licenses/src',
-        ),
-        'Composer\\Semver\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/semver/src',
-        ),
-        'Composer\\Pcre\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/pcre/src',
-        ),
-        'Composer\\MetadataMinifier\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/metadata-minifier/src',
-        ),
-        'Composer\\ClassMapGenerator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/class-map-generator/src',
-        ),
-        'Composer\\CaBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
-        ),
-        'Composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
-        ),
         'Carbon\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
@@ -783,6 +932,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Brick\\Math\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
+        'Aws\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
         ),
     );
 
@@ -804,6 +957,29 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
     );
 
     public static $classMap = array (
+        'AWS\\CRT\\Auth\\AwsCredentials' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/AwsCredentials.php',
+        'AWS\\CRT\\Auth\\CredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/CredentialsProvider.php',
+        'AWS\\CRT\\Auth\\Signable' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signable.php',
+        'AWS\\CRT\\Auth\\SignatureType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignatureType.php',
+        'AWS\\CRT\\Auth\\SignedBodyHeaderType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignedBodyHeaderType.php',
+        'AWS\\CRT\\Auth\\Signing' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signing.php',
+        'AWS\\CRT\\Auth\\SigningAlgorithm' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningAlgorithm.php',
+        'AWS\\CRT\\Auth\\SigningConfigAWS' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningConfigAWS.php',
+        'AWS\\CRT\\Auth\\SigningResult' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningResult.php',
+        'AWS\\CRT\\Auth\\StaticCredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/StaticCredentialsProvider.php',
+        'AWS\\CRT\\CRT' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/CRT.php',
+        'AWS\\CRT\\HTTP\\Headers' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Headers.php',
+        'AWS\\CRT\\HTTP\\Message' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Message.php',
+        'AWS\\CRT\\HTTP\\Request' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Request.php',
+        'AWS\\CRT\\HTTP\\Response' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Response.php',
+        'AWS\\CRT\\IO\\EventLoopGroup' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/EventLoopGroup.php',
+        'AWS\\CRT\\IO\\InputStream' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/InputStream.php',
+        'AWS\\CRT\\Internal\\Encoding' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Encoding.php',
+        'AWS\\CRT\\Internal\\Extension' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Extension.php',
+        'AWS\\CRT\\Log' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Log.php',
+        'AWS\\CRT\\NativeResource' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/NativeResource.php',
+        'AWS\\CRT\\OptionValue' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
+        'AWS\\CRT\\Options' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -839,6 +1015,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Nette\\Schema\\Processor' => __DIR__ . '/..' . '/nette/schema/src/Schema/Processor.php',
         'Nette\\Schema\\Schema' => __DIR__ . '/..' . '/nette/schema/src/Schema/Schema.php',
         'Nette\\Schema\\ValidationException' => __DIR__ . '/..' . '/nette/schema/src/Schema/ValidationException.php',
+        'Nette\\ShouldNotHappenException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'Nette\\SmartObject' => __DIR__ . '/..' . '/nette/utils/src/SmartObject.php',
         'Nette\\StaticClass' => __DIR__ . '/..' . '/nette/utils/src/StaticClass.php',
         'Nette\\UnexpectedValueException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',

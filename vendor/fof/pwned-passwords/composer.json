@@ -1,0 +1,69 @@
+{
+    "name": "fof/pwned-passwords",
+    "description": "Check passwords against the Have I Been Pwned password database",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/pwned-passwords/issues",
+        "source": "https://github.com/FriendsOfFlarum/pwned-passwords",
+        "forum": "https://discuss.flarum.org/d/18348"
+    },
+    "homepage": "https://friendsofflarum.org/",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "keywords": [
+        "flarum"
+    ],
+    "authors": [
+        {
+            "name": "FoF Team",
+            "email": "team@friendsofflarum.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.6",
+        "guzzlehttp/guzzle": "6.* || 7.*"
+    },
+    "replace": {
+        "reflar/pwned-passwords": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\PwnedPasswords\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Pwned Passwords",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-key",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/18348"
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true
+            }
+        }
+    },
+    "require-dev": {
+        "flarum/phpstan": "*"
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    }
+}

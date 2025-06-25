@@ -21,7 +21,7 @@
         "docs": "https://docs.flarum.org/"
     },
     "require": {
-        "php": "8.3",
+        "php": "^8.3",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/core": "^1.8",
@@ -64,7 +64,7 @@
         "fof/webhooks": "*",
         "fof/secure-https": "*",
         "fof/pwned-passwords": "*",
-        "fof/s3-assets": "*"
+        "fof/s3-assets": "1.0.0-beta.4"
     },
     "config": {
         "preferred-install": "dist",
