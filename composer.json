@@ -61,7 +61,10 @@
         "fof/share-social": "*",
         "fof/default-user-preferences": "*",
         "fof/subscribed": "*",
-        "fof/webhooks": "*"
+        "fof/webhooks": "*",
+        "fof/secure-https": "*",
+        "fof/pwned-passwords": "*",
+        "fof/s3-assets": "*"
     },
     "config": {
         "preferred-install": "dist",
