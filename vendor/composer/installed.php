@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'a7660148b8e5db07eb5ae97eea5c10338f26b1ff',
+        'reference' => 'b8b11fe318e0c4efeffafd87abf7ce4afa952bf4',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -286,7 +286,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'a7660148b8e5db07eb5ae97eea5c10338f26b1ff',
+            'reference' => 'b8b11fe318e0c4efeffafd87abf7ce4afa952bf4',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

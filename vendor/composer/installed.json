@@ -440,12 +440,12 @@
             "type": "component",
             "extra": {
                 "component": {
-                    "styles": [
-                        "css/all.css"
-                    ],
                     "files": [
                         "css/all.min.css",
                         "webfonts/*"
+                    ],
+                    "styles": [
+                        "css/all.css"
                     ]
                 }
             },
@@ -1478,34 +1478,34 @@
             "time": "2024-10-02T11:13:26+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Approval",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-check",
-                        "backgroundColor": "#ABDC88",
-                        "color": "#3F8A32"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#3F8A32",
+                        "backgroundColor": "#ABDC88"
+                    },
+                    "title": "Approval",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -1557,34 +1557,34 @@
             "time": "2023-05-20T15:08:42+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": false,
+                        "css": false,
+                        "admin": false,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": false,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": false,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "BBCode",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-bold",
-                        "backgroundColor": "#238C59",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": false,
-                        "js": false,
-                        "jsCommon": false,
-                        "css": false,
-                        "gitConf": true,
-                        "githubActions": false,
-                        "prettier": false,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#238C59"
+                    },
+                    "title": "BBCode",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -1785,33 +1785,33 @@
             "time": "2024-10-02T07:10:53+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Emoji",
-                    "category": "feature",
                     "icon": {
                         "image": "icon.svg",
                         "backgroundColor": "#FECC4D"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                    },
+                    "title": "Emoji",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -1942,44 +1942,44 @@
             "time": "2023-05-20T15:08:42+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": false,
+                        "css": false,
+                        "admin": false,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": false,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": false,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
-                },
-                "flarum-extension": {
-                    "title": "English",
-                    "category": "language",
-                    "info": {
-                        "donate": "https://flarum.org/donate/",
-                        "website": "https://flarum.org",
-                        "support": "https://discuss.flarum.org"
-                    },
-                    "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#00247d",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
-                    }
                 },
                 "flarum-locale": {
                     "code": "en",
                     "title": "English"
                 },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": false,
-                        "js": false,
-                        "jsCommon": false,
-                        "css": false,
-                        "gitConf": true,
-                        "githubActions": false,
-                        "prettier": false,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                "flarum-extension": {
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundColor": "#00247d",
+                        "backgroundPosition": "center"
+                    },
+                    "info": {
+                        "donate": "https://flarum.org/donate/",
+                        "support": "https://discuss.flarum.org",
+                        "website": "https://flarum.org"
+                    },
+                    "title": "English",
+                    "category": "language"
                 }
             },
             "installation-source": "dist",
@@ -2030,34 +2030,34 @@
             "time": "2024-10-02T11:13:26+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Likes",
-                    "category": "feature",
                     "icon": {
                         "name": "far fa-thumbs-up",
-                        "backgroundColor": "#3A649D",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#3A649D"
+                    },
+                    "title": "Likes",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -2188,37 +2188,37 @@
             "time": "2024-10-02T07:10:53+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Markdown",
-                    "category": "feature",
                     "icon": {
+                        "color": "#fff",
                         "image": "icon.svg",
-                        "backgroundColor": "#000",
                         "backgroundSize": "100%",
+                        "backgroundColor": "#000",
                         "backgroundRepeat": "no-repeat",
-                        "backgroundPosition": "center",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "backgroundPosition": "center"
+                    },
+                    "title": "Markdown",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -2439,37 +2439,37 @@
             "time": "2024-09-29T14:35:29+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Pusher",
-                    "category": "feature",
                     "icon": {
+                        "color": "#fff",
                         "image": "icon.png",
                         "backgroundSize": "46% 63%",
-                        "backgroundPosition": "center",
-                        "backgroundRepeat": "no-repeat",
                         "backgroundColor": "#40bad8",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center"
+                    },
+                    "title": "Pusher",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -2524,37 +2524,37 @@
             "time": "2024-10-02T07:10:53+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    },
+                    "excludeScaffolding": [
+                        "js/src/admin/index.ts"
+                    ]
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Statistics",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-chart-bar",
-                        "backgroundColor": "#6932d1",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "excludeScaffolding": [
-                        "js/src/admin/index.ts"
-                    ],
-                    "modules": {
-                        "admin": true,
-                        "forum": false,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#6932d1"
+                    },
+                    "title": "Statistics",
+                    "category": "feature"
                 }
             },
             "installation-source": "dist",
@@ -2693,37 +2693,37 @@
             "time": "2024-10-02T07:10:53+00:00",
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-star",
+                        "color": "#de8e00",
+                        "backgroundColor": "#ffea7b"
+                    },
                     "title": "Subscriptions",
                     "category": "feature",
                     "optional-dependencies": [
                         "flarum/approval"
-                    ],
-                    "icon": {
-                        "name": "fas fa-star",
-                        "backgroundColor": "#ffea7b",
-                        "color": "#de8e00"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                    ]
                 }
             },
             "installation-source": "dist",
@@ -7005,16 +7005,16 @@
             "time": "2022-05-21T17:30:32+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Intervention\\Image\\ImageServiceProvider"
-                    ],
                     "aliases": {
                         "Image": "Intervention\\Image\\Facades\\Image"
-                    }
+                    },
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
                 }
             },
             "installation-source": "dist",
@@ -7145,16 +7145,16 @@
             "time": "2020-06-13T08:05:20+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Jenssegers\\Agent\\AgentServiceProvider"
-                    ],
                     "aliases": {
                         "Agent": "Jenssegers\\Agent\\Facades\\Agent"
-                    }
+                    },
+                    "providers": [
+                        "Jenssegers\\Agent\\AgentServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
                 }
             },
             "installation-source": "dist",
