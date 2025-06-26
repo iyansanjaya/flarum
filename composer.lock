@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74da0cca7a7e0c3240d3f5ad77bfb17a",
+    "content-hash": "c0a2535ed64cb68bd0a7fbae89e54979",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -4082,86 +4082,6 @@
                 }
             ],
             "time": "2024-04-08T06:18:01+00:00"
-        },
-        {
-            "name": "fof/drafts",
-            "version": "1.2.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/drafts.git",
-                "reference": "4f54df53d84bea012ff5c23fa53a7c5f524bb683"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/4f54df53d84bea012ff5c23fa53a7c5f524bb683",
-                "reference": "4f54df53d84bea012ff5c23fa53a7c5f524bb683",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.8.3"
-            },
-            "require-dev": {
-                "flarum/gdpr": "dev-main",
-                "flarum/phpstan": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20957"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-edit",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Drafts",
-                    "category": "feature",
-                    "optional-dependencies": [
-                        "fof/byobu",
-                        "flarum/gdpr"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Drafts\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FoF Team",
-                    "email": "team@friendsofflarum.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Allow users to create post and discussion drafts",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "Friends of Flarum",
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20957",
-                "issues": "https://github.com/FriendsOfFlarum/drafts/issues",
-                "source": "https://github.com/FriendsOfFlarum/drafts"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2024-11-03T15:06:38+00:00"
         },
         {
             "name": "fof/extend",

@@ -270,7 +270,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\FollowTags\\' => 15,
             'FoF\\Filter\\' => 11,
             'FoF\\Extend\\' => 11,
-            'FoF\\Drafts\\' => 11,
             'FoF\\Doorman\\' => 12,
             'FoF\\DisposableEmails\\' => 21,
             'FoF\\DiscussionViews\\' => 20,
@@ -953,10 +952,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Extend\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/extend/src',
-        ),
-        'FoF\\Drafts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/drafts/src',
         ),
         'FoF\\Doorman\\' => 
         array (
