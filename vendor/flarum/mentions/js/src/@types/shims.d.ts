@@ -1,7 +1,3 @@
-import 'flarum/forum/ForumApplication';
-import 'flarum/common/models/User';
-import 'flarum/common/models/Post';
-
 import MentionFormats from '../forum/mentionables/formats/MentionFormats';
 import type BasePost from 'flarum/common/models/Post';
 

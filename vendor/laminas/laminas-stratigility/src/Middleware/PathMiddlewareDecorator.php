@@ -10,19 +10,22 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 use function rtrim;
-use function str_starts_with;
 use function stripos;
 use function strlen;
+use function strpos;
 use function substr;
 
 final class PathMiddlewareDecorator implements MiddlewareInterface
 {
-    /** @var string Path prefix under which the middleware is segregated.  */
-    private readonly string $prefix;
+    private MiddlewareInterface $middleware;
 
-    public function __construct(string $prefix, private readonly MiddlewareInterface $middleware)
+    /** @var string Path prefix under which the middleware is segregated.  */
+    private string $prefix;
+
+    public function __construct(string $prefix, MiddlewareInterface $middleware)
     {
-        $this->prefix = $this->normalizePrefix($prefix);
+        $this->prefix     = $this->normalizePrefix($prefix);
+        $this->middleware = $middleware;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
@@ -92,10 +95,14 @@ final class PathMiddlewareDecorator implements MiddlewareInterface
     private function prepareHandlerForOriginalRequest(RequestHandlerInterface $handler): RequestHandlerInterface
     {
         return new class ($handler, $this->prefix) implements RequestHandlerInterface {
-            public function __construct(
-                private readonly RequestHandlerInterface $handler,
-                private readonly string $prefix
-            ) {
+            private RequestHandlerInterface $handler;
+
+            private string $prefix;
+
+            public function __construct(RequestHandlerInterface $handler, string $prefix)
+            {
+                $this->handler = $handler;
+                $this->prefix  = $prefix;
             }
 
             /**
@@ -124,7 +131,7 @@ final class PathMiddlewareDecorator implements MiddlewareInterface
     private function normalizePrefix(string $prefix): string
     {
         $prefix = strlen($prefix) > 1 ? rtrim($prefix, '/') : $prefix;
-        if (! str_starts_with($prefix, '/')) {
+        if (0 !== strpos($prefix, '/')) {
             $prefix = '/' . $prefix;
         }
         return $prefix;

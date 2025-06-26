@@ -10,8 +10,11 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class EmptyPipelineHandler implements RequestHandlerInterface
 {
-    public function __construct(private readonly string $className)
+    private string $className;
+
+    public function __construct(string $className)
     {
+        $this->className = $className;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface

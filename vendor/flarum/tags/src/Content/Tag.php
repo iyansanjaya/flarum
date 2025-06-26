@@ -69,7 +69,7 @@ class Tag
         $slug = Arr::pull($queryParams, 'slug');
         $sort = Arr::pull($queryParams, 'sort');
         $q = Arr::pull($queryParams, 'q', '');
-        $page = max(1, intval(Arr::pull($queryParams, 'page')));
+        $page = Arr::pull($queryParams, 'page', 1);
         $filters = Arr::pull($queryParams, 'filter', []);
 
         $sortMap = $this->getSortMap();

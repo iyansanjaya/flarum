@@ -18,7 +18,6 @@ use SplStack;
  * true value will short-circuit iteration.
  *
  * @template-extends SplStack<EmitterInterface>
- * @final
  */
 class EmitterStack extends SplStack implements EmitterInterface
 {

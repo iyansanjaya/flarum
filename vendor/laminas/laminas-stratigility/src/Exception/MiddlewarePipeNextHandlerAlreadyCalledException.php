@@ -6,7 +6,6 @@ namespace Laminas\Stratigility\Exception;
 
 use DomainException;
 
-/** @final */
 class MiddlewarePipeNextHandlerAlreadyCalledException extends DomainException implements ExceptionInterface
 {
     public static function create(): self

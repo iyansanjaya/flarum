@@ -99,7 +99,7 @@ abstract class AbstractSerializer
                 continue;
             }
 
-            if ($currentHeader === false) {
+            if (! $currentHeader) {
                 throw Exception\DeserializationException::forInvalidHeader();
             }
 

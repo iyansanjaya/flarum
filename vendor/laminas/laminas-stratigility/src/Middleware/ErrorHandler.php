@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Laminas\Stratigility\Middleware;
 
 use ErrorException;
-use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -62,8 +61,6 @@ use function set_error_handler;
  *
  * Listeners are attached using the attachListener() method, and triggered
  * in the order attached.
- *
- * @final
  */
 class ErrorHandler implements MiddlewareInterface
 {
@@ -73,14 +70,19 @@ class ErrorHandler implements MiddlewareInterface
     /** @var callable Routine that will generate the error response. */
     private $responseGenerator;
 
+    /** @var callable */
+    private $responseFactory;
+
     /**
+     * @param callable $responseFactory A factory capable of returning an
+     *     empty ResponseInterface instance to update and return when returning
+     *     an error response.
      * @param null|callable $responseGenerator Callback that will generate the final
      *     error response; if none is provided, ErrorResponseGenerator is used.
      */
-    public function __construct(
-        private readonly ResponseFactoryInterface $responseFactory,
-        ?callable $responseGenerator = null
-    ) {
+    public function __construct(callable $responseFactory, ?callable $responseGenerator = null)
+    {
+        $this->responseFactory   = static fn(): ResponseInterface => $responseFactory();
         $this->responseGenerator = $responseGenerator ?? new ErrorResponseGenerator();
     }
 
@@ -144,8 +146,7 @@ class ErrorHandler implements MiddlewareInterface
     private function handleThrowable(Throwable $e, ServerRequestInterface $request): ResponseInterface
     {
         $generator = $this->responseGenerator;
-        /** @var ResponseInterface $response */
-        $response = $generator($e, $request, $this->responseFactory->createResponse());
+        $response  = $generator($e, $request, ($this->responseFactory)());
         $this->triggerListeners($e, $request, $response);
         return $response;
     }
@@ -154,19 +155,16 @@ class ErrorHandler implements MiddlewareInterface
      * Creates and returns a callable error handler that raises exceptions.
      *
      * Only raises exceptions for errors that are within the error_reporting mask.
-     *
-     * @return callable(int, string, string=, int=, array<array-key, mixed>=): bool
      */
     private function createErrorHandler(): callable
     {
         /**
          * @throws ErrorException if error is not within the error_reporting mask.
-         * @return bool|never
          */
-        return static function (int $errno, string $errstr, string $errfile = '', int $errline = 0): bool {
+        return static function (int $errno, string $errstr, string $errfile, int $errline): void {
             if (! (error_reporting() & $errno)) {
                 // error_reporting does not include this error
-                return true;
+                return;
             }
 
             throw new ErrorException($errstr, 0, $errno, $errfile, $errline);

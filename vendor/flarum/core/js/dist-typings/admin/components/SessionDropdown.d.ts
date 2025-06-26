@@ -10,7 +10,7 @@ export interface ISessionDropdownAttrs extends IDropdownAttrs {
 export default class SessionDropdown<CustomAttrs extends ISessionDropdownAttrs = ISessionDropdownAttrs> extends Dropdown<CustomAttrs> {
     static initAttrs(attrs: ISessionDropdownAttrs): void;
     view(vnode: Mithril.Vnode<CustomAttrs, this>): JSX.Element;
-    getButtonContent(): (string | Mithril.Vnode<{}, {}>)[];
+    getButtonContent(): (string | JSX.Element)[];
     /**
      * Build an item list for the contents of the dropdown menu.
      */

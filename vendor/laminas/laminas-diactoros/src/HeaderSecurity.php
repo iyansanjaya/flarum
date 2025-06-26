@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Laminas\Diactoros;
 
-use function get_debug_type;
+use function gettype;
 use function in_array;
 use function is_numeric;
+use function is_object;
 use function is_string;
 use function ord;
 use function preg_match;
@@ -127,7 +128,7 @@ final class HeaderSecurity
         if (! is_string($value) && ! is_numeric($value)) {
             throw new Exception\InvalidArgumentException(sprintf(
                 'Invalid header value type; must be a string or numeric; received %s',
-                get_debug_type($value)
+                is_object($value) ? $value::class : gettype($value)
             ));
         }
         if (! self::isValid($value)) {
@@ -150,7 +151,7 @@ final class HeaderSecurity
         if (! is_string($name)) {
             throw new Exception\InvalidArgumentException(sprintf(
                 'Invalid header name type; expected string; received %s',
-                get_debug_type($name)
+                is_object($name) ? $name::class : gettype($name)
             ));
         }
         if (! preg_match('/^[a-zA-Z0-9\'`#$%&*+.^_|~!-]+$/D', $name)) {

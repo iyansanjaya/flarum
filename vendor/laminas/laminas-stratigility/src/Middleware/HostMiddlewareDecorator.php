@@ -13,11 +13,15 @@ use function strtolower;
 
 final class HostMiddlewareDecorator implements MiddlewareInterface
 {
-    public function __construct(
-        /** @var string Host name under which the middleware is segregated.  */
-        private readonly string $host,
-        private readonly MiddlewareInterface $middleware
-    ) {
+    private MiddlewareInterface $middleware;
+
+    /** @var string Host name under which the middleware is segregated.  */
+    private string $host;
+
+    public function __construct(string $host, MiddlewareInterface $middleware)
+    {
+        $this->host       = $host;
+        $this->middleware = $middleware;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

@@ -35,8 +35,6 @@ export default class DiscussionsSearchSource implements SearchSource {
   view(query: string): Array<Mithril.Vnode> {
     query = query.toLowerCase();
 
-    this.setQueryString(query);
-
     const results = (this.results.get(query) || []).map((discussion) => {
       const mostRelevantPost = discussion.mostRelevantPost();
 

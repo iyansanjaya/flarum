@@ -1,7 +1,3 @@
-import 'flarum/common/models/Post';
-import 'flarum/forum/ForumApplication';
-import 'flarum/forum/components/Post';
-
 import Flag from '../forum/models/Flag';
 import FlagListState from '../forum/states/FlagListState';
 import Mithril from 'mithril';

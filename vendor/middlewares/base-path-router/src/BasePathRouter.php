@@ -12,6 +12,9 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class BasePathRouter implements MiddlewareInterface
 {
+    /**
+     * @var array
+     */
     private $middlewares;
 
     /**
@@ -24,6 +27,9 @@ class BasePathRouter implements MiddlewareInterface
      */
     private $continueOnError = false;
 
+    /**
+     * @var ResponseFactoryInterface
+     */
     private $responseFactory;
 
     /**
@@ -31,11 +37,7 @@ class BasePathRouter implements MiddlewareInterface
      */
     private $attribute = 'request-handler';
 
-    /**
-     * @param array<string, string>         $middlewares
-     * @param ResponseFactoryInterface|null $responseFactory
-     */
-    public function __construct(array $middlewares, ?ResponseFactoryInterface $responseFactory = null)
+    public function __construct(array $middlewares, ResponseFactoryInterface $responseFactory = null)
     {
         $this->middlewares = $middlewares;
         $this->responseFactory = $responseFactory ?: Factory::getResponseFactory();

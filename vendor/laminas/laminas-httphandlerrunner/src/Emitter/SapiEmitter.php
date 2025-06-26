@@ -6,7 +6,6 @@ namespace Laminas\HttpHandlerRunner\Emitter;
 
 use Psr\Http\Message\ResponseInterface;
 
-/** @final */
 class SapiEmitter implements EmitterInterface
 {
     use SapiEmitterTrait;

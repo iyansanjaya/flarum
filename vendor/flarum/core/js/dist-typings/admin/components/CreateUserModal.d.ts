@@ -10,7 +10,7 @@ export interface ICreateUserModalAttrs extends IInternalModalAttrs {
     token?: string;
     provided?: string[];
 }
-export type SignupBody = {
+export declare type SignupBody = {
     username: string;
     email: string;
     isEmailConfirmed: boolean;

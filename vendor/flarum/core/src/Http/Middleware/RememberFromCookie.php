@@ -45,18 +45,7 @@ class RememberFromCookie implements Middleware
 
                 /** @var \Illuminate\Contracts\Session\Session $session */
                 $session = $request->getAttribute('session');
-                $currentAccessToken = $session->get('access_token');
-
-                if ($currentAccessToken !== $token->token) {
-                    $session->invalidate();
-                    $session->regenerateToken();
-
-                    if ($currentAccessToken) {
-                        AccessToken::whereToken($currentAccessToken)->delete();
-                    }
-
-                    $session->put('access_token', $token->token);
-                }
+                $session->put('access_token', $token->token);
             }
         }
 

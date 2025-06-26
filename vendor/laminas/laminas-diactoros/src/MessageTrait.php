@@ -10,8 +10,10 @@ use Psr\Http\Message\StreamInterface;
 use function array_map;
 use function array_merge;
 use function array_values;
+use function gettype;
 use function implode;
 use function is_array;
+use function is_object;
 use function is_resource;
 use function is_string;
 use function preg_match;
@@ -74,7 +76,7 @@ trait MessageTrait
      * @param string $version HTTP protocol version
      * @return static
      */
-    public function withProtocolVersion(string $version): MessageInterface
+    public function withProtocolVersion($version): MessageInterface
     {
         $this->validateProtocolVersion($version);
         $new           = clone $this;
@@ -117,7 +119,7 @@ trait MessageTrait
      *     name using a case-insensitive string comparison. Returns false if
      *     no matching header name is found in the message.
      */
-    public function hasHeader(string $header): bool
+    public function hasHeader($header): bool
     {
         return isset($this->headerNames[strtolower($header)]);
     }
@@ -136,7 +138,7 @@ trait MessageTrait
      *    header. If the header does not appear in the message, this method MUST
      *    return an empty array.
      */
-    public function getHeader(string $header): array
+    public function getHeader($header): array
     {
         if (! $this->hasHeader($header)) {
             return [];
@@ -166,7 +168,7 @@ trait MessageTrait
      *    concatenated together using a comma. If the header does not appear in
      *    the message, this method MUST return an empty string.
      */
-    public function getHeaderLine(string $name): string
+    public function getHeaderLine($name): string
     {
         $value = $this->getHeader($name);
         if (empty($value)) {
@@ -192,7 +194,7 @@ trait MessageTrait
      * @return static
      * @throws Exception\InvalidArgumentException For invalid header names or values.
      */
-    public function withHeader(string $name, $value): MessageInterface
+    public function withHeader($name, $value): MessageInterface
     {
         $this->assertHeader($name);
 
@@ -228,7 +230,7 @@ trait MessageTrait
      * @return static
      * @throws Exception\InvalidArgumentException For invalid header names or values.
      */
-    public function withAddedHeader(string $name, $value): MessageInterface
+    public function withAddedHeader($name, $value): MessageInterface
     {
         $this->assertHeader($name);
 
@@ -256,9 +258,9 @@ trait MessageTrait
      * @param string $name Case-insensitive header field name to remove.
      * @return static
      */
-    public function withoutHeader(string $name): MessageInterface
+    public function withoutHeader($name): MessageInterface
     {
-        if ($name === '' || ! $this->hasHeader($name)) {
+        if (! is_string($name) || $name === '' || ! $this->hasHeader($name)) {
             return clone $this;
         }
 
@@ -345,14 +347,21 @@ trait MessageTrait
     /**
      * Validate the HTTP protocol version
      *
+     * @param string $version
      * @throws Exception\InvalidArgumentException On invalid HTTP protocol version.
      */
-    private function validateProtocolVersion(string $version): void
+    private function validateProtocolVersion($version): void
     {
         if (empty($version)) {
             throw new Exception\InvalidArgumentException(
                 'HTTP protocol version can not be empty'
             );
+        }
+        if (! is_string($version)) {
+            throw new Exception\InvalidArgumentException(sprintf(
+                'Unsupported HTTP protocol version; must be a string, received %s',
+                is_object($version) ? $version::class : gettype($version)
+            ));
         }
 
         // HTTP/1 uses a "<major>.<minor>" numbering scheme to indicate

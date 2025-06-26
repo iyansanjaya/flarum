@@ -60,11 +60,6 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
   protected static MIN_SEARCH_LEN = 3;
 
   /**
-   * Time to wait (in milliseconds) after the user stops typing before triggering a search.
-   */
-  protected static SEARCH_DEBOUNCE_TIME_MS = 250;
-
-  /**
    * The instance of `SearchState` for this component.
    */
   protected searchState!: SearchState;
@@ -263,7 +258,7 @@ export default class Search<T extends SearchAttrs = SearchAttrs> extends Compone
 
           state.cache(query);
           m.redraw();
-        }, (search.constructor as typeof Search).SEARCH_DEBOUNCE_TIME_MS);
+        }, 250);
       })
 
       .on('focus', function () {
