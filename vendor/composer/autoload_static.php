@@ -15,17 +15,17 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
@@ -54,7 +54,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '04b6576f786ea6b5b4b577af08f8e4d1' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/bootstrap.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
-        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -114,13 +113,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Staudenmeir\\EloquentEagerLimit\\' => 31,
-            'Seld\\Signal\\' => 12,
-            'Seld\\PharUtils\\' => 15,
-            'Seld\\JsonLint\\' => 14,
         ),
         'R' => 
         array (
-            'React\\Promise\\' => 14,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -161,7 +156,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'J' => 
         array (
-            'JsonSchema\\' => 11,
             'Jenssegers\\Agent\\' => 17,
             'Jaybizzle\\CrawlerDetect\\' => 24,
         ),
@@ -207,7 +201,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Flarum\\Lock\\' => 12,
             'Flarum\\Likes\\' => 13,
             'Flarum\\Flags\\' => 13,
-            'Flarum\\ExtensionManager\\' => 24,
             'Flarum\\BBCode\\' => 14,
             'Flarum\\Approval\\' => 16,
             'Flarum\\' => 7,
@@ -232,14 +225,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'C' => 
         array (
             'Cron\\' => 5,
-            'Composer\\XdebugHandler\\' => 23,
-            'Composer\\Spdx\\' => 14,
-            'Composer\\Semver\\' => 16,
-            'Composer\\Pcre\\' => 14,
-            'Composer\\MetadataMinifier\\' => 26,
-            'Composer\\ClassMapGenerator\\' => 27,
-            'Composer\\CaBundle\\' => 18,
-            'Composer\\' => 9,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
@@ -406,22 +391,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/staudenmeir/eloquent-eager-limit/src',
         ),
-        'Seld\\Signal\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/signal-handler/src',
-        ),
-        'Seld\\PharUtils\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/phar-utils/src',
-        ),
-        'Seld\\JsonLint\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint',
-        ),
-        'React\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/promise/src',
-        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -440,13 +409,13 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'Psr\\Http\\Server\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
-            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            0 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            1 => __DIR__ . '/..' . '/psr/http-server-handler/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -526,10 +495,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
         ),
-        'JsonSchema\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
-        ),
         'Jenssegers\\Agent\\' => 
         array (
             0 => __DIR__ . '/..' . '/jenssegers/agent/src',
@@ -556,9 +521,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/support',
             1 => __DIR__ . '/..' . '/illuminate/collections',
-            2 => __DIR__ . '/..' . '/illuminate/support',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
         ),
         'Illuminate\\Session\\' => 
         array (
@@ -676,10 +641,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/flarum/flags/src',
         ),
-        'Flarum\\ExtensionManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/flarum/extension-manager/src',
-        ),
         'Flarum\\BBCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/flarum/bbcode/src',
@@ -739,38 +700,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
-        ),
-        'Composer\\XdebugHandler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
-        ),
-        'Composer\\Spdx\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/spdx-licenses/src',
-        ),
-        'Composer\\Semver\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/semver/src',
-        ),
-        'Composer\\Pcre\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/pcre/src',
-        ),
-        'Composer\\MetadataMinifier\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/metadata-minifier/src',
-        ),
-        'Composer\\ClassMapGenerator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/class-map-generator/src',
-        ),
-        'Composer\\CaBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
-        ),
-        'Composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
         ),
         'Carbon\\Doctrine\\' => 
         array (
