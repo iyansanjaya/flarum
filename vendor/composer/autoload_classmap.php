@@ -11,6 +11,7 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'IntlException' => $vendorDir . '/symfony/polyfill-intl-messageformatter/Resources/stubs/IntlException.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+    'MailChecker' => $vendorDir . '/fgribreau/mailchecker/platform/php/MailChecker.php',
     'MessageFormatter' => $vendorDir . '/symfony/polyfill-intl-messageformatter/Resources/stubs/MessageFormatter.php',
     'Mobile_Detect' => $vendorDir . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
     'Nette\\ArgumentOutOfRangeException' => $vendorDir . '/nette/utils/src/exceptions.php',

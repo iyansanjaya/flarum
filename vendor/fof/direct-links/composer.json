@@ -1,0 +1,71 @@
+{
+    "name": "fof/direct-links",
+    "description": "Adds some direct links and composer auto-fill capabilities.",
+    "type": "flarum-extension",
+    "keywords": [
+        "discussion",
+        "features",
+        "links"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FoF Developers",
+            "homepage": "https://friendsofflarum.org/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/friendsofflarum/direct-links/issues",
+        "source": "https://github.com/friendsofflarum/direct-links",
+        "forum": "https://discuss.flarum.org/d/34158"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\DirectLinks\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Direct Links",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-link",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true
+            }
+        }
+    },
+    "conflict": {
+        "sycho/flarum-private-facade": "*"
+    },
+    "replace": {
+        "zerosonesfun/direct-links": "*",
+        "flagrow/direct-links": "*"
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    },
+    "require-dev": {
+        "flarum/phpstan": "*"
+    }
+}

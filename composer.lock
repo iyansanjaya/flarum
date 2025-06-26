@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d98da3aafc325af30e83bbaf6ab4e91",
+    "content-hash": "74da0cca7a7e0c3240d3f5ad77bfb17a",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -187,6 +187,141 @@
                 }
             ],
             "time": "2023-10-01T12:35:29+00:00"
+        },
+        {
+            "name": "charescape/serialize-closure",
+            "version": "3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/charescape/serialize-closure.git",
+                "reference": "833c98ec940ffd72d2d3f879ef657aa0ca5192b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/charescape/serialize-closure/zipball/833c98ec940ffd72d2d3f879ef657aa0ca5192b0",
+                "reference": "833c98ec940ffd72d2d3f879ef657aa0ca5192b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0 || ^8.0"
+            },
+            "replace": {
+                "opis/closure": "*"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "ext-mbstring": "*",
+                "jeremeamia/superclosure": "^2.0",
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Opis\\Closure\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marius Sarca",
+                    "email": "marius.sarca@gmail.com"
+                },
+                {
+                    "name": "Sorin Sarca",
+                    "email": "sarca_sorin@hotmail.com"
+                }
+            ],
+            "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
+            "homepage": "https://opis.io/closure",
+            "keywords": [
+                "anonymous functions",
+                "closure",
+                "function",
+                "serializable",
+                "serialization",
+                "serialize"
+            ],
+            "support": {
+                "source": "https://github.com/charescape/serialize-closure/tree/3.8.0"
+            },
+            "time": "2023-04-12T09:30:16+00:00"
+        },
+        {
+            "name": "clue/stream-filter",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clue/stream-filter.git",
+                "reference": "049509fef80032cb3f051595029ab75b49a3c2f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clue/stream-filter/zipball/049509fef80032cb3f051595029ab75b49a3c2f7",
+                "reference": "049509fef80032cb3f051595029ab75b49a3c2f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "Clue\\StreamFilter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering"
+                }
+            ],
+            "description": "A simple and modern approach to stream filtering in PHP",
+            "homepage": "https://github.com/clue/stream-filter",
+            "keywords": [
+                "bucket brigade",
+                "callback",
+                "filter",
+                "php_user_filter",
+                "stream",
+                "stream_filter_append",
+                "stream_filter_register"
+            ],
+            "support": {
+                "issues": "https://github.com/clue/stream-filter/issues",
+                "source": "https://github.com/clue/stream-filter/tree/v1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://clue.engineering/support",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-20T15:40:13+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -1049,6 +1184,55 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.21.0"
             },
             "time": "2025-01-13T09:32:25+00:00"
+        },
+        {
+            "name": "fgribreau/mailchecker",
+            "version": "v4.1.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FGRibreau/mailchecker.git",
+                "reference": "4b5dab1c590f09eba94b07210a89816578fe0c51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/4b5dab1c590f09eba94b07210a89816578fe0c51",
+                "reference": "4b5dab1c590f09eba94b07210a89816578fe0c51",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "platform/php/MailChecker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Temporary (disposable/throwaway) email detection library. Covers 1987 fake email providers.",
+            "keywords": [
+                "detection",
+                "disposable",
+                "email",
+                "fake"
+            ],
+            "support": {
+                "issues": "https://github.com/FGRibreau/mailchecker/issues",
+                "source": "https://github.com/FGRibreau/mailchecker/tree/v4.1.19"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fgribreau",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-07-26T09:53:04+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -2677,6 +2861,107 @@
             "time": "2022-08-15T03:38:09+00:00"
         },
         {
+            "name": "fof/anti-spam",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/anti-spam.git",
+                "reference": "6551e2c77f166b0edf26144eda51869478998de3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/6551e2c77f166b0edf26144eda51869478998de3",
+                "reference": "6551e2c77f166b0edf26144eda51869478998de3",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0"
+            },
+            "replace": {
+                "fof/spamblock": "*",
+                "fof/stopforumspam": "*"
+            },
+            "require-dev": {
+                "flarum/approval": "*",
+                "flarum/flags": "^1.8",
+                "flarum/phpstan": "^1.8",
+                "flarum/suspend": "^1.8",
+                "flarum/tags": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/oauth": "*",
+                "fof/user-bio": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-shield-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Anti Spam",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/suspend",
+                        "flarum/flags",
+                        "flarum/approval",
+                        "flarum/tags"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\AntiSpam\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Effective tools to manage spammers on your community.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/33698",
+                "issues": "https://github.com/FriendsOfFlarum/anti-spam/issues",
+                "source": "https://github.com/FriendsOfFlarum/anti-spam"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-01-07T13:34:36+00:00"
+        },
+        {
             "name": "fof/ban-ips",
             "version": "1.1.2",
             "source": {
@@ -2764,6 +3049,158 @@
                 }
             ],
             "time": "2024-11-03T14:43:15+00:00"
+        },
+        {
+            "name": "fof/bbcode-details",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/bbcode-details.git",
+                "reference": "ec267964be7c51ceb91f7b9313dca01489d956e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-details/zipball/ec267964be7c51ceb91f7b9313dca01489d956e1",
+                "reference": "ec267964be7c51ceb91f7b9313dca01489d956e1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "sijad/flarum-ext-details": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18796"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-minus-square",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF BBCode Details",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\BBCodeDetails\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Katos",
+                    "email": "katos@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Details BBCode for Flarum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18796",
+                "issues": "https://github.com/FriendsOfFlarum/bbcode-details/issues",
+                "source": "https://github.com/FriendsOfFlarum/bbcode-details"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T16:18:23+00:00"
+        },
+        {
+            "name": "fof/bbcode-tabs",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/bbcode-tabs.git",
+                "reference": "7aa5099f99d2094d76a341d95b78a8b90dfd7c9d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/bbcode-tabs/zipball/7aa5099f99d2094d76a341d95b78a8b90dfd7c9d",
+                "reference": "7aa5099f99d2094d76a341d95b78a8b90dfd7c9d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/21033"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-border-none",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF BBCode Tabs",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\BBCodeTabs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add tabs to your posts by using BBCode tags",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21033",
+                "issues": "https://github.com/FriendsOfFlarum/bbcode-tabs/issues",
+                "source": "https://github.com/FriendsOfFlarum/bbcode-tabs"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-03-15T11:31:35+00:00"
         },
         {
             "name": "fof/best-answer",
@@ -2945,6 +3382,83 @@
             "time": "2024-02-15T08:44:16+00:00"
         },
         {
+            "name": "fof/custom-footer",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/custom-footer.git",
+                "reference": "c8bf5493c4fceac71ba029fa340db9933acd44ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/custom-footer/zipball/c8bf5493c4fceac71ba029fa340db9933acd44ba",
+                "reference": "c8bf5493c4fceac71ba029fa340db9933acd44ba",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "davis/flarum-ext-customfooter": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17774"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-columns",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Custom Footer",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\CustomFooter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allows the Addition of a Custom Footer",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/17774",
+                "issues": "https://github.com/FriendsOfFlarum/custom-footer/issues",
+                "source": "https://github.com/FriendsOfFlarum/custom-footer"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2024-01-21T00:09:17+00:00"
+        },
+        {
             "name": "fof/default-group",
             "version": "1.1.2",
             "source": {
@@ -3100,6 +3614,86 @@
             "time": "2023-11-12T14:41:07+00:00"
         },
         {
+            "name": "fof/direct-links",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/direct-links.git",
+                "reference": "6eed7687e3e3b85dbdc8d4a6e9d2903ecea4b388"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/direct-links/zipball/6eed7687e3e3b85dbdc8d4a6e9d2903ecea4b388",
+                "reference": "6eed7687e3e3b85dbdc8d4a6e9d2903ecea4b388",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0"
+            },
+            "conflict": {
+                "sycho/flarum-private-facade": "*"
+            },
+            "replace": {
+                "flagrow/direct-links": "*",
+                "zerosonesfun/direct-links": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-link",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Direct Links",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DirectLinks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FoF Developers",
+                    "homepage": "https://friendsofflarum.org/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds some direct links and composer auto-fill capabilities.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "discussion",
+                "features",
+                "links"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/34158",
+                "issues": "https://github.com/friendsofflarum/direct-links/issues",
+                "source": "https://github.com/friendsofflarum/direct-links"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2024-08-05T05:44:29+00:00"
+        },
+        {
             "name": "fof/discussion-language",
             "version": "1.3.6",
             "source": {
@@ -3191,6 +3785,223 @@
                 }
             ],
             "time": "2025-02-12T13:53:45+00:00"
+        },
+        {
+            "name": "fof/discussion-thumbnail",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/discussion-thumbnail.git",
+                "reference": "0242f3f5b7c2e81c1939803a5350a2b9652c29a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-thumbnail/zipball/0242f3f5b7c2e81c1939803a5350a2b9652c29a4",
+                "reference": "0242f3f5b7c2e81c1939803a5350a2b9652c29a4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22231"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-image",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Discussion Thumbnail",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DiscussionThumbnail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "homepage": "https://datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Replace author avatars with the first image in a discussion's starting post",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum",
+                "friendsofflarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/22231",
+                "issues": "https://github.com/FriendsOfFlarum/discussion-thumbnail/issues",
+                "source": "https://github.com/FriendsOfFlarum/discussion-thumbnail"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T14:21:20+00:00"
+        },
+        {
+            "name": "fof/discussion-views",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/discussion-views.git",
+                "reference": "2304ae2d70430b82ff892812a1da1bac9825842a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-views/zipball/2304ae2d70430b82ff892812a1da1bac9825842a",
+                "reference": "2304ae2d70430b82ff892812a1da1bac9825842a",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0",
+                "jaybizzle/crawler-detect": "^1.2"
+            },
+            "conflict": {
+                "michaelbelgium/flarum-discussion-views": "*"
+            },
+            "replace": {
+                "flarumite/simple-discussion-views": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "far fa-eye",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Discussion Views",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DiscussionViews\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add view counts to discussions",
+            "support": {
+                "forum": "https://discuss.flarum.org/d/24002",
+                "issues": "https://github.com/friendsofflarum/discussion-views/issues",
+                "source": "https://github.com/friendsofflarum/discussion-views"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2025-03-28T13:45:30+00:00"
+        },
+        {
+            "name": "fof/disposable-emails",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/disposable-emails.git",
+                "reference": "304cb670eb1b731f6108cc5e5401096e3c41ef2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/disposable-emails/zipball/304cb670eb1b731f6108cc5e5401096e3c41ef2c",
+                "reference": "304cb670eb1b731f6108cc5e5401096e3c41ef2c",
+                "shasum": ""
+            },
+            "require": {
+                "fgribreau/mailchecker": "^4.0.7",
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20457-friendsofflarum-disposable-emails"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-user-times",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Disposable Emails",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DisposableEmails\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Prevent users from signing up with disposable emails",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21894",
+                "issues": "https://github.com/FriendsOfFlarum/disposabile-emails/issues",
+                "source": "https://github.com/FriendsOfFlarum/disposable-emails"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-05-22T18:56:14+00:00"
         },
         {
             "name": "fof/doorman",
@@ -3402,6 +4213,88 @@
                 }
             ],
             "time": "2023-11-30T08:13:16+00:00"
+        },
+        {
+            "name": "fof/filter",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/filter.git",
+                "reference": "1e32bbba33b6e62ed36ffbabcf4ab81548f51649"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/1e32bbba33b6e62ed36ffbabcf4ab81548f51649",
+                "reference": "1e32bbba33b6e62ed36ffbabcf4ab81548f51649",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/approval": "*",
+                "flarum/core": "^1.2.0",
+                "flarum/flags": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/5131"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-filter",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Filter",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Filter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "charlie.k@redevs.org"
+                },
+                {
+                    "name": "Katos",
+                    "email": "katos@flarum.org"
+                }
+            ],
+            "description": "Filter out words and phrases from forum posts",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "moderation"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/5131",
+                "issues": "https://github.com/friendsofflarum/filter/issues",
+                "source": "https://github.com/friendsofflarum/filter"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2024-06-12T09:25:35+00:00"
         },
         {
             "name": "fof/follow-tags",
@@ -3737,6 +4630,341 @@
             "time": "2024-11-10T08:51:08+00:00"
         },
         {
+            "name": "fof/geoip",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/geoip.git",
+                "reference": "9d3dafae345184865a36fd8e25ef3764c30a820b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/geoip/zipball/9d3dafae345184865a36fd8e25ef3764c30a820b",
+                "reference": "9d3dafae345184865a36fd8e25ef3764c30a820b",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.7",
+                "guzzlehttp/guzzle": "^7.3",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/default-user-preferences": "*",
+                "fof/drafts": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/21493"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-map-marker-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF GeoIP",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "fof/ban-ips"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\GeoIP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                },
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Geolocation for your Flarum forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21493",
+                "issues": "https://github.com/FriendsOfFlarum/geoip/issues",
+                "source": "https://github.com/FriendsOfFlarum/geoip"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-06-03T07:07:03+00:00"
+        },
+        {
+            "name": "fof/github-autolink",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/github-autolink.git",
+                "reference": "dec17a3d474268d8a9032d7ff093a442722cf143"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/github-autolink/zipball/dec17a3d474268d8a9032d7ff093a442722cf143",
+                "reference": "dec17a3d474268d8a9032d7ff093a442722cf143",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "replace": {
+                "sijad/flarum-ext-github-autolink": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/21856"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fab fa-github-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF GitHub Autolink",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\GitHubAutolink\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com",
+                    "role": "Developer (Original)"
+                },
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Autolink GitHub issues and commits in posts",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "autolink",
+                "commit",
+                "flarum",
+                "github",
+                "issue"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21856",
+                "issues": "https://github.com/FriendsOfFlarum/github-autolink/issues",
+                "source": "https://github.com/FriendsOfFlarum/github-autolink"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-02-07T10:45:23+00:00"
+        },
+        {
+            "name": "fof/github-sponsors",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/github-sponsors.git",
+                "reference": "b91f82ecbc0624ff924211668ede13b0f7118002"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/github-sponsors/zipball/b91f82ecbc0624ff924211668ede13b0f7118002",
+                "reference": "b91f82ecbc0624ff924211668ede13b0f7118002",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0",
+                "guzzlehttp/guzzle": "^7.1",
+                "knplabs/github-api": "^3.3",
+                "php-http/guzzle7-adapter": "^0.1"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22260"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fab fa-github",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF GitHub Sponsors",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\GitHubSponsors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "homepage": "https://datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "GitHub Sponsors integration for your Flarum forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/22260",
+                "issues": "https://github.com/FriendsOfFlarum/github-sponsors/issues",
+                "source": "https://github.com/FriendsOfFlarum/github-sponsors"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T13:53:27+00:00"
+        },
+        {
+            "name": "fof/html-errors",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/html-errors.git",
+                "reference": "d838758849472ec11fff8aed7ffa0958c9d1beab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/html-errors/zipball/d838758849472ec11fff8aed7ffa0958c9d1beab",
+                "reference": "d838758849472ec11fff8aed7ffa0958c9d1beab",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "flagrow/html-errors": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/10784"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-exclamation-circle",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF HTML Errors",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\HtmlErrors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Add custom HTML error pages",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "error",
+                "extension",
+                "flarum",
+                "html",
+                "page"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/10784",
+                "issues": "https://github.com/FriendsOfFlarum/html-errors/issues",
+                "source": "https://github.com/FriendsOfFlarum/html-errors"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T12:15:04+00:00"
+        },
+        {
             "name": "fof/ignore-users",
             "version": "1.2.1",
             "source": {
@@ -3984,6 +5212,86 @@
                 }
             ],
             "time": "2024-10-14T13:16:09+00:00"
+        },
+        {
+            "name": "fof/mason",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/mason.git",
+                "reference": "0c153937dd5bee4ff54abbc30e1ee929a3b10978"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/mason/zipball/0c153937dd5bee4ff54abbc30e1ee929a3b10978",
+                "reference": "0c153937dd5bee4ff54abbc30e1ee929a3b10978",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2"
+            },
+            "replace": {
+                "flagrow/mason": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/7028"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-dungeon",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Mason",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Mason\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Add custom fields to discussions",
+            "keywords": [
+                "custom-fields",
+                "discussion",
+                "extension",
+                "flagrow",
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/7028",
+                "issues": "https://github.com/FriendsOfFlarum/mason/issues",
+                "source": "https://github.com/FriendsOfFlarum/mason"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-11-12T21:49:44+00:00"
         },
         {
             "name": "fof/merge-discussions",
@@ -4346,6 +5654,93 @@
             "time": "2023-11-12T10:51:30+00:00"
         },
         {
+            "name": "fof/passport",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/passport.git",
+                "reference": "ae442f5d1d4f8dcf368ce1a8c0864868c0c83718"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/passport/zipball/ae442f5d1d4f8dcf368ce1a8c0864868c0c83718",
+                "reference": "ae442f5d1d4f8dcf368ce1a8c0864868c0c83718",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0",
+                "league/oauth2-client": "^2.3.0"
+            },
+            "replace": {
+                "flagrow/passport": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/5203"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-key",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Passport",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Passport\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel+flarum@klabbers.email",
+                    "homepage": "https://hyn.me/"
+                },
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "The OAuth2 (and Laravel passport) compatible oauth extension",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum",
+                "league",
+                "oauth",
+                "oauth2",
+                "passport"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/5203",
+                "issues": "https://github.com/FriendsOfFlarum/passport/issues",
+                "source": "https://github.com/FriendsOfFlarum/passport"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T12:46:23+00:00"
+        },
+        {
             "name": "fof/polls",
             "version": "2.2.14",
             "source": {
@@ -4655,6 +6050,84 @@
             "time": "2023-09-05T14:57:51+00:00"
         },
         {
+            "name": "fof/pwned-passwords",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/pwned-passwords.git",
+                "reference": "7fe2088049127b9151ea457de21d13604303d7a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/pwned-passwords/zipball/7fe2088049127b9151ea457de21d13604303d7a1",
+                "reference": "7fe2088049127b9151ea457de21d13604303d7a1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.6",
+                "guzzlehttp/guzzle": "6.* || 7.*"
+            },
+            "replace": {
+                "reflar/pwned-passwords": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18348"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-key",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Pwned Passwords",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\PwnedPasswords\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FoF Team",
+                    "email": "team@friendsofflarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Check passwords against the Have I Been Pwned password database",
+            "homepage": "https://friendsofflarum.org/",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18348",
+                "issues": "https://github.com/FriendsOfFlarum/pwned-passwords/issues",
+                "source": "https://github.com/FriendsOfFlarum/pwned-passwords"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T21:32:43+00:00"
+        },
+        {
             "name": "fof/reactions",
             "version": "1.4.1",
             "source": {
@@ -4748,6 +6221,67 @@
             "time": "2024-02-11T21:51:01+00:00"
         },
         {
+            "name": "fof/realtimelogin",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/realtimelogin.git",
+                "reference": "7c02cb82aaf18d5d719cfc92f7709071ba46a3b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/realtimelogin/zipball/7c02cb82aaf18d5d719cfc92f7709071ba46a3b4",
+                "reference": "7c02cb82aaf18d5d719cfc92f7709071ba46a3b4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.3"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-sign-in-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Real Time Login",
+                    "category": "feature"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie Kern",
+                    "email": "charlie.k@redevs.org",
+                    "homepage": "https://redevs.org"
+                }
+            ],
+            "description": "Makes logins update in real time",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Friends of Flarum",
+                "extension",
+                "flarum",
+                "realtime"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/23220",
+                "issues": "https://github.com/friendsofflarum/realtimelogin/issues",
+                "source": "https://github.com/friendsofflarum/realtimelogin"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-08-21T20:24:52+00:00"
+        },
+        {
             "name": "fof/recaptcha",
             "version": "1.3.4",
             "source": {
@@ -4831,6 +6365,81 @@
                 }
             ],
             "time": "2024-02-24T18:06:43+00:00"
+        },
+        {
+            "name": "fof/secure-https",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/secure-https.git",
+                "reference": "da2633f0be116b2c4b5bc4e4bbdba8eab53b58d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/secure-https/zipball/da2633f0be116b2c4b5bc4e4bbdba8eab53b58d0",
+                "reference": "da2633f0be116b2c4b5bc4e4bbdba8eab53b58d0",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0",
+                "guzzlehttp/guzzle": "^7.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17771"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-lock",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Secure HTTPS",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\SecureHttps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Changes all images using http to https",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/17771",
+                "issues": "https://github.com/FriendsOfFlarum/secure-https/issues",
+                "source": "https://github.com/FriendsOfFlarum/secure-https"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-11-12T15:40:52+00:00"
         },
         {
             "name": "fof/share-social",
@@ -5694,6 +7303,98 @@
             "time": "2023-12-20T10:35:11+00:00"
         },
         {
+            "name": "fof/webhooks",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/webhooks.git",
+                "reference": "d40b192aa5a4964d4a4d7b44d87a6489b502bc70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/webhooks/zipball/d40b192aa5a4964d4a4d7b44d87a6489b502bc70",
+                "reference": "d40b192aa5a4964d4a4d7b44d87a6489b502bc70",
+                "shasum": ""
+            },
+            "require": {
+                "charescape/serialize-closure": "^3.8",
+                "flarum/core": "^1.7.0",
+                "guzzlehttp/guzzle": "7.*",
+                "html2text/html2text": "^4.3.1",
+                "ssnepenthe/color-utils": "^0.4.2"
+            },
+            "replace": {
+                "reflar/webhooks": "*"
+            },
+            "require-dev": {
+                "flarum/approval": "*",
+                "flarum/phpstan": "*",
+                "flarum/tags": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17812"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-external-link-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Webhooks",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/tags",
+                        "flarum/approval"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Webhooks\\": "src/",
+                    "Reflar\\Webhooks\\": "src/Legacy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Flarum with webhooks",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/17812",
+                "issues": "https://github.com/FriendsOfFlarum/webhooks/issues",
+                "source": "https://github.com/FriendsOfFlarum/webhooks"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/datitisev",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2025-01-23T15:52:16+00:00"
+        },
+        {
             "name": "franzl/whoops-middleware",
             "version": "2.0.0",
             "source": {
@@ -6113,6 +7814,44 @@
                 }
             ],
             "time": "2024-07-18T11:15:46+00:00"
+        },
+        {
+            "name": "html2text/html2text",
+            "version": "4.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtibben/html2text.git",
+                "reference": "3b443cbe302b52eb5806a21a9dbd79524203970a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtibben/html2text/zipball/3b443cbe302b52eb5806a21a9dbd79524203970a",
+                "reference": "3b443cbe302b52eb5806a21a9dbd79524203970a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4|^9.0"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "symfony/polyfill-mbstring": "If you can't install ext-mbstring"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Converts HTML to formatted plain text",
+            "support": {
+                "issues": "https://github.com/mtibben/html2text/issues",
+                "source": "https://github.com/mtibben/html2text/tree/4.3.2"
+            },
+            "time": "2024-08-20T02:43:29+00:00"
         },
         {
             "name": "ianm/iso-639",
@@ -7497,6 +9236,94 @@
                 }
             ],
             "time": "2020-06-13T08:05:20+00:00"
+        },
+        {
+            "name": "knplabs/github-api",
+            "version": "v3.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/php-github-api.git",
+                "reference": "25d7bafd6b0dd088d4850aef7fcc74dc4fba8b28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/25d7bafd6b0dd088d4850aef7fcc74dc4fba8b28",
+                "reference": "25d7bafd6b0dd088d4850aef7fcc74dc4fba8b28",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2.5 || ^8.0",
+                "php-http/cache-plugin": "^1.7.1|^2.0",
+                "php-http/client-common": "^2.3",
+                "php-http/discovery": "^1.12",
+                "php-http/httplug": "^2.2",
+                "php-http/multipart-stream-builder": "^1.1.2",
+                "psr/cache": "^1.0|^2.0|^3.0",
+                "psr/http-client-implementation": "^1.0",
+                "psr/http-factory-implementation": "^1.0",
+                "psr/http-message": "^1.0|^2.0",
+                "symfony/deprecation-contracts": "^2.2|^3.0",
+                "symfony/polyfill-php80": "^1.17"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.2",
+                "guzzlehttp/psr7": "^2.7",
+                "http-interop/http-factory-guzzle": "^1.0",
+                "php-http/mock-client": "^1.4.1",
+                "phpstan/extension-installer": "^1.0.5",
+                "phpstan/phpstan": "^0.12.57",
+                "phpstan/phpstan-deprecation-rules": "^0.12.5",
+                "phpunit/phpunit": "^8.5 || ^9.4",
+                "symfony/cache": "^5.1.8",
+                "symfony/phpunit-bridge": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.20.x-dev",
+                    "dev-master": "3.15-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Github\\": "lib/Github/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com",
+                    "homepage": "http://ornicar.github.com"
+                }
+            ],
+            "description": "GitHub API v3 client",
+            "homepage": "https://github.com/KnpLabs/php-github-api",
+            "keywords": [
+                "api",
+                "gh",
+                "gist",
+                "github"
+            ],
+            "support": {
+                "issues": "https://github.com/KnpLabs/php-github-api/issues",
+                "source": "https://github.com/KnpLabs/php-github-api/tree/v3.16.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/acrobat",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-07T19:35:30+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -9484,38 +11311,34 @@
             "time": "2024-12-20T15:42:03+00:00"
         },
         {
-            "name": "opis/closure",
-            "version": "3.6.3",
+            "name": "php-http/cache-plugin",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/opis/closure.git",
-                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad"
+                "url": "https://github.com/php-http/cache-plugin.git",
+                "reference": "5c591e9e04602cec12307e3e1be3abefeb005e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/3d81e4309d2a927abbe66df935f4bb60082805ad",
-                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad",
+                "url": "https://api.github.com/repos/php-http/cache-plugin/zipball/5c591e9e04602cec12307e3e1be3abefeb005e29",
+                "reference": "5c591e9e04602cec12307e3e1be3abefeb005e29",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.4 || ^7.0 || ^8.0"
+                "php": "^7.1 || ^8.0",
+                "php-http/client-common": "^1.9 || ^2.0",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "psr/http-factory-implementation": "^1.0",
+                "symfony/options-resolver": "^2.6 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "require-dev": {
-                "jeremeamia/superclosure": "^2.0",
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+                "nyholm/psr7": "^1.6.1",
+                "phpspec/phpspec": "^5.1 || ^6.0 || ^7.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.6.x-dev"
-                }
-            },
             "autoload": {
-                "files": [
-                    "functions.php"
-                ],
                 "psr-4": {
-                    "Opis\\Closure\\": "src/"
+                    "Http\\Client\\Common\\Plugin\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -9524,29 +11347,516 @@
             ],
             "authors": [
                 {
-                    "name": "Marius Sarca",
-                    "email": "marius.sarca@gmail.com"
-                },
-                {
-                    "name": "Sorin Sarca",
-                    "email": "sarca_sorin@hotmail.com"
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
                 }
             ],
-            "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
-            "homepage": "https://opis.io/closure",
+            "description": "PSR-6 Cache plugin for HTTPlug",
+            "homepage": "http://httplug.io",
             "keywords": [
-                "anonymous functions",
-                "closure",
-                "function",
-                "serializable",
-                "serialization",
-                "serialize"
+                "cache",
+                "http",
+                "httplug",
+                "plugin"
             ],
             "support": {
-                "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.3"
+                "issues": "https://github.com/php-http/cache-plugin/issues",
+                "source": "https://github.com/php-http/cache-plugin/tree/2.0.1"
             },
-            "time": "2022-01-27T09:35:39+00:00"
+            "time": "2024-10-02T11:25:38+00:00"
+        },
+        {
+            "name": "php-http/client-common",
+            "version": "2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/client-common.git",
+                "reference": "0cfe9858ab9d3b213041b947c881d5b19ceeca46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/client-common/zipball/0cfe9858ab9d3b213041b947c881d5b19ceeca46",
+                "reference": "0cfe9858ab9d3b213041b947c881d5b19ceeca46",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "php-http/httplug": "^2.0",
+                "php-http/message": "^1.6",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0 || ^2.0",
+                "symfony/options-resolver": "~4.0.15 || ~4.1.9 || ^4.2.1 || ^5.0 || ^6.0 || ^7.0",
+                "symfony/polyfill-php80": "^1.17"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "^1.1",
+                "guzzlehttp/psr7": "^1.4",
+                "nyholm/psr7": "^1.2",
+                "phpspec/phpspec": "^5.1 || ^6.3 || ^7.1",
+                "phpspec/prophecy": "^1.10.2",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.33 || ^9.6.7"
+            },
+            "suggest": {
+                "ext-json": "To detect JSON responses with the ContentTypePlugin",
+                "ext-libxml": "To detect XML responses with the ContentTypePlugin",
+                "php-http/cache-plugin": "PSR-6 Cache plugin",
+                "php-http/logger-plugin": "PSR-3 Logger plugin",
+                "php-http/stopwatch-plugin": "Symfony Stopwatch plugin"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Http\\Client\\Common\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "Common HTTP Client implementations and tools for HTTPlug",
+            "homepage": "http://httplug.io",
+            "keywords": [
+                "client",
+                "common",
+                "http",
+                "httplug"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/client-common/issues",
+                "source": "https://github.com/php-http/client-common/tree/2.7.2"
+            },
+            "time": "2024-09-24T06:21:48+00:00"
+        },
+        {
+            "name": "php-http/discovery",
+            "version": "1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/discovery.git",
+                "reference": "82fe4c73ef3363caed49ff8dd1539ba06044910d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/82fe4c73ef3363caed49ff8dd1539ba06044910d",
+                "reference": "82fe4c73ef3363caed49ff8dd1539ba06044910d",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0|^2.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "nyholm/psr7": "<1.0",
+                "zendframework/zend-diactoros": "*"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "*",
+                "psr/http-factory-implementation": "*",
+                "psr/http-message-implementation": "*"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0.2|^2.0",
+                "graham-campbell/phpspec-skip-example-extension": "^5.0",
+                "php-http/httplug": "^1.0 || ^2.0",
+                "php-http/message-factory": "^1.0",
+                "phpspec/phpspec": "^5.1 || ^6.1 || ^7.3",
+                "sebastian/comparator": "^3.0.5 || ^4.0.8",
+                "symfony/phpunit-bridge": "^6.4.4 || ^7.0.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Http\\Discovery\\Composer\\Plugin",
+                "plugin-optional": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "Http\\Discovery\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/Composer/Plugin.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "Finds and installs PSR-7, PSR-17, PSR-18 and HTTPlug implementations",
+            "homepage": "http://php-http.org",
+            "keywords": [
+                "adapter",
+                "client",
+                "discovery",
+                "factory",
+                "http",
+                "message",
+                "psr17",
+                "psr7"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/discovery/issues",
+                "source": "https://github.com/php-http/discovery/tree/1.20.0"
+            },
+            "time": "2024-10-02T11:20:13+00:00"
+        },
+        {
+            "name": "php-http/guzzle7-adapter",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/guzzle7-adapter.git",
+                "reference": "1967de656b9679a2a6a66d0e4e16fa99bbed1ad1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/guzzle7-adapter/zipball/1967de656b9679a2a6a66d0e4e16fa99bbed1ad1",
+                "reference": "1967de656b9679a2a6a66d0e4e16fa99bbed1ad1",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "php": "^7.2 | ^8.0",
+                "php-http/httplug": "^2.0",
+                "psr/http-client": "^1.0"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "1.0",
+                "php-http/client-implementation": "1.0",
+                "psr/http-client-implementation": "1.0"
+            },
+            "require-dev": {
+                "php-http/client-integration-tests": "^3.0",
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Http\\Adapter\\Guzzle7\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                }
+            ],
+            "description": "Guzzle 7 HTTP Adapter",
+            "homepage": "http://httplug.io",
+            "keywords": [
+                "Guzzle",
+                "http"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/guzzle7-adapter/issues",
+                "source": "https://github.com/php-http/guzzle7-adapter/tree/0.1.1"
+            },
+            "time": "2020-10-21T17:30:51+00:00"
+        },
+        {
+            "name": "php-http/httplug",
+            "version": "2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/httplug.git",
+                "reference": "5cad731844891a4c282f3f3e1b582c46839d22f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/httplug/zipball/5cad731844891a4c282f3f3e1b582c46839d22f4",
+                "reference": "5cad731844891a4c282f3f3e1b582c46839d22f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "php-http/promise": "^1.1",
+                "psr/http-client": "^1.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "friends-of-phpspec/phpspec-code-coverage": "^4.1 || ^5.0 || ^6.0",
+                "phpspec/phpspec": "^5.1 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Http\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
+                }
+            ],
+            "description": "HTTPlug, the HTTP client abstraction for PHP",
+            "homepage": "http://httplug.io",
+            "keywords": [
+                "client",
+                "http"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/httplug/issues",
+                "source": "https://github.com/php-http/httplug/tree/2.4.1"
+            },
+            "time": "2024-09-23T11:39:58+00:00"
+        },
+        {
+            "name": "php-http/message",
+            "version": "1.16.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/message.git",
+                "reference": "06dd5e8562f84e641bf929bfe699ee0f5ce8080a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/message/zipball/06dd5e8562f84e641bf929bfe699ee0f5ce8080a",
+                "reference": "06dd5e8562f84e641bf929bfe699ee0f5ce8080a",
+                "shasum": ""
+            },
+            "require": {
+                "clue/stream-filter": "^1.5",
+                "php": "^7.2 || ^8.0",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "provide": {
+                "php-http/message-factory-implementation": "1.0"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.6",
+                "ext-zlib": "*",
+                "guzzlehttp/psr7": "^1.0 || ^2.0",
+                "laminas/laminas-diactoros": "^2.0 || ^3.0",
+                "php-http/message-factory": "^1.0.2",
+                "phpspec/phpspec": "^5.1 || ^6.3 || ^7.1",
+                "slim/slim": "^3.0"
+            },
+            "suggest": {
+                "ext-zlib": "Used with compressor/decompressor streams",
+                "guzzlehttp/psr7": "Used with Guzzle PSR-7 Factories",
+                "laminas/laminas-diactoros": "Used with Diactoros Factories",
+                "slim/slim": "Used with Slim Framework PSR-7 implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/filters.php"
+                ],
+                "psr-4": {
+                    "Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "HTTP Message related tools",
+            "homepage": "http://php-http.org",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/message/issues",
+                "source": "https://github.com/php-http/message/tree/1.16.2"
+            },
+            "time": "2024-10-02T11:34:13+00:00"
+        },
+        {
+            "name": "php-http/multipart-stream-builder",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/multipart-stream-builder.git",
+                "reference": "10086e6de6f53489cca5ecc45b6f468604d3460e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/multipart-stream-builder/zipball/10086e6de6f53489cca5ecc45b6f468604d3460e",
+                "reference": "10086e6de6f53489cca5ecc45b6f468604d3460e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "php-http/discovery": "^1.15",
+                "psr/http-factory-implementation": "^1.0"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.0",
+                "php-http/message": "^1.5",
+                "php-http/message-factory": "^1.0.2",
+                "phpunit/phpunit": "^7.5.15 || ^8.5 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Http\\Message\\MultipartStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                }
+            ],
+            "description": "A builder class that help you create a multipart stream",
+            "homepage": "http://php-http.org",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "multipart stream",
+                "stream"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/multipart-stream-builder/issues",
+                "source": "https://github.com/php-http/multipart-stream-builder/tree/1.4.2"
+            },
+            "time": "2024-09-04T13:22:54+00:00"
+        },
+        {
+            "name": "php-http/promise",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/promise.git",
+                "reference": "fc85b1fba37c169a69a07ef0d5a8075770cc1f83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/promise/zipball/fc85b1fba37c169a69a07ef0d5a8075770cc1f83",
+                "reference": "fc85b1fba37c169a69a07ef0d5a8075770cc1f83",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "friends-of-phpspec/phpspec-code-coverage": "^4.3.2 || ^6.3",
+                "phpspec/phpspec": "^5.1.2 || ^6.2 || ^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Http\\Promise\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joel Wurtz",
+                    "email": "joel.wurtz@gmail.com"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "Promise used for asynchronous HTTP requests",
+            "homepage": "http://httplug.io",
+            "keywords": [
+                "promise"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/promise/issues",
+                "source": "https://github.com/php-http/promise/tree/1.3.1"
+            },
+            "time": "2024-03-15T13:55:21+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/3.0.0"
+            },
+            "time": "2021-02-03T23:26:27+00:00"
         },
         {
             "name": "psr/clock",
@@ -10646,6 +12956,78 @@
                 }
             ],
             "time": "2024-09-01T17:19:47+00:00"
+        },
+        {
+            "name": "ssnepenthe/color-utils",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ssnepenthe/color-utils.git",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ssnepenthe/color-utils/zipball/a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phploc/phploc": "^3.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^6.0",
+                "psy/psysh": "^0.8",
+                "squizlabs/php_codesniffer": "^2.8",
+                "vimeo/psalm": "^0.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "inc/colors.php",
+                    "inc/helpers.php",
+                    "inc/transformations.php"
+                ],
+                "psr-4": {
+                    "SSNepenthe\\ColorUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "A PHP library for performing SASS-like color manipulations.",
+            "homepage": "https://github.com/ssnepenthe/color-utils",
+            "keywords": [
+                "Brightness",
+                "alpha",
+                "blue",
+                "color",
+                "conversion",
+                "convert",
+                "green",
+                "hex",
+                "hexadecimal",
+                "hsl",
+                "hsla",
+                "hue",
+                "lightness",
+                "luminance",
+                "manipulation",
+                "red",
+                "rgb",
+                "rgba",
+                "sass",
+                "saturation",
+                "scss",
+                "transformation"
+            ],
+            "support": {
+                "issues": "https://github.com/ssnepenthe/color-utils/issues",
+                "source": "https://github.com/ssnepenthe/color-utils/tree/master"
+            },
+            "time": "2017-06-19T16:48:17+00:00"
         },
         {
             "name": "staudenmeir/eloquent-eager-limit",
@@ -11757,6 +14139,73 @@
                 }
             ],
             "time": "2024-08-13T10:38:38+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v7.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "afb9a8038025e5dbc657378bfab9198d75f10fca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/afb9a8038025e5dbc657378bfab9198d75f10fca",
+                "reference": "afb9a8038025e5dbc657378bfab9198d75f10fca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an improved replacement for the array_replace PHP function",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/options-resolver/tree/v7.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-04-04T13:12:05+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -13085,6 +15534,81 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
             },
             "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "v17development/flarum-seo",
+            "version": "v2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/v17development/flarum-seo.git",
+                "reference": "27fafcb456d95057c96bc4ed7c00c98ac281a78f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/27fafcb456d95057c96bc4ed7c00c98ac281a78f",
+                "reference": "27fafcb456d95057c96bc4ed7c00c98ac281a78f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^1.0.0",
+                "php": "^8.0"
+            },
+            "conflict": {
+                "franzl/flarum-open-links-in-new-tab": "*",
+                "zerosonesfun/elint": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "^1.0",
+                "flarum/tags": "^1.8",
+                "fof/best-answer": "^1.6",
+                "fof/pages": "^1.0"
+            },
+            "suggest": {
+                "fof/sitemap": "Allows you to generate powerful sitemap.xml files"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18316"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-check",
+                        "color": "#ffffff",
+                        "backgroundColor": "#0072ff"
+                    },
+                    "title": "SEO",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/tags"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "V17Development\\FlarumSeo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "V17 Development",
+                    "email": "info@v17.dev"
+                }
+            ],
+            "description": "Adds SEO tags for your Flarum forum",
+            "homepage": "https://v17.dev/projects/flarum-seo",
+            "support": {
+                "docs": "https://community.v17.dev/knowledgebase/category/flarum-seo",
+                "forum": "https://discuss.flarum.org/d/18316",
+                "issues": "https://github.com/v17development/flarum-seo/issues",
+                "source": "https://github.com/v17development/flarum-seo"
+            },
+            "time": "2025-03-29T13:48:40+00:00"
         },
         {
             "name": "voku/portable-ascii",

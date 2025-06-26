@@ -1,0 +1,95 @@
+{
+    "name": "fof/geoip",
+    "description": "Geolocation for your Flarum forum",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/geoip/issues",
+        "source": "https://github.com/FriendsOfFlarum/geoip",
+        "forum": "https://discuss.flarum.org/d/21493"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "flarum/core": "^1.8.7",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "authors": [
+        {
+            "name": "David Sevilla Martin",
+            "email": "me+fof@datitisev.me",
+            "role": "Developer"
+        },
+        {
+            "name": "IanM",
+            "email": "ian@flarum.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FoF\\GeoIP\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF GeoIP",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-map-marker-alt",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "fof/ban-ips"
+            ]
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/21493"
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true,
+                "backendTesting": true
+            }
+        }
+    },
+    "require-dev": {
+        "flarum/phpstan": "*",
+        "fof/drafts": "*",
+        "fof/default-user-preferences": "*",
+        "flarum/testing": "^1.0.0"
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache",
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis",
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FoF\\GeoIP\\Tests\\": "tests/"
+        }
+    }
+}
