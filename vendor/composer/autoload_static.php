@@ -54,6 +54,8 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '04b6576f786ea6b5b4b577af08f8e4d1' => __DIR__ . '/..' . '/symfony/polyfill-intl-messageformatter/bootstrap.php',
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
+        '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
+        '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -122,6 +124,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'R' => 
         array (
+            'Rinvex\\Country\\' => 15,
             'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
@@ -156,6 +159,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
+            'League\\Csv\\' => 11,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
             'Laravel\\SerializableClosure\\' => 28,
@@ -190,6 +194,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Illuminate\\Config\\' => 18,
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
+            'IanM\\ISO639\\' => 12,
         ),
         'G' => 
         array (
@@ -200,10 +205,12 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\UserRequest\\' => 16,
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
             'FoF\\Upload\\' => 11,
             'FoF\\Terms\\' => 10,
+            'FoF\\Subscribed\\' => 15,
             'FoF\\Split\\' => 10,
             'FoF\\SocialProfile\\' => 18,
             'FoF\\Sitemap\\' => 12,
@@ -211,6 +218,8 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\Reactions\\' => 14,
             'FoF\\ReCaptcha\\' => 14,
             'FoF\\ProfileImageCrop\\' => 21,
+            'FoF\\PreventNecrobumping\\' => 24,
+            'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
             'FoF\\Pages\\' => 10,
@@ -219,12 +228,18 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Links\\' => 10,
             'FoF\\Impersonate\\' => 16,
+            'FoF\\IgnoreUsers\\' => 16,
             'FoF\\Gamification\\' => 17,
+            'FoF\\ForumStatisticsWidget\\' => 26,
             'FoF\\Formatting\\' => 15,
             'FoF\\FollowTags\\' => 15,
             'FoF\\Extend\\' => 11,
             'FoF\\Drafts\\' => 11,
+            'FoF\\Doorman\\' => 12,
+            'FoF\\DiscussionLanguage\\' => 23,
             'FoF\\DefaultUserPreferences\\' => 27,
+            'FoF\\DefaultGroup\\' => 17,
+            'FoF\\CookieConsent\\' => 18,
             'FoF\\BestAnswer\\' => 15,
             'FoF\\BanIPs\\' => 11,
             'FoF\\Analytics\\' => 14,
@@ -441,6 +456,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
         ),
+        'Rinvex\\Country\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rinvex/countries/src',
+        ),
         'ReCaptcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
@@ -535,6 +554,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'League\\Csv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/csv/src',
         ),
         'League\\Config\\' => 
         array (
@@ -650,6 +673,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
         ),
+        'IanM\\ISO639\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ianm/iso-639/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -666,6 +693,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
         ),
+        'FoF\\UserRequest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/username-request/src',
+        ),
         'FoF\\UserDirectory\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/user-directory/src',
@@ -681,6 +712,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Terms\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/terms/src',
+        ),
+        'FoF\\Subscribed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/subscribed/src',
         ),
         'FoF\\Split\\' => 
         array (
@@ -709,6 +744,14 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\ProfileImageCrop\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
+        ),
+        'FoF\\PreventNecrobumping\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/prevent-necrobumping/src',
+        ),
+        'FoF\\PrettyMail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pretty-mail/src',
         ),
         'FoF\\Polls\\Migrations\\' => 
         array (
@@ -742,9 +785,17 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/impersonate/src',
         ),
+        'FoF\\IgnoreUsers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/ignore-users/src',
+        ),
         'FoF\\Gamification\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/gamification/src',
+        ),
+        'FoF\\ForumStatisticsWidget\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/forum-statistics-widget/src',
         ),
         'FoF\\Formatting\\' => 
         array (
@@ -762,9 +813,25 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/drafts/src',
         ),
+        'FoF\\Doorman\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/doorman/src',
+        ),
+        'FoF\\DiscussionLanguage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/discussion-language/src',
+        ),
         'FoF\\DefaultUserPreferences\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/default-user-preferences/src',
+        ),
+        'FoF\\DefaultGroup\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-group/src',
+        ),
+        'FoF\\CookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/cookie-consent/src',
         ),
         'FoF\\BestAnswer\\' => 
         array (
