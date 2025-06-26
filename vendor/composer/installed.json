@@ -13411,6 +13411,6 @@
             "install-path": "../wohali/oauth2-discord-new"
         }
     ],
-    "dev": true,
+    "dev": false,
     "dev-package-names": []
 }

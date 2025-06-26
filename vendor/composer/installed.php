@@ -3,11 +3,11 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'ef533a97b41949bd9e8c7c602650fbdb6dfcaa73',
+        'reference' => 'a7660148b8e5db07eb5ae97eea5c10338f26b1ff',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         'avatar4eg/flarum-ext-share-social' => array(
@@ -286,7 +286,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'ef533a97b41949bd9e8c7c602650fbdb6dfcaa73',
+            'reference' => 'a7660148b8e5db07eb5ae97eea5c10338f26b1ff',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
