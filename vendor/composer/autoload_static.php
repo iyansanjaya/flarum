@@ -137,7 +137,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             'Rinvex\\Country\\' => 15,
             'Reflar\\Webhooks\\' => 16,
-            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -244,8 +243,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\ShareSocial\\' => 16,
             'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
-            'FoF\\ReCaptcha\\' => 14,
-            'FoF\\PwnedPasswords\\' => 19,
             'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\PreventNecrobumping\\' => 24,
             'FoF\\PrettyMail\\' => 15,
@@ -518,10 +515,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Reflar\\Webhooks\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
-        ),
-        'ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -847,14 +840,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Reactions\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/reactions/src',
-        ),
-        'FoF\\ReCaptcha\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
-        ),
-        'FoF\\PwnedPasswords\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/pwned-passwords/src',
         ),
         'FoF\\ProfileImageCrop\\' => 
         array (

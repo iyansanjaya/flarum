@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '626d3cd54953134fd8c559b632e1b6ce342b85db',
+        'reference' => '38dbeeeb10b3069adb8936f97df03c370c06fb4c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -340,7 +340,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '626d3cd54953134fd8c559b632e1b6ce342b85db',
+            'reference' => '38dbeeeb10b3069adb8936f97df03c370c06fb4c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -814,15 +814,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fof/pwned-passwords' => array(
-            'pretty_version' => '1.1.1',
-            'version' => '1.1.1.0',
-            'reference' => '7fe2088049127b9151ea457de21d13604303d7a1',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/pwned-passwords',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'fof/reactions' => array(
             'pretty_version' => '1.4.1',
             'version' => '1.4.1.0',
@@ -838,15 +829,6 @@
             'reference' => '7c02cb82aaf18d5d719cfc92f7709071ba46a3b4',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/realtimelogin',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'fof/recaptcha' => array(
-            'pretty_version' => '1.3.4',
-            'version' => '1.3.4.0',
-            'reference' => 'ab7eb4a4d13cf203e82306e1fa625d77919817bf',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/recaptcha',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -976,15 +958,6 @@
             'reference' => '71d75c5fff75587d6194a051d510a9eca0e3a047',
             'type' => 'library',
             'install_path' => __DIR__ . '/../franzl/whoops-middleware',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'google/recaptcha' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
-            'reference' => 'd59a801e98a4e9174814a6d71bbc268dff1202df',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../google/recaptcha',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -1834,12 +1807,6 @@
                 0 => '*',
             ),
         ),
-        'reflar/pwned-passwords' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
-        ),
         'reflar/reactions' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1913,12 +1880,6 @@
             ),
         ),
         'sijad/flarum-ext-pages' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
-        ),
-        'sijad/flarum-ext-recaptcha' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '*',
