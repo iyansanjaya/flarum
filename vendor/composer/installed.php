@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'd4fe3bf3ad2e51e0605987bbf62aa8945eefadc7',
+        'reference' => 'ef533a97b41949bd9e8c7c602650fbdb6dfcaa73',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -286,7 +286,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'd4fe3bf3ad2e51e0605987bbf62aa8945eefadc7',
+            'reference' => 'ef533a97b41949bd9e8c7c602650fbdb6dfcaa73',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1214,9 +1214,9 @@
             'dev_requirement' => false,
         ),
         'omines/oauth2-gitlab' => array(
-            'pretty_version' => '3.6.0',
-            'version' => '3.6.0.0',
-            'reference' => '5d8afd581c3d40dc469d03fa42965c449e95de9a',
+            'pretty_version' => '3.7.0',
+            'version' => '3.7.0.0',
+            'reference' => '3dee862326d999b0517da4dd83b169e08f5ddf0a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../omines/oauth2-gitlab',
             'aliases' => array(),
@@ -1412,9 +1412,9 @@
             'dev_requirement' => false,
         ),
         'ramsey/uuid' => array(
-            'pretty_version' => '4.8.1',
-            'version' => '4.8.1.0',
-            'reference' => 'fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28',
+            'pretty_version' => '4.9.0',
+            'version' => '4.9.0.0',
+            'reference' => '4e0e23cc785f0724a0e838279a9eb03f28b092a0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../ramsey/uuid',
             'aliases' => array(),
@@ -1441,7 +1441,7 @@
         'rhumsaa/uuid' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '4.8.1',
+                0 => '4.9.0',
             ),
         ),
         's9e/regexp-builder' => array(

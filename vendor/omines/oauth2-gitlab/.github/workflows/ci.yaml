@@ -18,6 +18,8 @@ jobs:
         php:
           - '8.1'
           - '8.2'
+          - '8.3'
+          - '8.4'
         dependencies: [ stable, beta, lowest ]
         experimental: [ false ]
         include:
@@ -27,9 +29,9 @@ jobs:
             dependencies: lowest
           - description: 'beta/RC dependencies'
             dependencies: beta
-          - description: 'nightly with stable dependencies'
-            php: 8.3
-            experimental: true
+          # - description: 'nightly with stable dependencies'
+          #   php: 8.5
+          #   experimental: true
 
     name: PHP ${{ matrix.php }} ${{ matrix.description }}
     steps:
@@ -56,6 +58,8 @@ jobs:
       - name: Check code style
         run: vendor/bin/php-cs-fixer fix --dry-run
         if: ${{ matrix.dependencies == 'stable' && !matrix.experimental }}
+        env:
+          PHP_CS_FIXER_IGNORE_ENV: 1
 
       - name: Run PHPStan static analysis
         run: vendor/bin/phpstan
@@ -65,7 +69,7 @@ jobs:
         run: vendor/bin/phpunit --coverage-text --coverage-xml build/coverage-xml --coverage-cobertura build/cobertura.xml
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v3.1.5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
