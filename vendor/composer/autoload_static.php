@@ -259,7 +259,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\Mason\\' => 10,
             'FoF\\Links\\' => 10,
             'FoF\\Impersonate\\' => 16,
-            'FoF\\IgnoreUsers\\' => 16,
             'FoF\\HtmlErrors\\' => 15,
             'FoF\\GitHubSponsors\\' => 19,
             'FoF\\GitHubAutolink\\' => 19,
@@ -908,10 +907,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Impersonate\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/impersonate/src',
-        ),
-        'FoF\\IgnoreUsers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/ignore-users/src',
         ),
         'FoF\\HtmlErrors\\' => 
         array (

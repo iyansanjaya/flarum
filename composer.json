@@ -64,7 +64,6 @@
         "fof/github-autolink": "*",
         "fof/github-sponsors": "*",
         "fof/html-errors": "^1.1",
-        "fof/ignore-users": "*",
         "fof/impersonate": "*",
         "fof/links": "^1.3",
         "fof/mason": "^1.2",

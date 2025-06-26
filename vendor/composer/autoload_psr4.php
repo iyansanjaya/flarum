@@ -148,7 +148,6 @@ return array(
     'FoF\\Mason\\' => array($vendorDir . '/fof/mason/src'),
     'FoF\\Links\\' => array($vendorDir . '/fof/links/src'),
     'FoF\\Impersonate\\' => array($vendorDir . '/fof/impersonate/src'),
-    'FoF\\IgnoreUsers\\' => array($vendorDir . '/fof/ignore-users/src'),
     'FoF\\HtmlErrors\\' => array($vendorDir . '/fof/html-errors/src'),
     'FoF\\GitHubSponsors\\' => array($vendorDir . '/fof/github-sponsors/src'),
     'FoF\\GitHubAutolink\\' => array($vendorDir . '/fof/github-autolink/src'),

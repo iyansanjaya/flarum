@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0a2535ed64cb68bd0a7fbae89e54979",
+    "content-hash": "ca76b18a9f6c5a4261cccc9439fa3a7d",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -4883,87 +4883,6 @@
                 }
             ],
             "time": "2023-11-12T12:15:04+00:00"
-        },
-        {
-            "name": "fof/ignore-users",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/ignore-users.git",
-                "reference": "7cc58e69ae660e48ee1383edc7fb7e8a61b51677"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/ignore-users/zipball/7cc58e69ae660e48ee1383edc7fb7e8a61b51677",
-                "reference": "7cc58e69ae660e48ee1383edc7fb7e8a61b51677",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.7.0"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*",
-                "fof/byobu": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20681"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-comment-slash",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Ignore Users",
-                    "category": "feature",
-                    "optional-dependencies": [
-                        "fof/byobu"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\IgnoreUsers\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sajjad Hashemian",
-                    "email": "wolaws@gmail.com"
-                },
-                {
-                    "name": "IanM",
-                    "homepage": "https://discuss.flarum.org/u/ianm"
-                }
-            ],
-            "description": "Allow users to ignore other users.",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20681",
-                "issues": "https://github.com/FriendsOfFlarum/ignore-users/issues",
-                "source": "https://github.com/FriendsOfFlarum/ignore-users"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2023-11-12T13:38:22+00:00"
         },
         {
             "name": "fof/impersonate",
