@@ -38,7 +38,18 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*"
+        "flarum/tags": "*",
+        "fof/best-answer": "*",
+        "fof/follow-tags": "*",
+        "fof/formatting": "*",
+        "fof/links": "^1.3",
+        "fof/oauth": "^1.7",
+        "fof/pages": "^1.0",
+        "fof/polls": "*",
+        "fof/sitemap": "^2.2",
+        "fof/upload": "*",
+        "fof/user-bio": "*",
+        "fof/user-directory": "*"
     },
     "config": {
         "preferred-install": "dist",

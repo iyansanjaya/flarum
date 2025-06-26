@@ -21,12 +21,12 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -67,6 +67,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             's9e\\SweetDOM\\' => 13,
             's9e\\RegexpBuilder\\' => 18,
         ),
+        'e' => 
+        array (
+            'enshrined\\svgSanitize\\' => 22,
+        ),
         'a' => 
         array (
             'axy\\sourcemap\\' => 14,
@@ -77,6 +81,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'W' => 
         array (
+            'Wohali\\OAuth2\\Client\\' => 21,
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
@@ -113,6 +118,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Staudenmeir\\EloquentEagerLimit\\' => 31,
+            'SoftCreatR\\MimeDetector\\' => 24,
         ),
         'R' => 
         array (
@@ -133,6 +139,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
+            'Omines\\OAuth2\\Client\\' => 21,
         ),
         'M' => 
         array (
@@ -144,6 +151,8 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'L' => 
         array (
+            'League\\OAuth2\\Client\\' => 21,
+            'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\Config\\' => 14,
@@ -190,6 +199,19 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'F' => 
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
+            'FoF\\UserDirectory\\' => 18,
+            'FoF\\UserBio\\' => 12,
+            'FoF\\Upload\\' => 11,
+            'FoF\\Sitemap\\' => 12,
+            'FoF\\Polls\\Migrations\\' => 21,
+            'FoF\\Polls\\' => 10,
+            'FoF\\Pages\\' => 10,
+            'FoF\\OAuth\\' => 10,
+            'FoF\\Links\\' => 10,
+            'FoF\\Formatting\\' => 15,
+            'FoF\\FollowTags\\' => 15,
+            'FoF\\Extend\\' => 11,
+            'FoF\\BestAnswer\\' => 15,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -251,6 +273,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/s9e/regexp-builder/src',
         ),
+        'enshrined\\svgSanitize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
+        ),
         'axy\\sourcemap\\' => 
         array (
             0 => __DIR__ . '/..' . '/sycho/sourcemap/src',
@@ -270,6 +296,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'axy\\backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/axy/backtrace/src',
+        ),
+        'Wohali\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wohali/oauth2-discord-new/src',
         ),
         'Whoops\\' => 
         array (
@@ -391,6 +421,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/staudenmeir/eloquent-eager-limit/src',
         ),
+        'SoftCreatR\\MimeDetector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -437,6 +471,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
+        'Omines\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -458,6 +496,17 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'MatthiasMullie\\Minify\\' => 
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
+        ),
+        'League\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/oauth2-google/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-github/src',
+            2 => __DIR__ . '/..' . '/league/oauth2-facebook/src',
+            3 => __DIR__ . '/..' . '/league/oauth2-client/src',
+        ),
+        'League\\OAuth1\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/oauth1-client/src',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -596,6 +645,58 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Franzl\\Middleware\\Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/franzl/whoops-middleware/src',
+        ),
+        'FoF\\UserDirectory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/user-directory/src',
+        ),
+        'FoF\\UserBio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/user-bio/src',
+        ),
+        'FoF\\Upload\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/upload/src',
+        ),
+        'FoF\\Sitemap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/sitemap/src',
+        ),
+        'FoF\\Polls\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/migrations',
+        ),
+        'FoF\\Polls\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/polls/src',
+        ),
+        'FoF\\Pages\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/pages/src',
+        ),
+        'FoF\\OAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/oauth/src',
+        ),
+        'FoF\\Links\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/links/src',
+        ),
+        'FoF\\Formatting\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/formatting/src',
+        ),
+        'FoF\\FollowTags\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/follow-tags/src',
+        ),
+        'FoF\\Extend\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/extend/src',
+        ),
+        'FoF\\BestAnswer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/best-answer/src',
         ),
         'Flarum\\Tags\\' => 
         array (
