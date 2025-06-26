@@ -1,0 +1,7 @@
+[2025-06-26 02:44:50] Flarum Installer.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "migrate" is not defined. in /Users/iyansanjaya/VSCODE/flarum/vendor/symfony/console/Application.php:720
+Stack trace:
+#0 /Users/iyansanjaya/VSCODE/flarum/vendor/symfony/console/Application.php(259): Symfony\Component\Console\Application->find('migrate')
+#1 /Users/iyansanjaya/VSCODE/flarum/vendor/symfony/console/Application.php(171): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/iyansanjaya/VSCODE/flarum/vendor/flarum/core/src/Console/Server.php(42): Symfony\Component\Console\Application->run()
+#3 /Users/iyansanjaya/VSCODE/flarum/flarum(24): Flarum\Console\Server->listen()
+#4 {main}  

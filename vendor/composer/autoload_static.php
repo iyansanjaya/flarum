@@ -122,6 +122,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'R' => 
         array (
+            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -202,16 +203,31 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
             'FoF\\Upload\\' => 11,
+            'FoF\\Terms\\' => 10,
+            'FoF\\Split\\' => 10,
+            'FoF\\SocialProfile\\' => 18,
             'FoF\\Sitemap\\' => 12,
+            'FoF\\ShareSocial\\' => 16,
+            'FoF\\Reactions\\' => 14,
+            'FoF\\ReCaptcha\\' => 14,
+            'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
             'FoF\\Pages\\' => 10,
             'FoF\\OAuth\\' => 10,
+            'FoF\\ModeratorNotes\\' => 19,
+            'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Links\\' => 10,
+            'FoF\\Impersonate\\' => 16,
+            'FoF\\Gamification\\' => 17,
             'FoF\\Formatting\\' => 15,
             'FoF\\FollowTags\\' => 15,
             'FoF\\Extend\\' => 11,
+            'FoF\\Drafts\\' => 11,
+            'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\BestAnswer\\' => 15,
+            'FoF\\BanIPs\\' => 11,
+            'FoF\\Analytics\\' => 14,
             'Flarum\\Tags\\' => 12,
             'Flarum\\Suspend\\' => 15,
             'Flarum\\Subscriptions\\' => 21,
@@ -424,6 +440,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'SoftCreatR\\MimeDetector\\' => 
         array (
             0 => __DIR__ . '/..' . '/softcreatr/php-mime-detector/src/SoftCreatR/MimeDetector',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -658,9 +678,37 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/upload/src',
         ),
+        'FoF\\Terms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/terms/src',
+        ),
+        'FoF\\Split\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/split/src',
+        ),
+        'FoF\\SocialProfile\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/socialprofile/src',
+        ),
         'FoF\\Sitemap\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/sitemap/src',
+        ),
+        'FoF\\ShareSocial\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/share-social/src',
+        ),
+        'FoF\\Reactions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/reactions/src',
+        ),
+        'FoF\\ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/recaptcha/src',
+        ),
+        'FoF\\ProfileImageCrop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
         ),
         'FoF\\Polls\\Migrations\\' => 
         array (
@@ -678,9 +726,25 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/oauth/src',
         ),
+        'FoF\\ModeratorNotes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/moderator-notes/src',
+        ),
+        'FoF\\MergeDiscussions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/merge-discussions/src',
+        ),
         'FoF\\Links\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/links/src',
+        ),
+        'FoF\\Impersonate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/impersonate/src',
+        ),
+        'FoF\\Gamification\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/gamification/src',
         ),
         'FoF\\Formatting\\' => 
         array (
@@ -694,9 +758,25 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/extend/src',
         ),
+        'FoF\\Drafts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/drafts/src',
+        ),
+        'FoF\\DefaultUserPreferences\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/default-user-preferences/src',
+        ),
         'FoF\\BestAnswer\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/best-answer/src',
+        ),
+        'FoF\\BanIPs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/ban-ips/src',
+        ),
+        'FoF\\Analytics\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/analytics/src',
         ),
         'Flarum\\Tags\\' => 
         array (

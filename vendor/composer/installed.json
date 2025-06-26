@@ -2689,6 +2689,185 @@
             "install-path": "../flarum/tags"
         },
         {
+            "name": "fof/analytics",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/analytics.git",
+                "reference": "d5484c204a3a11b890dce3778bb65c468c814a78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/analytics/zipball/d5484c204a3a11b890dce3778bb65c468c814a78",
+                "reference": "d5484c204a3a11b890dce3778bb65c468c814a78",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "flagrow/flarum-ext-analytics": "*"
+            },
+            "time": "2022-08-15T03:38:09+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/1983"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-chart-line",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Analytics",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Analytics\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel+flarum@klabbers.email",
+                    "homepage": "http://hyn.io"
+                },
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                },
+                {
+                    "name": "IanM",
+                    "homepage": "https://discuss.flarum.org/u/ianm"
+                }
+            ],
+            "description": "Tracks analytics using Google Analytics, Google Optimize/GTM and Matomo",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "analytics",
+                "extension",
+                "flarum",
+                "google-analytics",
+                "gtm",
+                "matomo",
+                "piwik"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/1983",
+                "issues": "https://github.com/FriendsOfFlarum/analytics/issues",
+                "source": "https://github.com/FriendsOfFlarum/analytics"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/analytics"
+        },
+        {
+            "name": "fof/ban-ips",
+            "version": "1.1.2",
+            "version_normalized": "1.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/ban-ips.git",
+                "reference": "d1933a9dfe9fc66ddbb7208b42ad6dc13b7edddb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/ban-ips/zipball/d1933a9dfe9fc66ddbb7208b42ad6dc13b7edddb",
+                "reference": "d1933a9dfe9fc66ddbb7208b42ad6dc13b7edddb",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.3"
+            },
+            "require-dev": {
+                "flarum/gdpr": "dev-main",
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2024-11-03T14:43:15+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20949"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-gavel",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Ban IPs",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/suspend",
+                        "flarum/flags",
+                        "flarum/tags",
+                        "flarum/approval",
+                        "flarum/gdpr"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\BanIPs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                },
+                {
+                    "name": "IanM",
+                    "homepage": "https://discuss.flarum.org/u/ianm",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Ban IP addresses from your forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20949",
+                "issues": "https://github.com/FriendsOfFlarum/ban-ips/issues",
+                "source": "https://github.com/FriendsOfFlarum/ban-ips"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/ban-ips"
+        },
+        {
             "name": "fof/best-answer",
             "version": "1.6.4",
             "version_normalized": "1.6.4.0",
@@ -2780,6 +2959,169 @@
                 }
             ],
             "install-path": "../fof/best-answer"
+        },
+        {
+            "name": "fof/default-user-preferences",
+            "version": "1.2.1",
+            "version_normalized": "1.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/default-user-preferences.git",
+                "reference": "f93221eeff22a72c7a9d7f040788b8941ba9f268"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/default-user-preferences/zipball/f93221eeff22a72c7a9d7f040788b8941ba9f268",
+                "reference": "f93221eeff22a72c7a9d7f040788b8941ba9f268",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.6.2"
+            },
+            "replace": {
+                "piotr-tokarczyk/flarum-user-default-preferences": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "time": "2023-11-12T14:41:07+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18607"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-reply-all",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Default User Preferences",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DefaultUserPreferences\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FoF Team",
+                    "email": "team@friendsofflarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Configure the default user preferences for new users joining your forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18607",
+                "issues": "https://github.com/FriendsOfFlarum/default-user-preferences/issues",
+                "source": "https://github.com/FriendsOfFlarum/default-user-preferences"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/default-user-preferences"
+        },
+        {
+            "name": "fof/drafts",
+            "version": "1.2.12",
+            "version_normalized": "1.2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/drafts.git",
+                "reference": "4f54df53d84bea012ff5c23fa53a7c5f524bb683"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/4f54df53d84bea012ff5c23fa53a7c5f524bb683",
+                "reference": "4f54df53d84bea012ff5c23fa53a7c5f524bb683",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.3"
+            },
+            "require-dev": {
+                "flarum/gdpr": "dev-main",
+                "flarum/phpstan": "*"
+            },
+            "time": "2024-11-03T15:06:38+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20957"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-edit",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Drafts",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "fof/byobu",
+                        "flarum/gdpr"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Drafts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FoF Team",
+                    "email": "team@friendsofflarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow users to create post and discussion drafts",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Friends of Flarum",
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20957",
+                "issues": "https://github.com/FriendsOfFlarum/drafts/issues",
+                "source": "https://github.com/FriendsOfFlarum/drafts"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/drafts"
         },
         {
             "name": "fof/extend",
@@ -3011,6 +3353,187 @@
             "install-path": "../fof/formatting"
         },
         {
+            "name": "fof/gamification",
+            "version": "1.6.8",
+            "version_normalized": "1.6.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/gamification.git",
+                "reference": "83f80ac28977ce1ee482575c4cce7774f4c33c77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/83f80ac28977ce1ee482575c4cce7774f4c33c77",
+                "reference": "83f80ac28977ce1ee482575c4cce7774f4c33c77",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^1.7",
+                "fof/extend": "^1.0.0"
+            },
+            "replace": {
+                "reflar/gamification": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "flarum/pusher": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2024-11-10T08:51:08+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20671"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-thumbs-up",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Gamification",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Gamification\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FoF Team",
+                    "email": "team@friendsofflarum.org",
+                    "homepage": "https://friendsofflarum.org"
+                }
+            ],
+            "description": "Upvotes and downvotes for your Flarum community",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Gamification",
+                "Settings",
+                "flarum",
+                "friendsofflarum",
+                "misc",
+                "points"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20671",
+                "issues": "https://github.com/FriendsOfFlarum/gamification/issues",
+                "source": "https://github.com/FriendsOfFlarum/gamification"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/gamification"
+        },
+        {
+            "name": "fof/impersonate",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/impersonate.git",
+                "reference": "6bf957b5e9a087ec30431633947865c8d5ad4f1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/impersonate/zipball/6bf957b5e9a087ec30431633947865c8d5ad4f1d",
+                "reference": "6bf957b5e9a087ec30431633947865c8d5ad4f1d",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.7"
+            },
+            "replace": {
+                "flagrow/impersonate": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "suggest": {
+                "fof/moderator-notes": "Allows audit logging when users are impersonated"
+            },
+            "time": "2024-10-22T08:39:25+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/9868"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-id-card",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Impersonate",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Impersonate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                },
+                {
+                    "name": "IanM",
+                    "email": "ian@blomstra.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Login as other users of your forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "extension",
+                "flarum",
+                "impersonate",
+                "login"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/9868",
+                "issues": "https://github.com/FriendsOfFlarum/impersonate/issues",
+                "source": "https://github.com/FriendsOfFlarum/impersonate"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/impersonate"
+        },
+        {
             "name": "fof/links",
             "version": "1.3.0",
             "version_normalized": "1.3.0.0",
@@ -3092,6 +3615,180 @@
                 }
             ],
             "install-path": "../fof/links"
+        },
+        {
+            "name": "fof/merge-discussions",
+            "version": "1.4.3",
+            "version_normalized": "1.4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/merge-discussions.git",
+                "reference": "8086e0828a243bb53df45eb111685f81188bb3f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/merge-discussions/zipball/8086e0828a243bb53df45eb111685f81188bb3f2",
+                "reference": "8086e0828a243bb53df45eb111685f81188bb3f2",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "time": "2025-05-20T10:17:31+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/19460"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-code-branch fa-flip-vertical",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Merge Discussions",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\MergeDiscussions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                },
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Merge two or more discussions into one",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/19460",
+                "issues": "https://github.com/FriendsOfFlarum/merge-discussions/issues",
+                "source": "https://github.com/FriendsOfFlarum/merge-discussions"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/merge-discussions"
+        },
+        {
+            "name": "fof/moderator-notes",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/moderator-notes.git",
+                "reference": "c6c7a5f69d11c0eb1a1d045a3e8be502236ec954"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/c6c7a5f69d11c0eb1a1d045a3e8be502236ec954",
+                "reference": "c6c7a5f69d11c0eb1a1d045a3e8be502236ec954",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.3.0"
+            },
+            "require-dev": {
+                "flarum/core": "*@dev",
+                "flarum/markdown": "*@dev",
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/impersonate": "*",
+                "symfony/var-dumper": "*"
+            },
+            "time": "2024-10-27T09:58:29+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22925"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-sticky-note",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Moderator Notes",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "fof/impersonate"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ModeratorNotes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@morland.me",
+                    "role": "Developer"
+                },
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create private notes for your forum users",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/22925",
+                "issues": "https://github.com/FriendsOfFlarum/moderator-notes/issues",
+                "source": "https://github.com/FriendsOfFlarum/moderator-notes"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/moderator-notes"
         },
         {
             "name": "fof/oauth",
@@ -3375,6 +4072,342 @@
             "install-path": "../fof/polls"
         },
         {
+            "name": "fof/profile-image-crop",
+            "version": "1.1.6",
+            "version_normalized": "1.1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/profile-image-crop.git",
+                "reference": "128b908b4b8c136908345df370c6e8adec5b7e63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/profile-image-crop/zipball/128b908b4b8c136908345df370c6e8adec5b7e63",
+                "reference": "128b908b4b8c136908345df370c6e8adec5b7e63",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.5.0"
+            },
+            "replace": {
+                "wiseclock/flarum-ext-profile-image-crop": "*"
+            },
+            "time": "2023-09-05T14:57:51+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18286"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-crop",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Profile Image Crop",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ProfileImageCrop\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow cropping when uploading profile picture",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18286",
+                "issues": "https://github.com/FriendsOfFlarum/profile-image-crop/issues",
+                "source": "https://github.com/FriendsOfFlarum/profile-image-crop"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/profile-image-crop"
+        },
+        {
+            "name": "fof/reactions",
+            "version": "1.4.1",
+            "version_normalized": "1.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/reactions.git",
+                "reference": "87a09add9aeae75cb2ae7eda29f5d74ad271c1c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/reactions/zipball/87a09add9aeae75cb2ae7eda29f5d74ad271c1c4",
+                "reference": "87a09add9aeae75cb2ae7eda29f5d74ad271c1c4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0",
+                "php": "^7.4 | ^8.0"
+            },
+            "replace": {
+                "reflar/reactions": "*"
+            },
+            "require-dev": {
+                "flarum/likes": "*",
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/gamification": "*"
+            },
+            "time": "2024-02-11T21:51:01+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20655"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "far fa-smile",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Reactions",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Reactions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+reflar@datitisev.me",
+                    "homepage": "https://datitisev.me",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Charlie K",
+                    "email": "issyrocks12@reflar.email",
+                    "homepage": "https://redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Reactions for Flarum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Settings",
+                "flarum",
+                "misc",
+                "reactions",
+                "reflar"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20655",
+                "issues": "https://github.com/friendsofflarum/reactions/issues",
+                "source": "https://github.com/friendsofflarum/reactions"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/reactions"
+        },
+        {
+            "name": "fof/recaptcha",
+            "version": "1.3.4",
+            "version_normalized": "1.3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/recaptcha.git",
+                "reference": "ab7eb4a4d13cf203e82306e1fa625d77919817bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/recaptcha/zipball/ab7eb4a4d13cf203e82306e1fa625d77919817bf",
+                "reference": "ab7eb4a4d13cf203e82306e1fa625d77919817bf",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.6.0",
+                "google/recaptcha": "^1.2"
+            },
+            "replace": {
+                "sijad/flarum-ext-recaptcha": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "time": "2024-02-24T18:06:43+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18399"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-robot",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF reCAPTCHA",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "fof/oauth"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ReCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Increase your forum's security with Google reCAPTCHA",
+            "homepage": "https://friendsofflarum.org/",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18399",
+                "issues": "https://github.com/FriendsOfFlarum/recaptcha/issues",
+                "source": "https://github.com/FriendsOfFlarum/recaptcha"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/recaptcha"
+        },
+        {
+            "name": "fof/share-social",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/share-social.git",
+                "reference": "8f17b5c7136119ef69951e9aab8cd4712855d3e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/share-social/zipball/8f17b5c7136119ef69951e9aab8cd4712855d3e4",
+                "reference": "8f17b5c7136119ef69951e9aab8cd4712855d3e4",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "avatar4eg/flarum-ext-share-social": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "time": "2024-02-02T19:26:27+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20401"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-share-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Share Social",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ShareSocial\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add a button to share discussions through social networks",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/20401",
+                "issues": "https://github.com/FriendsOfFlarum/share-social/issues",
+                "source": "https://github.com/FriendsOfFlarum/share-social"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/share-social"
+        },
+        {
             "name": "fof/sitemap",
             "version": "2.2.1",
             "version_normalized": "2.2.1.0",
@@ -3472,6 +4505,255 @@
                 }
             ],
             "install-path": "../fof/sitemap"
+        },
+        {
+            "name": "fof/socialprofile",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/socialprofile.git",
+                "reference": "18681e59a44d9a7b99251edf85c4b8dad93c71d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/socialprofile/zipball/18681e59a44d9a7b99251edf85c4b8dad93c71d2",
+                "reference": "18681e59a44d9a7b99251edf85c4b8dad93c71d2",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.3.1"
+            },
+            "replace": {
+                "davis/flarum-ext-socialprofile": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "time": "2025-04-06T15:14:17+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18775"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-globe",
+                        "color": "#ffff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Social Profile",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\SocialProfile\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add custom social media pages to your user profile",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18775",
+                "issues": "https://github.com/FriendsOfFlarum/socialprofile/issues",
+                "source": "https://github.com/FriendsOfFlarum/socialprofile"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/socialprofile"
+        },
+        {
+            "name": "fof/split",
+            "version": "1.1.1",
+            "version_normalized": "1.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/split.git",
+                "reference": "7a35a2924ed618160ea74b3972ccaa8a3e1f7ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/split/zipball/7a35a2924ed618160ea74b3972ccaa8a3e1f7ac0",
+                "reference": "7a35a2924ed618160ea74b3972ccaa8a3e1f7ac0",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "time": "2023-11-12T10:15:32+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/1903"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-code-branch",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Split",
+                    "category": "feature"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Split\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                }
+            ],
+            "description": "Separate posts from one discussion into its own, splits discussions.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum",
+                "split"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/1903",
+                "issues": "https://github.com/FriendsOfFlarum/split/issues",
+                "source": "https://github.com/FriendsOfFlarum/split"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/split"
+        },
+        {
+            "name": "fof/terms",
+            "version": "1.4.2",
+            "version_normalized": "1.4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/terms.git",
+                "reference": "e2d8b76465b78035bd5154e4f4f1ceac6cd0ec0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/terms/zipball/e2d8b76465b78035bd5154e4f4f1ceac6cd0ec0f",
+                "reference": "e2d8b76465b78035bd5154e4f4f1ceac6cd0ec0f",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.3"
+            },
+            "conflict": {
+                "reflar/user-management": "^0.1.0"
+            },
+            "replace": {
+                "flagrow/terms": "*"
+            },
+            "require-dev": {
+                "flarum/gdpr": "dev-main",
+                "flarum/phpstan": "*"
+            },
+            "time": "2024-12-09T10:06:42+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/11714"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-paperclip",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Terms",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/gdpr"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Terms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Ask users to accept terms of use before using the forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Policy",
+                "extension",
+                "flarum",
+                "terms",
+                "tos"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/11714",
+                "issues": "https://github.com/FriendsOfFlarum/terms/issues",
+                "source": "https://github.com/FriendsOfFlarum/terms"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/terms"
         },
         {
             "name": "fof/upload",
@@ -3810,6 +5092,61 @@
                 "source": "https://github.com/franzliedke/whoops-middleware/tree/2.0.0"
             },
             "install-path": "../franzl/whoops-middleware"
+        },
+        {
+            "name": "google/recaptcha",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "d59a801e98a4e9174814a6d71bbc268dff1202df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/d59a801e98a4e9174814a6d71bbc268dff1202df",
+                "reference": "d59a801e98a4e9174814a6d71bbc268dff1202df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^10"
+            },
+            "time": "2023-02-18T17:41:46+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
+            "install-path": "../google/recaptcha"
         },
         {
             "name": "guzzlehttp/guzzle",

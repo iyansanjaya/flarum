@@ -3,13 +3,19 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '6753ccac7d2ed83ebc5a555dc701a39c32cd84ff',
+        'reference' => '683e64d4d3f768ee453f81addb8f7a4092b7adf5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'avatar4eg/flarum-ext-share-social' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'axy/backtrace' => array(
             'pretty_version' => '2.0.0',
             'version' => '2.0.0.0',
@@ -45,6 +51,12 @@
             'install_path' => __DIR__ . '/../components/font-awesome',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'davis/flarum-ext-socialprofile' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
         ),
         'dflydev/dot-access-data' => array(
             'pretty_version' => 'v3.0.3',
@@ -163,7 +175,25 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'flagrow/flarum-ext-analytics' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'flagrow/impersonate' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'flagrow/sitemap' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'flagrow/terms' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '*',
@@ -247,7 +277,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '6753ccac7d2ed83ebc5a555dc701a39c32cd84ff',
+            'reference' => '683e64d4d3f768ee453f81addb8f7a4092b7adf5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -361,6 +391,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'fof/analytics' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => 'd5484c204a3a11b890dce3778bb65c468c814a78',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/analytics',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'fof/auth-discord' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -373,12 +412,39 @@
                 0 => '*',
             ),
         ),
+        'fof/ban-ips' => array(
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
+            'reference' => 'd1933a9dfe9fc66ddbb7208b42ad6dc13b7edddb',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/ban-ips',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'fof/best-answer' => array(
             'pretty_version' => '1.6.4',
             'version' => '1.6.4.0',
             'reference' => '4039e195e34c23645bb3f50bbe9bf8bce981cd8b',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/best-answer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/default-user-preferences' => array(
+            'pretty_version' => '1.2.1',
+            'version' => '1.2.1.0',
+            'reference' => 'f93221eeff22a72c7a9d7f040788b8941ba9f268',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/default-user-preferences',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/drafts' => array(
+            'pretty_version' => '1.2.12',
+            'version' => '1.2.12.0',
+            'reference' => '4f54df53d84bea012ff5c23fa53a7c5f524bb683',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/drafts',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -409,12 +475,48 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'fof/gamification' => array(
+            'pretty_version' => '1.6.8',
+            'version' => '1.6.8.0',
+            'reference' => '83f80ac28977ce1ee482575c4cce7774f4c33c77',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/gamification',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/impersonate' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '6bf957b5e9a087ec30431633947865c8d5ad4f1d',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/impersonate',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'fof/links' => array(
             'pretty_version' => '1.3.0',
             'version' => '1.3.0.0',
             'reference' => '80ee6577fcd7d5d49fe727729d30b3370c12ce5c',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/links',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/merge-discussions' => array(
+            'pretty_version' => '1.4.3',
+            'version' => '1.4.3.0',
+            'reference' => '8086e0828a243bb53df45eb111685f81188bb3f2',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/merge-discussions',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/moderator-notes' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => 'c6c7a5f69d11c0eb1a1d045a3e8be502236ec954',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/moderator-notes',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -445,12 +547,75 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'fof/profile-image-crop' => array(
+            'pretty_version' => '1.1.6',
+            'version' => '1.1.6.0',
+            'reference' => '128b908b4b8c136908345df370c6e8adec5b7e63',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/profile-image-crop',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/reactions' => array(
+            'pretty_version' => '1.4.1',
+            'version' => '1.4.1.0',
+            'reference' => '87a09add9aeae75cb2ae7eda29f5d74ad271c1c4',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/reactions',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/recaptcha' => array(
+            'pretty_version' => '1.3.4',
+            'version' => '1.3.4.0',
+            'reference' => 'ab7eb4a4d13cf203e82306e1fa625d77919817bf',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/recaptcha',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/share-social' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '8f17b5c7136119ef69951e9aab8cd4712855d3e4',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/share-social',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'fof/sitemap' => array(
             'pretty_version' => '2.2.1',
             'version' => '2.2.1.0',
             'reference' => '1f6d0891a132b0bfe2aca4cab3e5939224484908',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/sitemap',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/socialprofile' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '18681e59a44d9a7b99251edf85c4b8dad93c71d2',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/socialprofile',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/split' => array(
+            'pretty_version' => '1.1.1',
+            'version' => '1.1.1.0',
+            'reference' => '7a35a2924ed618160ea74b3972ccaa8a3e1f7ac0',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/split',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/terms' => array(
+            'pretty_version' => '1.4.2',
+            'version' => '1.4.2.0',
+            'reference' => 'e2d8b76465b78035bd5154e4f4f1ceac6cd0ec0f',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/terms',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -487,6 +652,15 @@
             'reference' => '71d75c5fff75587d6194a051d510a9eca0e3a047',
             'type' => 'library',
             'install_path' => __DIR__ . '/../franzl/whoops-middleware',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'google/recaptcha' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => 'd59a801e98a4e9174814a6d71bbc268dff1202df',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/recaptcha',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -994,6 +1168,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'piotr-tokarczyk/flarum-user-default-preferences' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'psr/clock' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -1169,6 +1349,18 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'reflar/gamification' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'reflar/reactions' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
         'rhumsaa/uuid' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1209,6 +1401,12 @@
             ),
         ),
         'sijad/flarum-ext-pages' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'sijad/flarum-ext-recaptcha' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '*',
@@ -1558,6 +1756,12 @@
             'install_path' => __DIR__ . '/../wikimedia/less.php',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'wiseclock/flarum-ext-profile-image-crop' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
         ),
         'wiwatsrt/flarum-ext-best-answer' => array(
             'dev_requirement' => false,

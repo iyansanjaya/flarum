@@ -1,0 +1,94 @@
+{
+    "name": "fof/gamification",
+    "description": "Upvotes and downvotes for your Flarum community",
+    "keywords": [
+        "flarum",
+        "friendsofflarum",
+        "misc",
+        "settings",
+        "points",
+        "gamification"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FoF Team",
+            "email": "team@friendsofflarum.org",
+            "homepage": "https://friendsofflarum.org"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/gamification/issues",
+        "source": "https://github.com/FriendsOfFlarum/gamification",
+        "forum": "https://discuss.flarum.org/d/20671"
+    },
+    "homepage": "https://friendsofflarum.org",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://opencollective.com/fof/donate"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.7",
+        "fof/extend": "^1.0.0",
+        "ext-json": "*"
+    },
+    "replace": {
+        "reflar/gamification": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Gamification\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "FoF Gamification",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-thumbs-up",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/20671"
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true,
+                "backendTesting": true
+            }
+        }
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache",
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis",
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+        "flarum/phpstan": "*",
+        "flarum/pusher": "*",
+        "flarum/testing": "^1.0.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FoF\\Gamification\\Tests\\": "tests/"
+        }
+    }
+}
