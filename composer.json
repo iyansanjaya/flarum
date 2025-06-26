@@ -76,6 +76,22 @@
         "fof/user-directory": "*",
         "fof/username-request": "*"
     },
+    "scripts": {
+        "post-autoload-dump": [
+            "Flarum\\Composer\\Installer::run"
+        ],
+        "post-install-cmd": [
+            "@post-autoload-dump",
+            "mkdir -p public/assets",
+            "chmod -R 777 public/assets",
+            "chmod -R 775 storage",
+            "chmod 664 composer.json",
+            "chmod 664 composer.lock"
+        ],
+        "post-update-cmd": [
+            "@post-autoload-dump"
+        ]
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
