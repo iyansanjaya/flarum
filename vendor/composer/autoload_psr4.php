@@ -120,7 +120,6 @@ return array(
     'Github\\' => array($vendorDir . '/knplabs/github-api/lib/Github'),
     'Franzl\\Middleware\\Whoops\\' => array($vendorDir . '/franzl/whoops-middleware/src'),
     'FoF\\Webhooks\\' => array($vendorDir . '/fof/webhooks/src'),
-    'FoF\\UserRequest\\' => array($vendorDir . '/fof/username-request/src'),
     'FoF\\UserDirectory\\' => array($vendorDir . '/fof/user-directory/src'),
     'FoF\\UserBio\\' => array($vendorDir . '/fof/user-bio/src'),
     'FoF\\Upload\\' => array($vendorDir . '/fof/upload/src'),

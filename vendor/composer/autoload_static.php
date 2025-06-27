@@ -231,7 +231,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             'Franzl\\Middleware\\Whoops\\' => 25,
             'FoF\\Webhooks\\' => 13,
-            'FoF\\UserRequest\\' => 16,
             'FoF\\UserDirectory\\' => 18,
             'FoF\\UserBio\\' => 12,
             'FoF\\Upload\\' => 11,
@@ -792,10 +791,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Webhooks\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/webhooks/src',
-        ),
-        'FoF\\UserRequest\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/username-request/src',
         ),
         'FoF\\UserDirectory\\' => 
         array (

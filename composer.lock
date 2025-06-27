@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d204d5de906d1f6e59d34d8655e75266",
+    "content-hash": "767bb668958bc03eadcc6e7138dd3990",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -6898,85 +6898,6 @@
                 }
             ],
             "time": "2025-02-14T18:55:28+00:00"
-        },
-        {
-            "name": "fof/username-request",
-            "version": "1.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/username-request.git",
-                "reference": "9dffee9e4946bf3dee94931b8af48d8fe9351f5b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/username-request/zipball/9dffee9e4946bf3dee94931b8af48d8fe9351f5b",
-                "reference": "9dffee9e4946bf3dee94931b8af48d8fe9351f5b",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.8.0"
-            },
-            "require-dev": {
-                "flarum/nicknames": "^1.8",
-                "flarum/phpstan": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20956"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-user-edit",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Username Request",
-                    "category": "feature",
-                    "optional-dependencies": [
-                        "flarum/nicknames"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\UserRequest\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FoF Team",
-                    "email": "team@friendsofflarum.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Allow users to request new usernames",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "Friends of Flarum",
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20956",
-                "issues": "https://github.com/FriendsOfFlarum/username-request/issues",
-                "source": "https://github.com/FriendsOfFlarum/username-request"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2023-12-20T10:35:11+00:00"
         },
         {
             "name": "fof/webhooks",
