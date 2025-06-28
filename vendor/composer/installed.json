@@ -1,6 +1,164 @@
 {
     "packages": [
         {
+            "name": "aws/aws-crt-php",
+            "version": "v1.2.7",
+            "version_normalized": "1.2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/awslabs/aws-crt-php.git",
+                "reference": "d71d9906c7bb63a28295447ba12e74723bd3730e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awslabs/aws-crt-php/zipball/d71d9906c7bb63a28295447ba12e74723bd3730e",
+                "reference": "d71d9906c7bb63a28295447ba12e74723bd3730e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35||^5.6.3||^9.5",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "ext-awscrt": "Make sure you install awscrt native extension to use any of the functionality."
+            },
+            "time": "2024-10-18T22:15:13+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "AWS SDK Common Runtime Team",
+                    "email": "aws-sdk-common-runtime@amazon.com"
+                }
+            ],
+            "description": "AWS Common Runtime for PHP",
+            "homepage": "https://github.com/awslabs/aws-crt-php",
+            "keywords": [
+                "amazon",
+                "aws",
+                "crt",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/awslabs/aws-crt-php/issues",
+                "source": "https://github.com/awslabs/aws-crt-php/tree/v1.2.7"
+            },
+            "install-path": "../aws/aws-crt-php"
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.337.3",
+            "version_normalized": "3.337.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "06dfc8f76423b49aaa181debd25bbdc724c346d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/06dfc8f76423b49aaa181debd25bbdc724c346d6",
+                "reference": "06dfc8f76423b49aaa181debd25bbdc724c346d6",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-crt-php": "^1.2.3",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
+                "guzzlehttp/promises": "^1.4.0 || ^2.0",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
+                "mtdowling/jmespath.php": "^2.6",
+                "php": ">=7.2.5",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "andrewsville/php-token-reflection": "^1.4",
+                "aws/aws-php-sns-message-validator": "~1.0",
+                "behat/behat": "~3.0",
+                "composer/composer": "^1.10.22",
+                "dms/phpunit-arraysubset-asserts": "^0.4.0",
+                "doctrine/cache": "~1.4",
+                "ext-dom": "*",
+                "ext-openssl": "*",
+                "ext-pcntl": "*",
+                "ext-sockets": "*",
+                "nette/neon": "^2.3",
+                "paragonie/random_compat": ">= 2",
+                "phpunit/phpunit": "^5.6.3 || ^8.5 || ^9.5",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "psr/simple-cache": "^1.0 || ^2.0 || ^3.0",
+                "sebastian/comparator": "^1.2.3 || ^4.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "suggest": {
+                "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
+                "doctrine/cache": "To use the DoctrineCacheAdapter",
+                "ext-curl": "To send requests using cURL",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+                "ext-sockets": "To use client-side monitoring"
+            },
+            "time": "2025-01-21T19:10:05+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Aws\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+            "homepage": "http://aws.amazon.com/sdkforphp",
+            "keywords": [
+                "amazon",
+                "aws",
+                "cloud",
+                "dynamodb",
+                "ec2",
+                "glacier",
+                "s3",
+                "sdk"
+            ],
+            "support": {
+                "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
+                "issues": "https://github.com/aws/aws-sdk-php/issues",
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.337.3"
+            },
+            "install-path": "../aws/aws-sdk-php"
+        },
+        {
             "name": "axy/backtrace",
             "version": "2.0.0",
             "version_normalized": "2.0.0.0",
@@ -3416,98 +3574,6 @@
             "install-path": "../fof/best-answer"
         },
         {
-            "name": "fof/cookie-consent",
-            "version": "1.1.3",
-            "version_normalized": "1.1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/cookie-consent.git",
-                "reference": "05ba22fa548f37add7c327f0be3c20e85efdfcf2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/cookie-consent/zipball/05ba22fa548f37add7c327f0be3c20e85efdfcf2",
-                "reference": "05ba22fa548f37add7c327f0be3c20e85efdfcf2",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "reflar/cookie-consent": "*"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*"
-            },
-            "time": "2024-02-15T08:44:16+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/10395"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-cookie",
-                        "color": "#FFF",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Cookie Consent",
-                    "category": "feature"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "FoF\\CookieConsent\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "ProfileSlayer",
-                    "email": "profileslayer@gmail.com"
-                },
-                {
-                    "name": "IanM",
-                    "homepage": "https://discuss.flarum.org/u/ianm"
-                },
-                {
-                    "name": "Katos",
-                    "homepage": "https://discuss.flarum.org/u/Katos"
-                }
-            ],
-            "description": "Customizable cookie consent notice",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "consent",
-                "cookie",
-                "customizable",
-                "extension",
-                "flarum",
-                "partialdev"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/10395",
-                "issues": "https://github.com/friendsofflarum/cookie-consent/issues",
-                "source": "https://github.com/friendsofflarum/cookie-consent"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "install-path": "../fof/cookie-consent"
-        },
-        {
             "name": "fof/custom-footer",
             "version": "1.1.2",
             "version_normalized": "1.1.2.0",
@@ -3830,181 +3896,6 @@
                 }
             ],
             "install-path": "../fof/direct-links"
-        },
-        {
-            "name": "fof/discussion-language",
-            "version": "1.3.6",
-            "version_normalized": "1.3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/discussion-language.git",
-                "reference": "27c829d9df077f1ce4c32d6b94c5ea17d7d6d596"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-language/zipball/27c829d9df077f1ce4c32d6b94c5ea17d7d6d596",
-                "reference": "27c829d9df077f1ce4c32d6b94c5ea17d7d6d596",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.8.3",
-                "flarum/tags": "*",
-                "ianm/iso-639": "^1.0",
-                "league/csv": "^9.7",
-                "rinvex/countries": "^6.1.2 || ^7.0.1 || ^8.1.0"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*",
-                "flarum/sticky": "*",
-                "flarum/testing": "^1.0.0",
-                "fof/byobu": "*",
-                "fof/follow-tags": "*"
-            },
-            "time": "2025-02-12T13:53:45+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/23702"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true,
-                        "backendTesting": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-language",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Discussion Language",
-                    "category": "feature",
-                    "optional-dependencies": [
-                        "fof/byobu",
-                        "fof/follow-tags",
-                        "flarum/sticky"
-                    ]
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "FoF\\DiscussionLanguage\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martin",
-                    "email": "me+fof@datitisev.me",
-                    "role": "Developer"
-                },
-                {
-                    "name": "IanM",
-                    "email": "ian@flarum.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Specify the language a discussion is written in & sort by language",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/23702",
-                "issues": "https://github.com/FriendsOfFlarum/discussion-language/issues",
-                "source": "https://github.com/FriendsOfFlarum/discussion-language"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "install-path": "../fof/discussion-language"
-        },
-        {
-            "name": "fof/discussion-thumbnail",
-            "version": "1.1.3",
-            "version_normalized": "1.1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/discussion-thumbnail.git",
-                "reference": "0242f3f5b7c2e81c1939803a5350a2b9652c29a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/discussion-thumbnail/zipball/0242f3f5b7c2e81c1939803a5350a2b9652c29a4",
-                "reference": "0242f3f5b7c2e81c1939803a5350a2b9652c29a4",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*"
-            },
-            "time": "2023-11-12T14:21:20+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/22231"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-image",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Discussion Thumbnail",
-                    "category": "feature"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "FoF\\DiscussionThumbnail\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martin",
-                    "email": "me+fof@datitisev.me",
-                    "homepage": "https://datitisev.me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Replace author avatars with the first image in a discussion's starting post",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum",
-                "friendsofflarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/22231",
-                "issues": "https://github.com/FriendsOfFlarum/discussion-thumbnail/issues",
-                "source": "https://github.com/FriendsOfFlarum/discussion-thumbnail"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "install-path": "../fof/discussion-thumbnail"
         },
         {
             "name": "fof/discussion-views",
@@ -5697,96 +5588,6 @@
             "install-path": "../fof/pages"
         },
         {
-            "name": "fof/passport",
-            "version": "1.1.1",
-            "version_normalized": "1.1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/passport.git",
-                "reference": "ae442f5d1d4f8dcf368ce1a8c0864868c0c83718"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/passport/zipball/ae442f5d1d4f8dcf368ce1a8c0864868c0c83718",
-                "reference": "ae442f5d1d4f8dcf368ce1a8c0864868c0c83718",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0",
-                "league/oauth2-client": "^2.3.0"
-            },
-            "replace": {
-                "flagrow/passport": "*"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*"
-            },
-            "time": "2023-11-12T12:46:23+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/5203"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-key",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Passport",
-                    "category": "feature"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Passport\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel+flarum@klabbers.email",
-                    "homepage": "https://hyn.me/"
-                },
-                {
-                    "name": "Clark Winkelmann",
-                    "email": "clark.winkelmann@gmail.com",
-                    "homepage": "https://clarkwinkelmann.com/"
-                }
-            ],
-            "description": "The OAuth2 (and Laravel passport) compatible oauth extension",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum",
-                "league",
-                "oauth",
-                "oauth2",
-                "passport"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/5203",
-                "issues": "https://github.com/FriendsOfFlarum/passport/issues",
-                "source": "https://github.com/FriendsOfFlarum/passport"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "install-path": "../fof/passport"
-        },
-        {
             "name": "fof/polls",
             "version": "2.2.14",
             "version_normalized": "2.2.14.0",
@@ -6202,70 +6003,6 @@
                 }
             ],
             "install-path": "../fof/reactions"
-        },
-        {
-            "name": "fof/realtimelogin",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/realtimelogin.git",
-                "reference": "7c02cb82aaf18d5d719cfc92f7709071ba46a3b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/realtimelogin/zipball/7c02cb82aaf18d5d719cfc92f7709071ba46a3b4",
-                "reference": "7c02cb82aaf18d5d719cfc92f7709071ba46a3b4",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.3"
-            },
-            "time": "2023-08-21T20:24:52+00:00",
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-sign-in-alt",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Real Time Login",
-                    "category": "feature"
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charlie Kern",
-                    "email": "charlie.k@redevs.org",
-                    "homepage": "https://redevs.org"
-                }
-            ],
-            "description": "Makes logins update in real time",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "Friends of Flarum",
-                "extension",
-                "flarum",
-                "realtime"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/23220",
-                "issues": "https://github.com/friendsofflarum/realtimelogin/issues",
-                "source": "https://github.com/friendsofflarum/realtimelogin"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "install-path": "../fof/realtimelogin"
         },
         {
             "name": "fof/secure-https",
@@ -7670,56 +7407,6 @@
                 "source": "https://github.com/mtibben/html2text/tree/4.3.2"
             },
             "install-path": "../html2text/html2text"
-        },
-        {
-            "name": "ianm/iso-639",
-            "version": "1.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imorland/php-iso-639.git",
-                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imorland/php-iso-639/zipball/1dff6806fcb714ff62e3d20efea21d92383d5a6d",
-                "reference": "1dff6806fcb714ff62e3d20efea21d92383d5a6d",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
-            },
-            "time": "2020-12-24T19:20:38+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "IanM\\ISO639\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Muhammad Zamroni",
-                    "email": "halo@matriphe.com"
-                }
-            ],
-            "description": "PHP library to convert ISO-639-1 code to language name.",
-            "keywords": [
-                "639",
-                "iso",
-                "iso-639",
-                "lang",
-                "language",
-                "laravel"
-            ],
-            "support": {
-                "source": "https://github.com/imorland/php-iso-639/tree/1.0"
-            },
-            "install-path": "../ianm/iso-639"
         },
         {
             "name": "illuminate/bus",
@@ -9794,100 +9481,6 @@
             "install-path": "../league/config"
         },
         {
-            "name": "league/csv",
-            "version": "9.24.1",
-            "version_normalized": "9.24.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/csv.git",
-                "reference": "e0221a3f16aa2a823047d59fab5809d552e29bc8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/e0221a3f16aa2a823047d59fab5809d552e29bc8",
-                "reference": "e0221a3f16aa2a823047d59fab5809d552e29bc8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^8.1.2"
-            },
-            "require-dev": {
-                "ext-dom": "*",
-                "ext-xdebug": "*",
-                "friendsofphp/php-cs-fixer": "^3.75.0",
-                "phpbench/phpbench": "^1.4.1",
-                "phpstan/phpstan": "^1.12.27",
-                "phpstan/phpstan-deprecation-rules": "^1.2.1",
-                "phpstan/phpstan-phpunit": "^1.4.2",
-                "phpstan/phpstan-strict-rules": "^1.6.2",
-                "phpunit/phpunit": "^10.5.16 || ^11.5.22",
-                "symfony/var-dumper": "^6.4.8 || ^7.3.0"
-            },
-            "suggest": {
-                "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
-                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters",
-                "ext-mbstring": "Needed to ease transcoding CSV using mb stream filters",
-                "ext-mysqli": "Requiered to use the package with the MySQLi extension",
-                "ext-pdo": "Required to use the package with the PDO extension",
-                "ext-pgsql": "Requiered to use the package with the PgSQL extension",
-                "ext-sqlite3": "Required to use the package with the SQLite3 extension"
-            },
-            "time": "2025-06-25T14:53:51+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "9.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
-                "psr-4": {
-                    "League\\Csv\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://github.com/nyamsprod/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "CSV data manipulation made easy in PHP",
-            "homepage": "https://csv.thephpleague.com",
-            "keywords": [
-                "convert",
-                "csv",
-                "export",
-                "filter",
-                "import",
-                "read",
-                "transform",
-                "write"
-            ],
-            "support": {
-                "docs": "https://csv.thephpleague.com",
-                "issues": "https://github.com/thephpleague/csv/issues",
-                "rss": "https://github.com/thephpleague/csv/releases.atom",
-                "source": "https://github.com/thephpleague/csv"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "install-path": "../league/csv"
-        },
-        {
             "name": "league/flysystem",
             "version": "1.1.10",
             "version_normalized": "1.1.10.0",
@@ -9983,6 +9576,74 @@
                 }
             ],
             "install-path": "../league/flysystem"
+        },
+        {
+            "name": "league/flysystem-aws-s3-v3",
+            "version": "1.0.30",
+            "version_normalized": "1.0.30.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
+                "reference": "af286f291ebab6877bac0c359c6c2cb017eb061d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/af286f291ebab6877bac0c359c6c2cb017eb061d",
+                "reference": "af286f291ebab6877bac0c359c6c2cb017eb061d",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "^3.20.0",
+                "league/flysystem": "^1.0.40",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.0.0"
+            },
+            "time": "2022-07-02T13:51:38+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\AwsS3v3\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Flysystem adapter for the AWS S3 SDK v3.x",
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem-aws-s3-v3/issues",
+                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/1.0.30"
+            },
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "../league/flysystem-aws-s3-v3"
         },
         {
             "name": "league/mime-type-detection",
@@ -10895,6 +10556,75 @@
                 }
             ],
             "install-path": "../monolog/monolog"
+        },
+        {
+            "name": "mtdowling/jmespath.php",
+            "version": "2.8.0",
+            "version_normalized": "2.8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmespath/jmespath.php.git",
+                "reference": "a2a865e05d5f420b50cc2f85bb78d565db12a6bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/a2a865e05d5f420b50cc2f85bb78d565db12a6bc",
+                "reference": "a2a865e05d5f420b50cc2f85bb78d565db12a6bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "require-dev": {
+                "composer/xdebug-handler": "^3.0.3",
+                "phpunit/phpunit": "^8.5.33"
+            },
+            "time": "2024-09-04T18:46:31+00:00",
+            "bin": [
+                "bin/jp.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/JmesPath.php"
+                ],
+                "psr-4": {
+                    "JmesPath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Declaratively specify how to extract elements from a JSON document",
+            "keywords": [
+                "json",
+                "jsonpath"
+            ],
+            "support": {
+                "issues": "https://github.com/jmespath/jmespath.php/issues",
+                "source": "https://github.com/jmespath/jmespath.php/tree/2.8.0"
+            },
+            "install-path": "../mtdowling/jmespath.php"
         },
         {
             "name": "nesbot/carbon",
@@ -12696,92 +12426,6 @@
                 }
             ],
             "install-path": "../ramsey/uuid"
-        },
-        {
-            "name": "rinvex/countries",
-            "version": "v8.1.2",
-            "version_normalized": "8.1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rinvex/countries.git",
-                "reference": "b012697307453e7d9d2df25bd385904b3e2e9baf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/countries/zipball/b012697307453e7d9d2df25bd385904b3e2e9baf",
-                "reference": "b012697307453e7d9d2df25bd385904b3e2e9baf",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0.0"
-            },
-            "require-dev": {
-                "codedungeon/phpunit-result-printer": "^0.31.0",
-                "phpunit/phpunit": "^9.5.0"
-            },
-            "time": "2022-12-29T20:30:43+00:00",
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Rinvex\\Country\\Providers\\CountryServiceProvider"
-                    ]
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Rinvex\\Country\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rinvex LLC",
-                    "email": "help@rinvex.com",
-                    "homepage": "https://rinvex.com"
-                },
-                {
-                    "name": "Abdelrahman Omran",
-                    "email": "me@omranic.com",
-                    "homepage": "https://omranic.com",
-                    "role": "Project Lead"
-                },
-                {
-                    "name": "The Generous PHP Community",
-                    "homepage": "https://github.com/rinvex/countries/contributors"
-                }
-            ],
-            "description": "Rinvex Countries is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.",
-            "homepage": "https://rinvex.com",
-            "keywords": [
-                "Flexible",
-                "Simple",
-                "countries",
-                "country",
-                "currencies",
-                "demonym",
-                "dialling",
-                "emoji",
-                "flags",
-                "geographic",
-                "languages",
-                "rinvex",
-                "svg"
-            ],
-            "support": {
-                "docs": "https://github.com/rinvex/countries/blob/master/README.md",
-                "email": "help@rinvex.com",
-                "issues": "https://github.com/rinvex/countries/issues",
-                "source": "https://github.com/rinvex/countries"
-            },
-            "install-path": "../rinvex/countries"
         },
         {
             "name": "s9e/regexp-builder",

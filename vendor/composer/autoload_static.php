@@ -55,9 +55,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '84245cb95409c51c4ae97f8e59da883a' => __DIR__ . '/..' . '/flarum/core/src/helpers.php',
         '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
+        'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
+        '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
         '246744580d27c90629e59154e0a2e42b' => __DIR__ . '/..' . '/charescape/serialize-closure/functions.php',
-        '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
-        '3c3a02bc9945aa3571024986c07a1e55' => __DIR__ . '/..' . '/rinvex/countries/src/helpers.php',
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
@@ -135,7 +135,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'R' => 
         array (
-            'Rinvex\\Country\\' => 15,
             'Reflar\\Webhooks\\' => 16,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
@@ -170,8 +169,8 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'League\\OAuth2\\Client\\' => 21,
             'League\\OAuth1\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
+            'League\\Flysystem\\AwsS3v3\\' => 25,
             'League\\Flysystem\\' => 17,
-            'League\\Csv\\' => 11,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
             'Laravel\\SerializableClosure\\' => 28,
@@ -182,6 +181,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         ),
         'J' => 
         array (
+            'JmesPath\\' => 9,
             'Jenssegers\\Agent\\' => 17,
             'Jaybizzle\\CrawlerDetect\\' => 24,
         ),
@@ -206,7 +206,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'Illuminate\\Config\\' => 18,
             'Illuminate\\Cache\\' => 17,
             'Illuminate\\Bus\\' => 15,
-            'IanM\\ISO639\\' => 12,
         ),
         'H' => 
         array (
@@ -247,7 +246,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
             'FoF\\Polls\\' => 10,
-            'FoF\\Passport\\' => 13,
             'FoF\\Pages\\' => 10,
             'FoF\\OAuth\\' => 10,
             'FoF\\ModeratorNotes\\' => 19,
@@ -268,13 +266,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\Doorman\\' => 12,
             'FoF\\DisposableEmails\\' => 21,
             'FoF\\DiscussionViews\\' => 20,
-            'FoF\\DiscussionThumbnail\\' => 24,
-            'FoF\\DiscussionLanguage\\' => 23,
             'FoF\\DirectLinks\\' => 16,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
             'FoF\\CustomFooter\\' => 17,
-            'FoF\\CookieConsent\\' => 18,
             'FoF\\BestAnswer\\' => 15,
             'FoF\\BanIPs\\' => 11,
             'FoF\\BBCodeTabs\\' => 15,
@@ -323,6 +318,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+        ),
+        'A' => 
+        array (
+            'Aws\\' => 4,
         ),
     );
 
@@ -507,10 +506,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/ssnepenthe/color-utils/src',
         ),
-        'Rinvex\\Country\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rinvex/countries/src',
-        ),
         'Reflar\\Webhooks\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/webhooks/src/Legacy',
@@ -606,13 +601,13 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
         ),
+        'League\\Flysystem\\AwsS3v3\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem-aws-s3-v3/src',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
-        ),
-        'League\\Csv\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/csv/src',
         ),
         'League\\Config\\' => 
         array (
@@ -641,6 +636,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Laminas\\Diactoros\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
+        ),
+        'JmesPath\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
         ),
         'Jenssegers\\Agent\\' => 
         array (
@@ -727,10 +726,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'Illuminate\\Bus\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/bus',
-        ),
-        'IanM\\ISO639\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ianm/iso-639/src',
         ),
         'Http\\Promise\\' => 
         array (
@@ -856,10 +851,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/polls/src',
         ),
-        'FoF\\Passport\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/passport/src',
-        ),
         'FoF\\Pages\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/pages/src',
@@ -940,14 +931,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/discussion-views/src',
         ),
-        'FoF\\DiscussionThumbnail\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/discussion-thumbnail/src',
-        ),
-        'FoF\\DiscussionLanguage\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/discussion-language/src',
-        ),
         'FoF\\DirectLinks\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/direct-links/src',
@@ -963,10 +946,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\CustomFooter\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/custom-footer/src',
-        ),
-        'FoF\\CookieConsent\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/cookie-consent/src',
         ),
         'FoF\\BestAnswer\\' => 
         array (
@@ -1112,6 +1091,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Aws\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -1132,6 +1115,29 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
     );
 
     public static $classMap = array (
+        'AWS\\CRT\\Auth\\AwsCredentials' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/AwsCredentials.php',
+        'AWS\\CRT\\Auth\\CredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/CredentialsProvider.php',
+        'AWS\\CRT\\Auth\\Signable' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signable.php',
+        'AWS\\CRT\\Auth\\SignatureType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignatureType.php',
+        'AWS\\CRT\\Auth\\SignedBodyHeaderType' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SignedBodyHeaderType.php',
+        'AWS\\CRT\\Auth\\Signing' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/Signing.php',
+        'AWS\\CRT\\Auth\\SigningAlgorithm' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningAlgorithm.php',
+        'AWS\\CRT\\Auth\\SigningConfigAWS' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningConfigAWS.php',
+        'AWS\\CRT\\Auth\\SigningResult' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/SigningResult.php',
+        'AWS\\CRT\\Auth\\StaticCredentialsProvider' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Auth/StaticCredentialsProvider.php',
+        'AWS\\CRT\\CRT' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/CRT.php',
+        'AWS\\CRT\\HTTP\\Headers' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Headers.php',
+        'AWS\\CRT\\HTTP\\Message' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Message.php',
+        'AWS\\CRT\\HTTP\\Request' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Request.php',
+        'AWS\\CRT\\HTTP\\Response' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/HTTP/Response.php',
+        'AWS\\CRT\\IO\\EventLoopGroup' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/EventLoopGroup.php',
+        'AWS\\CRT\\IO\\InputStream' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/IO/InputStream.php',
+        'AWS\\CRT\\Internal\\Encoding' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Encoding.php',
+        'AWS\\CRT\\Internal\\Extension' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Internal/Extension.php',
+        'AWS\\CRT\\Log' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Log.php',
+        'AWS\\CRT\\NativeResource' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/NativeResource.php',
+        'AWS\\CRT\\OptionValue' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
+        'AWS\\CRT\\Options' => __DIR__ . '/..' . '/aws/aws-crt-php/src/AWS/CRT/Options.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
