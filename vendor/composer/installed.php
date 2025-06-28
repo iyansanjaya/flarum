@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'd78e88a20b11add0c71ba8ff3904950c74c207d2',
+        'reference' => 'e7e1fb01eb2e3c6608a85cd54f4c7148bb9b08cc',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -15,24 +15,6 @@
             'replaced' => array(
                 0 => '*',
             ),
-        ),
-        'aws/aws-crt-php' => array(
-            'pretty_version' => 'v1.2.7',
-            'version' => '1.2.7.0',
-            'reference' => 'd71d9906c7bb63a28295447ba12e74723bd3730e',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../aws/aws-crt-php',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'aws/aws-sdk-php' => array(
-            'pretty_version' => '3.337.3',
-            'version' => '3.337.3.0',
-            'reference' => '06dfc8f76423b49aaa181debd25bbdc724c346d6',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../aws/aws-sdk-php',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'axy/backtrace' => array(
             'pretty_version' => '2.0.0',
@@ -190,15 +172,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'enshrined/svg-sanitize' => array(
-            'pretty_version' => '0.21.0',
-            'version' => '0.21.0.0',
-            'reference' => '5e477468fac5c5ce933dce53af3e8e4e58dcccc9',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../enshrined/svg-sanitize',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'fgribreau/mailchecker' => array(
             'pretty_version' => 'v4.1.19',
             'version' => '4.1.19.0',
@@ -269,12 +242,6 @@
             ),
         ),
         'flagrow/terms' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
-        ),
-        'flagrow/upload' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '*',
@@ -352,7 +319,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'd78e88a20b11add0c71ba8ff3904950c74c207d2',
+            'reference' => 'e7e1fb01eb2e3c6608a85cd54f4c7148bb9b08cc',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -883,15 +850,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fof/upload' => array(
-            'pretty_version' => '1.8.3',
-            'version' => '1.8.3.0',
-            'reference' => '17ed7e12172b549917d79ee8edc5826c197587bd',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/upload',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'fof/user-bio' => array(
             'pretty_version' => '1.4.2',
             'version' => '1.4.2.0',
@@ -1252,15 +1210,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'league/flysystem-aws-s3-v3' => array(
-            'pretty_version' => '1.0.30',
-            'version' => '1.0.30.0',
-            'reference' => 'af286f291ebab6877bac0c359c6c2cb017eb061d',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../league/flysystem-aws-s3-v3',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'league/mime-type-detection' => array(
             'pretty_version' => '1.16.0',
             'version' => '1.16.0.0',
@@ -1404,15 +1353,6 @@
             'replaced' => array(
                 0 => '^1.0',
             ),
-        ),
-        'mtdowling/jmespath.php' => array(
-            'pretty_version' => '2.8.0',
-            'version' => '2.8.0.0',
-            'reference' => 'a2a865e05d5f420b50cc2f85bb78d565db12a6bc',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../mtdowling/jmespath.php',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'nesbot/carbon' => array(
             'pretty_version' => '2.72.5',
@@ -1842,15 +1782,6 @@
             'replaced' => array(
                 0 => '*',
             ),
-        ),
-        'softcreatr/php-mime-detector' => array(
-            'pretty_version' => '4.0.0',
-            'version' => '4.0.0.0',
-            'reference' => 'ae204590de58cc4655c8fbf9a2dfbcbb21dae4fe',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../softcreatr/php-mime-detector',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'ssnepenthe/color-utils' => array(
             'pretty_version' => '0.4.2',
