@@ -137,6 +137,7 @@ return array(
     'FoF\\Polls\\' => array($vendorDir . '/fof/polls/src'),
     'FoF\\Pages\\' => array($vendorDir . '/fof/pages/src'),
     'FoF\\OAuth\\' => array($vendorDir . '/fof/oauth/src'),
+    'FoF\\NightMode\\' => array($vendorDir . '/fof/nightmode/src'),
     'FoF\\ModeratorNotes\\' => array($vendorDir . '/fof/moderator-notes/src'),
     'FoF\\MergeDiscussions\\' => array($vendorDir . '/fof/merge-discussions/src'),
     'FoF\\Mason\\' => array($vendorDir . '/fof/mason/src'),

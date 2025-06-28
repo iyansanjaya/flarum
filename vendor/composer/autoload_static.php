@@ -61,6 +61,9 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         '41726e7bf2a6c8c479b4598afabcba5a' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/colors.php',
         '958eb7d15725dcb21015002795ed092f' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/helpers.php',
         '4ea368213928f2a61682e096b10ce358' => __DIR__ . '/..' . '/ssnepenthe/color-utils/inc/transformations.php',
+        '2a1113d34562ecc8c338eb5d2958a97a' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Forum/ValidateCustomLess.php',
+        'd7a2467b87902a3ab793df7784bc6b7f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/Assets.php',
+        '1cf00d7bbe38b83167217839a255780f' => __DIR__ . '/..' . '/fof/nightmode/src/Overrides/Frontend/RecompileFrontendAssets.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -248,6 +251,7 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\Polls\\' => 10,
             'FoF\\Pages\\' => 10,
             'FoF\\OAuth\\' => 10,
+            'FoF\\NightMode\\' => 14,
             'FoF\\ModeratorNotes\\' => 19,
             'FoF\\MergeDiscussions\\' => 21,
             'FoF\\Mason\\' => 10,
@@ -858,6 +862,10 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\OAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/oauth/src',
+        ),
+        'FoF\\NightMode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fof/nightmode/src',
         ),
         'FoF\\ModeratorNotes\\' => 
         array (

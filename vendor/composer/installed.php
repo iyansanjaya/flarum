@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '18646804af27f62a97bfc3e2fed63d2f2bc92037',
+        'reference' => 'd78e88a20b11add0c71ba8ff3904950c74c207d2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -352,7 +352,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '18646804af27f62a97bfc3e2fed63d2f2bc92037',
+            'reference' => 'd78e88a20b11add0c71ba8ff3904950c74c207d2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -733,6 +733,15 @@
             'reference' => 'c6c7a5f69d11c0eb1a1d045a3e8be502236ec954',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/moderator-notes',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'fof/nightmode' => array(
+            'pretty_version' => '1.6.0',
+            'version' => '1.6.0.0',
+            'reference' => 'b65b1b4d092502a9e3801eb8d717ddd1f0f39d7a',
+            'type' => 'flarum-extension',
+            'install_path' => __DIR__ . '/../fof/nightmode',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -1748,6 +1757,12 @@
             ),
         ),
         'reflar/gamification' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'reflar/nightmode' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '*',

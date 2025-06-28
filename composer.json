@@ -66,6 +66,7 @@
         "fof/mason": "^1.2",
         "fof/merge-discussions": "*",
         "fof/moderator-notes": "*",
+        "fof/nightmode": "*",
         "fof/oauth": "^1.7",
         "fof/pages": "^1.0",
         "fof/polls": "*",

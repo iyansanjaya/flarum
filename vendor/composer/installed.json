@@ -5390,6 +5390,106 @@
             "install-path": "../fof/moderator-notes"
         },
         {
+            "name": "fof/nightmode",
+            "version": "1.6.0",
+            "version_normalized": "1.6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/nightmode.git",
+                "reference": "b65b1b4d092502a9e3801eb8d717ddd1f0f39d7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/nightmode/zipball/b65b1b4d092502a9e3801eb8d717ddd1f0f39d7a",
+                "reference": "b65b1b4d092502a9e3801eb8d717ddd1f0f39d7a",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.7.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "replace": {
+                "reflar/nightmode": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*",
+                "fof/default-user-preferences": "*"
+            },
+            "time": "2024-10-19T10:06:15+00:00",
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/21492"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "far fa-moon",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Night Mode",
+                    "category": "feature"
+                },
+                "optional-dependencies": [
+                    "fof/default-user-preferences"
+                ]
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/Overrides/Forum/ValidateCustomLess.php",
+                    "src/Overrides/Frontend/Assets.php",
+                    "src/Overrides/Frontend/RecompileFrontendAssets.php"
+                ],
+                "psr-4": {
+                    "FoF\\NightMode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lopez",
+                    "email": "Lopez.T.Christian@gmail.com"
+                },
+                {
+                    "name": "David Sevilla Martin",
+                    "homepage": "https://discuss.flarum.org/u/datitisev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add a Night Mode option for your users to use on your Flarum forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "extension",
+                "flarum",
+                "friendsoflarum",
+                "mode",
+                "night",
+                "nightmode",
+                "option"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21492",
+                "issues": "https://github.com/FriendsOfFlarum/nightmode/issues",
+                "source": "https://github.com/FriendsOfFlarum/nightmode"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "install-path": "../fof/nightmode"
+        },
+        {
             "name": "fof/oauth",
             "version": "1.7.1",
             "version_normalized": "1.7.1.0",
