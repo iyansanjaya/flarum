@@ -24,12 +24,6 @@ And run these command after delete cache, clear cache, re-deploy or disable exte
 php flarum cache:clear
 ```
 
-**Publish Assets**:
-
-```bash
-php flarum assets:publish
-```
-
 **Run Scheduler**:
 
 ```bash
