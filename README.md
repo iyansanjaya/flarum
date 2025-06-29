@@ -30,7 +30,7 @@ php flarum cache:clear
 php flarum assets:publish
 ```
 
-**Run Scheduler**:
+**Run Scheduler** :
 
 ```bash
 php flarum schedule:run >> /dev/null 2>&1
