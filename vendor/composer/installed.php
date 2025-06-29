@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e7e1fb01eb2e3c6608a85cd54f4c7148bb9b08cc',
+        'reference' => '6391e690c1eed7a45188b0e0c0fd3943b58b95d8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -319,7 +319,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e7e1fb01eb2e3c6608a85cd54f4c7148bb9b08cc',
+            'reference' => '6391e690c1eed7a45188b0e0c0fd3943b58b95d8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -754,15 +754,6 @@
             'reference' => '531fdcc4c57caca0ffb561d85b0166375b3fdb6f',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/prevent-necrobumping',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'fof/profile-image-crop' => array(
-            'pretty_version' => '1.1.6',
-            'version' => '1.1.6.0',
-            'reference' => '128b908b4b8c136908345df370c6e8adec5b7e63',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/profile-image-crop',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -2145,12 +2136,6 @@
             'install_path' => __DIR__ . '/../wikimedia/less.php',
             'aliases' => array(),
             'dev_requirement' => false,
-        ),
-        'wiseclock/flarum-ext-profile-image-crop' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
         ),
         'wiwatsrt/flarum-ext-best-answer' => array(
             'dev_requirement' => false,

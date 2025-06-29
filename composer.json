@@ -72,7 +72,6 @@
         "fof/polls": "*",
         "fof/pretty-mail": "*",
         "fof/prevent-necrobumping": "^1.2",
-        "fof/profile-image-crop": "*",
         "fof/reactions": "*",
         "fof/secure-https": "*",
         "fof/share-social": "^1.2",

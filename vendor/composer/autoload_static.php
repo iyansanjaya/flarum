@@ -234,7 +234,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\ShareSocial\\' => 16,
             'FoF\\SecureHttps\\' => 16,
             'FoF\\Reactions\\' => 14,
-            'FoF\\ProfileImageCrop\\' => 21,
             'FoF\\PreventNecrobumping\\' => 24,
             'FoF\\PrettyMail\\' => 15,
             'FoF\\Polls\\Migrations\\' => 21,
@@ -800,10 +799,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\Reactions\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/reactions/src',
-        ),
-        'FoF\\ProfileImageCrop\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/profile-image-crop/src',
         ),
         'FoF\\PreventNecrobumping\\' => 
         array (

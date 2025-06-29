@@ -125,7 +125,6 @@ return array(
     'FoF\\ShareSocial\\' => array($vendorDir . '/fof/share-social/src'),
     'FoF\\SecureHttps\\' => array($vendorDir . '/fof/secure-https/src'),
     'FoF\\Reactions\\' => array($vendorDir . '/fof/reactions/src'),
-    'FoF\\ProfileImageCrop\\' => array($vendorDir . '/fof/profile-image-crop/src'),
     'FoF\\PreventNecrobumping\\' => array($vendorDir . '/fof/prevent-necrobumping/src'),
     'FoF\\PrettyMail\\' => array($vendorDir . '/fof/pretty-mail/src'),
     'FoF\\Polls\\Migrations\\' => array($vendorDir . '/fof/polls/migrations'),

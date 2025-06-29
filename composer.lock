@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b00c7e0318170c9566a96eba7eb456ce",
+    "content-hash": "ee0e15f77b07d18201aeadfe5de7fbf2",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -5525,75 +5525,6 @@
                 }
             ],
             "time": "2025-05-13T05:34:18+00:00"
-        },
-        {
-            "name": "fof/profile-image-crop",
-            "version": "1.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/profile-image-crop.git",
-                "reference": "128b908b4b8c136908345df370c6e8adec5b7e63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/profile-image-crop/zipball/128b908b4b8c136908345df370c6e8adec5b7e63",
-                "reference": "128b908b4b8c136908345df370c6e8adec5b7e63",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.5.0"
-            },
-            "replace": {
-                "wiseclock/flarum-ext-profile-image-crop": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18286"
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-crop",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Profile Image Crop",
-                    "category": "feature"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\ProfileImageCrop\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martin",
-                    "email": "me+fof@datitisev.me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Allow cropping when uploading profile picture",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/18286",
-                "issues": "https://github.com/FriendsOfFlarum/profile-image-crop/issues",
-                "source": "https://github.com/FriendsOfFlarum/profile-image-crop"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2023-09-05T14:57:51+00:00"
         },
         {
             "name": "fof/reactions",
