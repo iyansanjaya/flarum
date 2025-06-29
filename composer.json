@@ -22,6 +22,7 @@
     },
     "require": {
         "php": "~8.3.0",
+        "ext-exif": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/core": "^1.8",
