@@ -10,7 +10,7 @@
 
 ## Important Things
 
-After deploying on Zeabur, run this command on Zeabur Dashboard:
+After deploying in Zeabur, run this command on Zeabur Dashboard:
 
 ```bash
 composer update --prefer-dist --no-dev -a
