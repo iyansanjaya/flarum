@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '2a9474ce3cfd38c31012ee5a05ee0aab775fd94f',
+        'reference' => '08b79e9df4135e77db0ae50db829e5e90b940eed',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -87,12 +87,6 @@
             'install_path' => __DIR__ . '/../components/font-awesome',
             'aliases' => array(),
             'dev_requirement' => false,
-        ),
-        'davis/flarum-ext-customfooter' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
         ),
         'davis/flarum-ext-socialprofile' => array(
             'dev_requirement' => false,
@@ -352,7 +346,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '2a9474ce3cfd38c31012ee5a05ee0aab775fd94f',
+            'reference' => '08b79e9df4135e77db0ae50db829e5e90b940eed',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -535,15 +529,6 @@
             'reference' => '4039e195e34c23645bb3f50bbe9bf8bce981cd8b',
             'type' => 'flarum-extension',
             'install_path' => __DIR__ . '/../fof/best-answer',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'fof/custom-footer' => array(
-            'pretty_version' => '1.1.2',
-            'version' => '1.1.2.0',
-            'reference' => 'c8bf5493c4fceac71ba029fa340db9933acd44ba',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/custom-footer',
             'aliases' => array(),
             'dev_requirement' => false,
         ),

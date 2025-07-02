@@ -272,7 +272,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\DirectLinks\\' => 16,
             'FoF\\DefaultUserPreferences\\' => 27,
             'FoF\\DefaultGroup\\' => 17,
-            'FoF\\CustomFooter\\' => 17,
             'FoF\\BestAnswer\\' => 15,
             'FoF\\BanIPs\\' => 11,
             'FoF\\BBCodeTabs\\' => 15,
@@ -945,10 +944,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\DefaultGroup\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/default-group/src',
-        ),
-        'FoF\\CustomFooter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/custom-footer/src',
         ),
         'FoF\\BestAnswer\\' => 
         array (

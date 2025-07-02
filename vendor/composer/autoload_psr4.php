@@ -158,7 +158,6 @@ return array(
     'FoF\\DirectLinks\\' => array($vendorDir . '/fof/direct-links/src'),
     'FoF\\DefaultUserPreferences\\' => array($vendorDir . '/fof/default-user-preferences/src'),
     'FoF\\DefaultGroup\\' => array($vendorDir . '/fof/default-group/src'),
-    'FoF\\CustomFooter\\' => array($vendorDir . '/fof/custom-footer/src'),
     'FoF\\BestAnswer\\' => array($vendorDir . '/fof/best-answer/src'),
     'FoF\\BanIPs\\' => array($vendorDir . '/fof/ban-ips/src'),
     'FoF\\BBCodeTabs\\' => array($vendorDir . '/fof/bbcode-tabs/src'),

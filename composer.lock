@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ad169bf8170e91b7bd7ddb7bf3b69b6",
+    "content-hash": "84119d3fc7ffcc05064d7e40d9dcb9c8",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3443,83 +3443,6 @@
                 }
             ],
             "time": "2025-03-12T06:43:10+00:00"
-        },
-        {
-            "name": "fof/custom-footer",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/custom-footer.git",
-                "reference": "c8bf5493c4fceac71ba029fa340db9933acd44ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/custom-footer/zipball/c8bf5493c4fceac71ba029fa340db9933acd44ba",
-                "reference": "c8bf5493c4fceac71ba029fa340db9933acd44ba",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "davis/flarum-ext-customfooter": "*"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/17774"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-columns",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Custom Footer",
-                    "category": "feature"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\CustomFooter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Allows the Addition of a Custom Footer",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/17774",
-                "issues": "https://github.com/FriendsOfFlarum/custom-footer/issues",
-                "source": "https://github.com/FriendsOfFlarum/custom-footer"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2024-01-21T00:09:17+00:00"
         },
         {
             "name": "fof/default-group",
@@ -15119,7 +15042,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.3.0"
+        "php": "~8.3.0",
+        "ext-exif": "*"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
