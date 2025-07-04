@@ -150,6 +150,7 @@ return array(
     'FoF\\Formatting\\' => array($vendorDir . '/fof/formatting/src'),
     'FoF\\FollowTags\\' => array($vendorDir . '/fof/follow-tags/src'),
     'FoF\\Extend\\' => array($vendorDir . '/fof/extend/src'),
+    'FoF\\Drafts\\' => array($vendorDir . '/fof/drafts/src'),
     'FoF\\Doorman\\' => array($vendorDir . '/fof/doorman/src'),
     'FoF\\DisposableEmails\\' => array($vendorDir . '/fof/disposable-emails/src'),
     'FoF\\DiscussionViews\\' => array($vendorDir . '/fof/discussion-views/src'),
