@@ -3,7 +3,7 @@
         'name' => 'flarum/flarum',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '08b79e9df4135e77db0ae50db829e5e90b940eed',
+        'reference' => '1fa7c70b6b5b6a07d065d446a87dbedf3a89aa2a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -256,12 +256,6 @@
                 0 => '*',
             ),
         ),
-        'flagrow/subscribed' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '*',
-            ),
-        ),
         'flagrow/terms' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -346,7 +340,7 @@
         'flarum/flarum' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '08b79e9df4135e77db0ae50db829e5e90b940eed',
+            'reference' => '1fa7c70b6b5b6a07d065d446a87dbedf3a89aa2a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -595,15 +589,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fof/filter' => array(
-            'pretty_version' => '1.2.0',
-            'version' => '1.2.0.0',
-            'reference' => '1e32bbba33b6e62ed36ffbabcf4ab81548f51649',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/filter',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'fof/follow-tags' => array(
             'pretty_version' => '1.2.9',
             'version' => '1.2.9.0',
@@ -840,15 +825,6 @@
             'replaced' => array(
                 0 => '*',
             ),
-        ),
-        'fof/subscribed' => array(
-            'pretty_version' => '1.1.4',
-            'version' => '1.1.4.0',
-            'reference' => '7177bb55c7439654c5176711c40db9549d67d72c',
-            'type' => 'flarum-extension',
-            'install_path' => __DIR__ . '/../fof/subscribed',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'fof/terms' => array(
             'pretty_version' => '1.4.2',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84119d3fc7ffcc05064d7e40d9dcb9c8",
+    "content-hash": "4ea95c95837b624e0e1d48e3ae1c882b",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3952,88 +3952,6 @@
             "time": "2023-11-30T08:13:16+00:00"
         },
         {
-            "name": "fof/filter",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/filter.git",
-                "reference": "1e32bbba33b6e62ed36ffbabcf4ab81548f51649"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/filter/zipball/1e32bbba33b6e62ed36ffbabcf4ab81548f51649",
-                "reference": "1e32bbba33b6e62ed36ffbabcf4ab81548f51649",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/approval": "*",
-                "flarum/core": "^1.2.0",
-                "flarum/flags": "*",
-                "php": "^7.4 || ^8.0"
-            },
-            "require-dev": {
-                "flarum/phpstan": "*",
-                "flarum/testing": "^1.0.0"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/5131"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true,
-                        "backendTesting": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-filter",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Filter",
-                    "category": "feature"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Filter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charlie K",
-                    "email": "charlie.k@redevs.org"
-                },
-                {
-                    "name": "Katos",
-                    "email": "katos@flarum.org"
-                }
-            ],
-            "description": "Filter out words and phrases from forum posts",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "moderation"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/5131",
-                "issues": "https://github.com/friendsofflarum/filter/issues",
-                "source": "https://github.com/friendsofflarum/filter"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2024-06-12T09:25:35+00:00"
-        },
-        {
             "name": "fof/follow-tags",
             "version": "1.2.9",
             "source": {
@@ -6138,93 +6056,6 @@
                 }
             ],
             "time": "2023-11-12T10:15:32+00:00"
-        },
-        {
-            "name": "fof/subscribed",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/subscribed.git",
-                "reference": "7177bb55c7439654c5176711c40db9549d67d72c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/subscribed/zipball/7177bb55c7439654c5176711c40db9549d67d72c",
-                "reference": "7177bb55c7439654c5176711c40db9549d67d72c",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "flagrow/subscribed": "*"
-            },
-            "require-dev": {
-                "flarum/approval": "*",
-                "flarum/flags": "*",
-                "flarum/phpstan": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20917"
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "githubActions": true
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-reply-all",
-                        "color": "#fff",
-                        "backgroundColor": "#e74c3c"
-                    },
-                    "title": "FoF Subscribed",
-                    "category": "feature",
-                    "optional-dependencies": [
-                        "flarum/approval",
-                        "flarum/flags"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Subscribed\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FoF Team",
-                    "email": "team@friendsofflarum.org",
-                    "role": "developer"
-                }
-            ],
-            "description": "Additional user subscriptions for your forum",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "extension",
-                "flarum",
-                "fof",
-                "friendsofflarum",
-                "subscriptions"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20917",
-                "issues": "https://github.com/FriendsOfFlarum/subscribed/issues",
-                "source": "https://github.com/FriendsOfFlarum/subscribed"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2023-11-12T13:11:32+00:00"
         },
         {
             "name": "fof/terms",

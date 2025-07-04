@@ -237,7 +237,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\UserBio\\' => 12,
             'FoF\\Upload\\' => 11,
             'FoF\\Terms\\' => 10,
-            'FoF\\Subscribed\\' => 15,
             'FoF\\Split\\' => 10,
             'FoF\\SocialProfile\\' => 18,
             'FoF\\Sitemap\\' => 12,
@@ -264,7 +263,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
             'FoF\\ForumStatisticsWidget\\' => 26,
             'FoF\\Formatting\\' => 15,
             'FoF\\FollowTags\\' => 15,
-            'FoF\\Filter\\' => 11,
             'FoF\\Extend\\' => 11,
             'FoF\\Doorman\\' => 12,
             'FoF\\DisposableEmails\\' => 21,
@@ -805,10 +803,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         array (
             0 => __DIR__ . '/..' . '/fof/terms/src',
         ),
-        'FoF\\Subscribed\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/subscribed/src',
-        ),
         'FoF\\Split\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/split/src',
@@ -912,10 +906,6 @@ class ComposerStaticInit3a0ab28a39dc7b077c15af2415c3542c
         'FoF\\FollowTags\\' => 
         array (
             0 => __DIR__ . '/..' . '/fof/follow-tags/src',
-        ),
-        'FoF\\Filter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fof/filter/src',
         ),
         'FoF\\Extend\\' => 
         array (
