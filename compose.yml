@@ -17,7 +17,7 @@ services:
       resources:
         limits:
           memory: 512M
-          cpus: "1.0"
+          cpus: '1.0'
 
   web:
     image: nginx:alpine
@@ -27,7 +27,7 @@ services:
       - ./flarum-data:/var/www/flarum
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - "127.0.0.1:8080:80" # Hanya localhost, diakses oleh cloudflared VPS
+      - "127.0.0.1:8080:80"  # Localhost only, accessed by VPS cloudflared
     depends_on:
       - app
     networks:
@@ -43,7 +43,7 @@ services:
       resources:
         limits:
           memory: 256M
-          cpus: "0.5"
+          cpus: '0.5'
 
   db:
     image: mariadb:10.11
@@ -57,14 +57,14 @@ services:
     volumes:
       - flarum_db_data:/var/lib/mysql
     networks:
-      - flarum-internal # DB hanya di network internal, tidak bisa akses internet
+      - flarum-internal  # DB only on internal network, no internet access
     security_opt:
       - no-new-privileges:true
     deploy:
       resources:
         limits:
           memory: 512M
-          cpus: "1.0"
+          cpus: '1.0'
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 10s
@@ -77,7 +77,7 @@ networks:
     driver: bridge
   flarum-internal:
     driver: bridge
-    internal: true # Tidak bisa akses internet — isolasi database
+    internal: true  # No internet access — database isolation
 
 volumes:
   flarum_db_data:

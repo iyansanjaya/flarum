@@ -1,144 +1,153 @@
 # 🚀 Flarum on Docker + Cloudflare Tunnel
 
-Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Software Forum) menggunakan Docker dengan arsitektur modern. Trafik web diakses melalui **Cloudflare Tunnel (`cloudflared`)** yang sudah terinstall di VPS, sehingga tidak ada port yang terekspos ke internet publik.
+A complete deployment guide for Flarum (Forum Software) using Docker with a modern architecture. Web traffic is routed through **Cloudflare Tunnel (`cloudflared`)** already installed on the VPS, so no ports are exposed to the public internet.
 
-## 🏗 Arsitektur Sistem
+> 📖 **[Baca dalam Bahasa Indonesia](README.id.md)**
 
-- **PHP-FPM (Custom Image)**: Menjalankan _core_ Flarum. Dilengkapi dengan Composer dan auto-install Flarum saat pertama kali dijalankan.
-- **Nginx**: Web server internal, hanya listen di `127.0.0.1:8080`. Dilengkapi rate limiting, security headers, dan read-only filesystem.
-- **MariaDB**: Database untuk Flarum. Terisolasi di network internal (tanpa akses internet). Dilengkapi _healthcheck_.
-- **Cloudflare Tunnel**: Menggunakan `cloudflared` yang sudah terinstall di VPS (bukan di dalam Docker). Meneruskan trafik dari domain Anda ke `http://localhost:8080`.
+## 🏗 Architecture
+
+- **PHP-FPM (Custom Image)**: Runs the Flarum core. Includes Composer and auto-installs Flarum on first run.
+- **Nginx**: Internal web server, only listens on `127.0.0.1:8080`. Equipped with rate limiting, security headers, and read-only filesystem.
+- **MariaDB**: Flarum database. Isolated in an internal network (no internet access). Includes healthcheck.
+- **Cloudflare Tunnel**: Uses `cloudflared` already installed on the VPS (not inside Docker). Routes traffic from your domain to `http://localhost:8080`.
 
 ---
 
-## 🔒 Fitur Keamanan
+## 🔒 Security Features
 
-| Fitur | Detail |
-|-------|--------|
-| **Zero Open Ports** | Nginx hanya listen di `127.0.0.1:8080` — tidak bisa diakses dari luar VPS |
-| **Rate Limiting** | 10 req/detik per IP, burst 20 — mencegah brute force & DDoS |
+| Feature | Detail |
+|---------|--------|
+| **Zero Open Ports** | Nginx only listens on `127.0.0.1:8080` — inaccessible from outside the VPS |
+| **Rate Limiting** | 10 req/s per IP, burst 20 — prevents brute force & DDoS |
 | **Security Headers** | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
-| **Upload Limit** | Max 5MB — mencegah disk penuh |
-| **Server Tokens Off** | Versi Nginx disembunyikan |
-| **Hidden Files Blocked** | Akses ke `.env`, `.git`, dll diblokir |
-| **No New Privileges** | Semua container tidak bisa eskalasi privilege |
-| **Resource Limits** | CPU & memory dibatasi per container |
-| **Read-only Nginx** | Filesystem Nginx read-only (tmpfs untuk cache) |
-| **Database Terisolasi** | MariaDB di network internal, tidak bisa akses internet |
-| **Secrets di .env** | Password tidak hardcoded di `compose.yml` |
+| **Upload Limit** | Max 5MB — prevents disk exhaustion |
+| **Server Tokens Off** | Nginx version hidden from attackers |
+| **Hidden Files Blocked** | Access to `.env`, `.git`, etc. is denied |
+| **No New Privileges** | All containers cannot escalate privileges |
+| **Resource Limits** | CPU & memory capped per container |
+| **Read-only Nginx** | Nginx filesystem is read-only (tmpfs for cache) |
+| **Isolated Database** | MariaDB on internal network, no internet access |
+| **Secrets in .env** | Passwords are not hardcoded in `compose.yml` |
 
 ---
 
-## 📂 Struktur Direktori
+## 📂 Directory Structure
 
 ```text
 flarum-docker/
-├── compose.yml        # Definisi semua service Docker
+├── compose.yml        # Docker service definitions
 ├── Dockerfile         # Custom PHP-FPM image + auto-install Flarum
-├── entrypoint.sh      # Script otomatis install Flarum saat pertama run
-├── nginx.conf         # Konfigurasi Nginx (+ security hardening)
-├── .env.example       # Template variabel environment
-├── .env               # Variabel environment (JANGAN commit ke git!)
-├── .gitignore         # Mengecualikan .env dan data dari git
-└── README.md          # File ini
+├── entrypoint.sh      # Auto-install script on first run
+├── nginx.conf         # Nginx configuration (+ security hardening)
+├── .env.example       # Environment variable template
+├── .env               # Environment variables (DO NOT commit to git!)
+├── .gitignore         # Excludes .env and data from git
+├── README.md          # This file (English)
+└── README.id.md       # Indonesian version
 ```
 
 ---
 
-## ⚡ Cara Deploy
+## ⚡ Deployment
 
 ### 1. Clone & Setup Environment
 
 ```bash
-git clone <url-repo-anda>
+git clone <your-repo-url>
 cd flarum-docker
 
-# Salin template environment, lalu isi dengan nilai Anda
+# Copy the environment template
 cp .env.example .env
-nano .env
 ```
 
-Isi `.env` dengan **password database** yang kuat.
+Generate strong passwords and fill in `.env`:
 
-### 2. Konfigurasi Cloudflare Tunnel
+```bash
+# Generate a strong random password
+openssl rand -base64 32
+```
 
-Karena `cloudflared` sudah terinstall di VPS, cukup tambahkan **Public Hostname** baru pada tunnel yang sudah ada:
+Run it twice — one for `MYSQL_ROOT_PASSWORD` and one for `MYSQL_PASSWORD`. Paste the results into `.env`.
+
+### 2. Configure Cloudflare Tunnel
+
+Since `cloudflared` is already installed on the VPS, just add a new **Public Hostname** to your existing tunnel:
 
 **Via Cloudflare Zero Trust Dashboard:**
-1. Buka tunnel yang aktif di VPS Anda
-2. Tambahkan Public Hostname baru:
-   - **Domain**: domain/subdomain untuk forum Anda
+1. Open your active tunnel
+2. Add a new Public Hostname:
+   - **Domain**: your forum domain/subdomain
    - **Service**: `http://localhost:8080`
 
-**Atau via config file** (`/etc/cloudflared/config.yml`):
+**Or via config file** (`/etc/cloudflared/config.yml`):
 ```yaml
-- hostname: forum.domainanda.com
+- hostname: forum.yourdomain.com
   service: http://localhost:8080
 ```
 
-Lalu restart cloudflared:
+Then restart cloudflared:
 ```bash
 sudo systemctl restart cloudflared
 ```
 
-### 3. Jalankan
+### 3. Start
 
 ```bash
 docker compose up -d --build
 ```
 
-Flarum akan **otomatis terinstall** pada pertama kali dijalankan. Pantau prosesnya:
+Flarum will **auto-install** on the first run. Monitor the progress:
 
 ```bash
 docker logs -f flarum_app
 ```
 
-### 4. Selesaikan Instalasi Web
+### 4. Complete Web Installation
 
-Buka domain Anda di browser. Flarum akan menampilkan halaman instalasi. Isi:
+Open your domain in a browser. Flarum will show the installation page. Fill in:
 - **Database Host**: `db`
-- **Database Name**: `flarum` (atau sesuai `.env`)
-- **Database User**: `flarum` (atau sesuai `.env`)
-- **Database Password**: (sesuai `MYSQL_PASSWORD` di `.env`)
+- **Database Name**: `flarum` (or as set in `.env`)
+- **Database User**: `flarum` (or as set in `.env`)
+- **Database Password**: (as set in `MYSQL_PASSWORD` in `.env`)
 
 ---
 
-## 🔧 Perintah Berguna
+## 🔧 Useful Commands
 
 ```bash
-# Jalankan semua service
+# Start all services
 docker compose up -d --build
 
-# Lihat log semua service
+# View all logs
 docker compose logs -f
 
-# Masuk ke container Flarum (untuk install ekstensi, dll)
+# Enter the Flarum container (to install extensions, etc.)
 docker exec -it flarum_app sh
 
-# Install ekstensi Flarum (contoh)
+# Install a Flarum extension (example)
 docker exec -it flarum_app su-exec www-data composer require fof/user-bio
 
-# Restart service
+# Restart services
 docker compose restart
 
-# Matikan semua service
+# Stop all services
 docker compose down
 
-# Matikan + hapus data (HATI-HATI!)
+# Stop + delete all data (CAUTION!)
 docker compose down -v
 ```
 
 ---
 
-## 🖥️ Rekomendasi Hardening VPS
+## 🖥️ VPS Hardening Recommendations
 
-Selain keamanan di level Docker, pastikan VPS Anda juga di-hardening:
+In addition to Docker-level security, make sure your VPS is also hardened:
 
-| Item | Perintah |
-|------|----------|
+| Item | Command |
+|------|---------|
 | **Firewall (UFW)** | `sudo ufw allow OpenSSH && sudo ufw enable` |
-| **Disable root login** | `PermitRootLogin no` di `/etc/ssh/sshd_config` |
-| **SSH Key only** | `PasswordAuthentication no` di `/etc/ssh/sshd_config` |
+| **Disable root login** | `PermitRootLogin no` in `/etc/ssh/sshd_config` |
+| **SSH Key only** | `PasswordAuthentication no` in `/etc/ssh/sshd_config` |
 | **Fail2Ban** | `sudo apt install fail2ban` |
 | **Auto security updates** | `sudo apt install unattended-upgrades` |
-| **Backup database** | `docker exec flarum_db mysqldump -u root -p flarum > backup.sql` |
+| **Database backup** | `docker exec flarum_db mysqldump -u root -p flarum > backup.sql` |

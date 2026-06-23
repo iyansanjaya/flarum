@@ -1,20 +1,20 @@
 #!/bin/sh
 set -e
 
-# Auto-install Flarum jika belum ada (pertama kali run)
+# Auto-install Flarum if not present (first run)
 if [ ! -f /var/www/flarum/composer.json ]; then
     echo "=========================================="
-    echo " Flarum belum terdeteksi. Menginstall..."
+    echo " Flarum not detected. Installing..."
     echo "=========================================="
-    # Install sebagai www-data agar permission benar
+    # Install as www-data for correct permissions
     su-exec www-data composer create-project flarum/flarum /var/www/flarum --stability=stable --no-interaction
     echo "=========================================="
-    echo " Flarum berhasil diinstall!"
-    echo " Buka URL Anda untuk menjalankan installer web."
+    echo " Flarum installed successfully!"
+    echo " Open your URL to run the web installer."
     echo "=========================================="
 else
-    echo "Flarum sudah terinstall. Melewati instalasi..."
+    echo "Flarum already installed. Skipping installation..."
 fi
 
-# Jalankan command utama (php-fpm)
+# Execute the main command (php-fpm)
 exec "$@"

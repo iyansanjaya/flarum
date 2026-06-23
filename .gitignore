@@ -1,5 +1,5 @@
 # Secrets
 .env
 
-# Data (jangan commit data database & flarum ke git)
+# Data (do not commit database & flarum data to git)
 flarum-data/
