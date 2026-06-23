@@ -155,4 +155,73 @@ Selain keamanan di level Docker, pastikan VPS Anda juga di-hardening:
 | **SSH Key only** | `PasswordAuthentication no` di `/etc/ssh/sshd_config` |
 | **Fail2Ban** | `sudo apt install fail2ban` |
 | **Auto security updates** | `sudo apt install unattended-upgrades` |
-| **Backup database** | `docker exec flarum_db mysqldump -u root -p flarum > backup.sql` |
+
+---
+
+## 💾 Backup & Restore
+
+Backup Flarum yang lengkap membutuhkan **dua bagian**: database dan file data.
+
+### Backup Manual
+
+```bash
+# 1. Backup database
+docker exec flarum_db mysqldump -u root -p"$(grep MYSQL_ROOT_PASSWORD .env | cut -d= -f2)" flarum > backup_db.sql
+
+# 2. Backup file data (uploads, avatars, config, extensions)
+tar -czf backup_files.tar.gz ./flarum-data
+```
+
+### Restore Manual
+
+```bash
+# 1. Restore database
+docker exec -i flarum_db mysql -u root -p"$(grep MYSQL_ROOT_PASSWORD .env | cut -d= -f2)" flarum < backup_db.sql
+
+# 2. Restore file data
+tar -xzf backup_files.tar.gz
+```
+
+### Apa saja isi `flarum-data/`?
+
+| Isi | Path |
+|-----|------|
+| Avatar user | `flarum-data/public/assets/avatars/` |
+| File upload | `flarum-data/public/assets/files/` |
+| Extensions | `flarum-data/vendor/` |
+| Config situs | `flarum-data/config.php` |
+
+### Backup Otomatis (Cron)
+
+Buat script backup (misal `~/backup-flarum.sh`):
+
+```bash
+#!/bin/bash
+BACKUP_DIR="$HOME/backups/flarum"
+DATE=$(date +%Y-%m-%d_%H-%M)
+FLARUM_DIR="$HOME/services/web/flarum"
+
+mkdir -p "$BACKUP_DIR"
+
+# Backup database
+docker exec flarum_db mysqldump -u root -p"$(grep MYSQL_ROOT_PASSWORD $FLARUM_DIR/.env | cut -d= -f2)" flarum > "$BACKUP_DIR/db_$DATE.sql"
+
+# Backup files
+tar -czf "$BACKUP_DIR/files_$DATE.tar.gz" -C "$FLARUM_DIR" flarum-data
+
+# Simpan hanya 7 backup terakhir
+ls -t "$BACKUP_DIR"/db_*.sql | tail -n +8 | xargs -r rm
+ls -t "$BACKUP_DIR"/files_*.tar.gz | tail -n +8 | xargs -r rm
+
+echo "Backup completed: $DATE"
+```
+
+Lalu jadwalkan untuk berjalan setiap hari jam 3 pagi:
+
+```bash
+chmod +x ~/backup-flarum.sh
+crontab -e
+# Tambahkan baris ini:
+0 3 * * * ~/backup-flarum.sh >> ~/backups/flarum/backup.log 2>&1
+```
+

@@ -155,4 +155,73 @@ In addition to Docker-level security, make sure your VPS is also hardened:
 | **SSH Key only** | `PasswordAuthentication no` in `/etc/ssh/sshd_config` |
 | **Fail2Ban** | `sudo apt install fail2ban` |
 | **Auto security updates** | `sudo apt install unattended-upgrades` |
-| **Database backup** | `docker exec flarum_db mysqldump -u root -p flarum > backup.sql` |
+
+---
+
+## 💾 Backup & Restore
+
+A complete Flarum backup requires **two parts**: the database and the file data.
+
+### Manual Backup
+
+```bash
+# 1. Backup database
+docker exec flarum_db mysqldump -u root -p"$(grep MYSQL_ROOT_PASSWORD .env | cut -d= -f2)" flarum > backup_db.sql
+
+# 2. Backup file data (uploads, avatars, config, extensions)
+tar -czf backup_files.tar.gz ./flarum-data
+```
+
+### Manual Restore
+
+```bash
+# 1. Restore database
+docker exec -i flarum_db mysql -u root -p"$(grep MYSQL_ROOT_PASSWORD .env | cut -d= -f2)" flarum < backup_db.sql
+
+# 2. Restore file data
+tar -xzf backup_files.tar.gz
+```
+
+### What's inside `flarum-data/`?
+
+| Content | Path |
+|---------|------|
+| User avatars | `flarum-data/public/assets/avatars/` |
+| Uploaded files | `flarum-data/public/assets/files/` |
+| Extensions | `flarum-data/vendor/` |
+| Site config | `flarum-data/config.php` |
+
+### Automated Backup (Cron)
+
+Create a backup script (e.g. `~/backup-flarum.sh`):
+
+```bash
+#!/bin/bash
+BACKUP_DIR="$HOME/backups/flarum"
+DATE=$(date +%Y-%m-%d_%H-%M)
+FLARUM_DIR="$HOME/services/web/flarum"
+
+mkdir -p "$BACKUP_DIR"
+
+# Backup database
+docker exec flarum_db mysqldump -u root -p"$(grep MYSQL_ROOT_PASSWORD $FLARUM_DIR/.env | cut -d= -f2)" flarum > "$BACKUP_DIR/db_$DATE.sql"
+
+# Backup files
+tar -czf "$BACKUP_DIR/files_$DATE.tar.gz" -C "$FLARUM_DIR" flarum-data
+
+# Keep only last 7 backups
+ls -t "$BACKUP_DIR"/db_*.sql | tail -n +8 | xargs -r rm
+ls -t "$BACKUP_DIR"/files_*.tar.gz | tail -n +8 | xargs -r rm
+
+echo "Backup completed: $DATE"
+```
+
+Then schedule it to run daily at 3 AM:
+
+```bash
+chmod +x ~/backup-flarum.sh
+crontab -e
+# Add this line:
+0 3 * * * ~/backup-flarum.sh >> ~/backups/flarum/backup.log 2>&1
+```
+
