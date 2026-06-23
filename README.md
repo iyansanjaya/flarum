@@ -93,14 +93,14 @@ sudo systemctl restart cloudflared
 ### 3. Start
 
 ```bash
-docker compose up -d --build
-```
-
-Flarum will **auto-install** on the first run. Monitor the progress:
-
-```bash
+docker compose build
+docker compose up -d
 docker logs -f flarum_app
 ```
+
+Flarum will **auto-install** on the first run.
+
+> 💡 **Tip**: If you've modified the `Dockerfile`, use `docker compose build --no-cache` to rebuild from scratch.
 
 ### 4. Complete Web Installation
 
@@ -115,8 +115,13 @@ Open your domain in a browser. Flarum will show the installation page. Fill in:
 ## 🔧 Useful Commands
 
 ```bash
-# Start all services
-docker compose up -d --build
+# Build & start all services
+docker compose build
+docker compose up -d
+
+# Rebuild from scratch (after Dockerfile changes)
+docker compose build --no-cache
+docker compose up -d
 
 # View all logs
 docker compose logs -f

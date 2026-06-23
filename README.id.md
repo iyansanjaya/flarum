@@ -93,14 +93,14 @@ sudo systemctl restart cloudflared
 ### 3. Jalankan
 
 ```bash
-docker compose up -d --build
-```
-
-Flarum akan **otomatis terinstall** pada pertama kali dijalankan. Pantau prosesnya:
-
-```bash
+docker compose build
+docker compose up -d
 docker logs -f flarum_app
 ```
+
+Flarum akan **otomatis terinstall** pada pertama kali dijalankan.
+
+> 💡 **Tip**: Jika Anda mengubah `Dockerfile`, gunakan `docker compose build --no-cache` untuk rebuild dari awal.
 
 ### 4. Selesaikan Instalasi Web
 
@@ -115,8 +115,13 @@ Buka domain Anda di browser. Flarum akan menampilkan halaman instalasi. Isi:
 ## 🔧 Perintah Berguna
 
 ```bash
-# Jalankan semua service
-docker compose up -d --build
+# Build & jalankan semua service
+docker compose build
+docker compose up -d
+
+# Rebuild dari awal (setelah ubah Dockerfile)
+docker compose build --no-cache
+docker compose up -d
 
 # Lihat log semua service
 docker compose logs -f
