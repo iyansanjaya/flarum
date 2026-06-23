@@ -1,4 +1,4 @@
-# 🚀 Flarum on Docker + Cloudflare Tunnel
+# 🚀 Flarum on Docker + Cloudflare Tunnel + S3 Storage (Optional)
 
 A complete deployment guide for Flarum (Forum Software) using Docker with a modern architecture. Web traffic is routed through **Cloudflare Tunnel (`cloudflared`)** already installed on the VPS, so no ports are exposed to the public internet.
 
@@ -15,18 +15,18 @@ A complete deployment guide for Flarum (Forum Software) using Docker with a mode
 
 ## 🔒 Security Features
 
-| Feature | Detail |
-|---------|--------|
-| **Zero Open Ports** | Nginx only listens on `127.0.0.1:8080` — inaccessible from outside the VPS |
-| **Rate Limiting** | 10 req/s per IP, burst 20 — prevents brute force & DDoS |
-| **Security Headers** | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
-| **Upload Limit** | Max 5MB — prevents disk exhaustion |
-| **Server Tokens Off** | Nginx version hidden from attackers |
-| **Hidden Files Blocked** | Access to `.env`, `.git`, etc. is denied |
-| **No New Privileges** | All containers cannot escalate privileges |
-| **Read-only Nginx** | Nginx filesystem is read-only (tmpfs for cache) |
-| **Isolated Database** | MariaDB on internal network, no internet access |
-| **Secrets in .env** | Passwords are not hardcoded in `compose.yml` |
+| Feature                  | Detail                                                                             |
+| ------------------------ | ---------------------------------------------------------------------------------- |
+| **Zero Open Ports**      | Nginx only listens on `127.0.0.1:8080` — inaccessible from outside the VPS         |
+| **Rate Limiting**        | 10 req/s per IP, burst 20 — prevents brute force & DDoS                            |
+| **Security Headers**     | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
+| **Upload Limit**         | Max 5MB — prevents disk exhaustion                                                 |
+| **Server Tokens Off**    | Nginx version hidden from attackers                                                |
+| **Hidden Files Blocked** | Access to `.env`, `.git`, etc. is denied                                           |
+| **No New Privileges**    | All containers cannot escalate privileges                                          |
+| **Read-only Nginx**      | Nginx filesystem is read-only (tmpfs for cache)                                    |
+| **Isolated Database**    | MariaDB on internal network, no internet access                                    |
+| **Secrets in .env**      | Passwords are not hardcoded in `compose.yml`                                       |
 
 ---
 
@@ -73,18 +73,21 @@ Run it twice — one for `MYSQL_ROOT_PASSWORD` and one for `MYSQL_PASSWORD`. Pas
 Since `cloudflared` is already installed on the VPS, just add a new **Public Hostname** to your existing tunnel:
 
 **Via Cloudflare Zero Trust Dashboard:**
+
 1. Open your active tunnel
 2. Add a new Public Hostname:
    - **Domain**: your forum domain/subdomain
    - **Service**: `http://localhost:8281`
 
 **Or via config file** (`/etc/cloudflared/config.yml`):
+
 ```yaml
 - hostname: forum.yourdomain.com
   service: http://localhost:8281
 ```
 
 Then restart cloudflared:
+
 ```bash
 sudo systemctl restart cloudflared
 ```
@@ -105,23 +108,24 @@ Flarum will **auto-install** on the first run.
 
 Open your domain in a browser. Flarum will show the installation page. Fill in the form:
 
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Forum Title** | *(your choice)* | Name of your forum |
-| **MySQL Host** | `db` | ⚠️ **Do NOT use `localhost`** — use `db` (the Docker service name) |
-| **MySQL Database** | `flarum` | Must match `MYSQL_DATABASE` in `.env` |
-| **MySQL Username** | `flarum` | Must match `MYSQL_USER` in `.env` |
-| **MySQL Password** | *(see `.env`)* | Must match `MYSQL_PASSWORD` in `.env` (**not** `MYSQL_ROOT_PASSWORD`) |
-| **Table Prefix** | *(leave empty)* | Optional, leave blank unless you have a reason |
-| **Admin Username** | *(your choice)* | Your forum admin login |
-| **Admin Email** | *(your email)* | Used for notifications and password reset |
-| **Admin Password** | *(your choice)* | Use a strong password |
+| Field              | Value           | Notes                                                                 |
+| ------------------ | --------------- | --------------------------------------------------------------------- |
+| **Forum Title**    | _(your choice)_ | Name of your forum                                                    |
+| **MySQL Host**     | `db`            | ⚠️ **Do NOT use `localhost`** — use `db` (the Docker service name)    |
+| **MySQL Database** | `flarum`        | Must match `MYSQL_DATABASE` in `.env`                                 |
+| **MySQL Username** | `flarum`        | Must match `MYSQL_USER` in `.env`                                     |
+| **MySQL Password** | _(see `.env`)_  | Must match `MYSQL_PASSWORD` in `.env` (**not** `MYSQL_ROOT_PASSWORD`) |
+| **Table Prefix**   | _(leave empty)_ | Optional, leave blank unless you have a reason                        |
+| **Admin Username** | _(your choice)_ | Your forum admin login                                                |
+| **Admin Email**    | _(your email)_  | Used for notifications and password reset                             |
+| **Admin Password** | _(your choice)_ | Use a strong password                                                 |
 
 > [!CAUTION]
 > The default MySQL Host is `localhost`, but this **will not work** in Docker. You must change it to `db`, which is the container name of the MariaDB service defined in `compose.yml`.
 
 > [!IMPORTANT]
 > **`MYSQL_ROOT_PASSWORD` vs `MYSQL_PASSWORD`** — Your `.env` contains two passwords:
+>
 > - `MYSQL_ROOT_PASSWORD` → Superadmin password for database maintenance/backup only. **Do not use this for Flarum.**
 > - `MYSQL_PASSWORD` → The password for the `flarum` user. **Use this one in the installer.**
 
@@ -173,17 +177,64 @@ sudo docker compose down -v
 
 ---
 
+## ☁️ S3 Storage (Optional)
+
+This project supports [FoF Upload](https://github.com/FriendsOfFlarum/upload) with S3 or S3-compatible storage (AWS S3, Cloudflare R2, MinIO, Wasabi, etc.) for file uploads. Environment variables are pre-configured in `compose.yml` — you just need to install the extension and fill in `.env`.
+
+### 1. Install the extension
+
+```bash
+sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*"
+sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
+```
+
+### 2. Fill in S3 credentials in `.env`
+
+```bash
+nano .env
+```
+
+Fill in the required variables:
+
+```env
+# Required (all 4 must be set)
+FOF_UPLOAD_AWS_S3_KEY=your-access-key
+FOF_UPLOAD_AWS_S3_SECRET=your-secret-key
+FOF_UPLOAD_AWS_S3_BUCKET=your-bucket-name
+FOF_UPLOAD_AWS_S3_REGION=ap-southeast-1
+
+# Optional - for S3-compatible services (Cloudflare R2, MinIO, Wasabi, etc.)
+FOF_UPLOAD_AWS_S3_ENDPOINT=https://s3.example.com
+FOF_UPLOAD_AWS_S3_PATH_STYLE_ENDPOINT=true
+```
+
+### 3. Restart to apply
+
+```bash
+sudo docker compose down
+sudo docker compose up -d
+```
+
+### 4. Enable in Admin Panel
+
+Open your forum admin → **FoF Upload** → change the upload adapter to **AWS S3**.
+
+> [!NOTE]
+> If you don't need S3, simply leave the S3 variables empty in `.env`. Uploads will be stored locally in `flarum-data/` by default.
+
+---
+
 ## 🖥️ VPS Hardening Recommendations
 
 In addition to Docker-level security, make sure your VPS is also hardened:
 
-| Item | Command |
-|------|---------|
-| **Firewall (UFW)** | `sudo ufw allow OpenSSH && sudo ufw enable` |
-| **Disable root login** | `PermitRootLogin no` in `/etc/ssh/sshd_config` |
-| **SSH Key only** | `PasswordAuthentication no` in `/etc/ssh/sshd_config` |
-| **Fail2Ban** | `sudo apt install fail2ban` |
-| **Auto security updates** | `sudo apt install unattended-upgrades` |
+| Item                      | Command                                               |
+| ------------------------- | ----------------------------------------------------- |
+| **Firewall (UFW)**        | `sudo ufw allow OpenSSH && sudo ufw enable`           |
+| **Disable root login**    | `PermitRootLogin no` in `/etc/ssh/sshd_config`        |
+| **SSH Key only**          | `PasswordAuthentication no` in `/etc/ssh/sshd_config` |
+| **Fail2Ban**              | `sudo apt install fail2ban`                           |
+| **Auto security updates** | `sudo apt install unattended-upgrades`                |
 
 ---
 
@@ -213,12 +264,12 @@ tar -xzf backup_files.tar.gz
 
 ### What's inside `flarum-data/`?
 
-| Content | Path |
-|---------|------|
-| User avatars | `flarum-data/public/assets/avatars/` |
-| Uploaded files | `flarum-data/public/assets/files/` |
-| Extensions | `flarum-data/vendor/` |
-| Site config | `flarum-data/config.php` |
+| Content        | Path                                 |
+| -------------- | ------------------------------------ |
+| User avatars   | `flarum-data/public/assets/avatars/` |
+| Uploaded files | `flarum-data/public/assets/files/`   |
+| Extensions     | `flarum-data/vendor/`                |
+| Site config    | `flarum-data/config.php`             |
 
 ### Automated Backup (Cron)
 
@@ -253,4 +304,3 @@ crontab -e
 # Add this line:
 0 3 * * * ~/backup-flarum.sh >> ~/backups/flarum/backup.log 2>&1
 ```
-

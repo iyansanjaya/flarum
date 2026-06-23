@@ -13,6 +13,17 @@ services:
       - flarum-internal
     security_opt:
       - no-new-privileges:true
+    environment:
+      # FoF Upload - S3 Storage (leave empty to disable)
+      FOF_UPLOAD_AWS_S3_KEY: ${FOF_UPLOAD_AWS_S3_KEY:-}
+      FOF_UPLOAD_AWS_S3_SECRET: ${FOF_UPLOAD_AWS_S3_SECRET:-}
+      FOF_UPLOAD_AWS_S3_BUCKET: ${FOF_UPLOAD_AWS_S3_BUCKET:-}
+      FOF_UPLOAD_AWS_S3_REGION: ${FOF_UPLOAD_AWS_S3_REGION:-}
+      FOF_UPLOAD_AWS_S3_ACL: ${FOF_UPLOAD_AWS_S3_ACL:-}
+      FOF_UPLOAD_AWS_S3_ENDPOINT: ${FOF_UPLOAD_AWS_S3_ENDPOINT:-}
+      FOF_UPLOAD_AWS_S3_PATH_STYLE_ENDPOINT: ${FOF_UPLOAD_AWS_S3_PATH_STYLE_ENDPOINT:-}
+      FOF_UPLOAD_AWS_S3_CUSTOM_URL: ${FOF_UPLOAD_AWS_S3_CUSTOM_URL:-}
+      FOF_UPLOAD_CDN_URL: ${FOF_UPLOAD_CDN_URL:-}
 
   web:
     image: nginx:alpine

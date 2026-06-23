@@ -1,4 +1,4 @@
-# 🚀 Flarum on Docker + Cloudflare Tunnel
+# 🚀 Flarum on Docker + Cloudflare Tunnel + S3 Storage (Optional)
 
 Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Software Forum) menggunakan Docker dengan arsitektur modern. Trafik web diakses melalui **Cloudflare Tunnel (`cloudflared`)** yang sudah terinstall di VPS, sehingga tidak ada port yang terekspos ke internet publik.
 
@@ -15,18 +15,18 @@ Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Softw
 
 ## 🔒 Fitur Keamanan
 
-| Fitur | Detail |
-|-------|--------|
-| **Zero Open Ports** | Nginx hanya listen di `127.0.0.1:8080` — tidak bisa diakses dari luar VPS |
-| **Rate Limiting** | 10 req/detik per IP, burst 20 — mencegah brute force & DDoS |
-| **Security Headers** | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
-| **Upload Limit** | Max 5MB — mencegah disk penuh |
-| **Server Tokens Off** | Versi Nginx disembunyikan |
-| **Hidden Files Blocked** | Akses ke `.env`, `.git`, dll diblokir |
-| **No New Privileges** | Semua container tidak bisa eskalasi privilege |
-| **Read-only Nginx** | Filesystem Nginx read-only (tmpfs untuk cache) |
-| **Database Terisolasi** | MariaDB di network internal, tidak bisa akses internet |
-| **Secrets di .env** | Password tidak hardcoded di `compose.yml` |
+| Fitur                    | Detail                                                                             |
+| ------------------------ | ---------------------------------------------------------------------------------- |
+| **Zero Open Ports**      | Nginx hanya listen di `127.0.0.1:8080` — tidak bisa diakses dari luar VPS          |
+| **Rate Limiting**        | 10 req/detik per IP, burst 20 — mencegah brute force & DDoS                        |
+| **Security Headers**     | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
+| **Upload Limit**         | Max 5MB — mencegah disk penuh                                                      |
+| **Server Tokens Off**    | Versi Nginx disembunyikan                                                          |
+| **Hidden Files Blocked** | Akses ke `.env`, `.git`, dll diblokir                                              |
+| **No New Privileges**    | Semua container tidak bisa eskalasi privilege                                      |
+| **Read-only Nginx**      | Filesystem Nginx read-only (tmpfs untuk cache)                                     |
+| **Database Terisolasi**  | MariaDB di network internal, tidak bisa akses internet                             |
+| **Secrets di .env**      | Password tidak hardcoded di `compose.yml`                                          |
 
 ---
 
@@ -73,18 +73,21 @@ Jalankan dua kali — satu untuk `MYSQL_ROOT_PASSWORD` dan satu untuk `MYSQL_PAS
 Karena `cloudflared` sudah terinstall di VPS, cukup tambahkan **Public Hostname** baru pada tunnel yang sudah ada:
 
 **Via Cloudflare Zero Trust Dashboard:**
+
 1. Buka tunnel yang aktif di VPS Anda
 2. Tambahkan Public Hostname baru:
    - **Domain**: domain/subdomain untuk forum Anda
    - **Service**: `http://localhost:8281`
 
 **Atau via config file** (`/etc/cloudflared/config.yml`):
+
 ```yaml
 - hostname: forum.domainanda.com
   service: http://localhost:8281
 ```
 
 Lalu restart cloudflared:
+
 ```bash
 sudo systemctl restart cloudflared
 ```
@@ -105,23 +108,24 @@ Flarum akan **otomatis terinstall** pada pertama kali dijalankan.
 
 Buka domain Anda di browser. Flarum akan menampilkan halaman instalasi. Isi form berikut:
 
-| Field | Nilai | Keterangan |
-|-------|-------|------------|
-| **Forum Title** | *(bebas)* | Nama forum Anda |
-| **MySQL Host** | `db` | ⚠️ **JANGAN gunakan `localhost`** — gunakan `db` (nama service Docker) |
-| **MySQL Database** | `flarum` | Harus sama dengan `MYSQL_DATABASE` di `.env` |
-| **MySQL Username** | `flarum` | Harus sama dengan `MYSQL_USER` di `.env` |
-| **MySQL Password** | *(lihat `.env`)* | Harus sama dengan `MYSQL_PASSWORD` di `.env` (**bukan** `MYSQL_ROOT_PASSWORD`) |
-| **Table Prefix** | *(kosongkan)* | Opsional, biarkan kosong |
-| **Admin Username** | *(bebas)* | Username admin forum Anda |
-| **Admin Email** | *(email Anda)* | Untuk notifikasi dan reset password |
-| **Admin Password** | *(bebas)* | Gunakan password yang kuat |
+| Field              | Nilai            | Keterangan                                                                     |
+| ------------------ | ---------------- | ------------------------------------------------------------------------------ |
+| **Forum Title**    | _(bebas)_        | Nama forum Anda                                                                |
+| **MySQL Host**     | `db`             | ⚠️ **JANGAN gunakan `localhost`** — gunakan `db` (nama service Docker)         |
+| **MySQL Database** | `flarum`         | Harus sama dengan `MYSQL_DATABASE` di `.env`                                   |
+| **MySQL Username** | `flarum`         | Harus sama dengan `MYSQL_USER` di `.env`                                       |
+| **MySQL Password** | _(lihat `.env`)_ | Harus sama dengan `MYSQL_PASSWORD` di `.env` (**bukan** `MYSQL_ROOT_PASSWORD`) |
+| **Table Prefix**   | _(kosongkan)_    | Opsional, biarkan kosong                                                       |
+| **Admin Username** | _(bebas)_        | Username admin forum Anda                                                      |
+| **Admin Email**    | _(email Anda)_   | Untuk notifikasi dan reset password                                            |
+| **Admin Password** | _(bebas)_        | Gunakan password yang kuat                                                     |
 
 > [!CAUTION]
 > Default MySQL Host adalah `localhost`, tapi ini **tidak akan bekerja** di Docker. Anda harus menggantinya ke `db`, yaitu nama container MariaDB yang didefinisikan di `compose.yml`.
 
 > [!IMPORTANT]
 > **`MYSQL_ROOT_PASSWORD` vs `MYSQL_PASSWORD`** — File `.env` Anda berisi dua password:
+>
 > - `MYSQL_ROOT_PASSWORD` → Password superadmin untuk maintenance/backup database. **Jangan gunakan untuk Flarum.**
 > - `MYSQL_PASSWORD` → Password untuk user `flarum`. **Gunakan ini saat instalasi.**
 
@@ -173,17 +177,64 @@ sudo docker compose down -v
 
 ---
 
+## ☁️ S3 Storage (Opsional)
+
+Project ini mendukung [FoF Upload](https://github.com/FriendsOfFlarum/upload) dengan S3 atau S3-compatible storage (AWS S3, Cloudflare R2, MinIO, Wasabi, dll.) untuk upload file. Environment variables sudah dikonfigurasi di `compose.yml` — Anda hanya perlu install ekstensi dan isi `.env`.
+
+### 1. Install ekstensi
+
+```bash
+sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*"
+sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
+```
+
+### 2. Isi kredensial S3 di `.env`
+
+```bash
+nano .env
+```
+
+Isi variabel yang diperlukan:
+
+```env
+# Required (keempat-empatnya harus diisi)
+FOF_UPLOAD_AWS_S3_KEY=access-key-anda
+FOF_UPLOAD_AWS_S3_SECRET=secret-key-anda
+FOF_UPLOAD_AWS_S3_BUCKET=nama-bucket-anda
+FOF_UPLOAD_AWS_S3_REGION=ap-southeast-1
+
+# Opsional - untuk S3-compatible (Cloudflare R2, MinIO, Wasabi, dll.)
+FOF_UPLOAD_AWS_S3_ENDPOINT=https://s3.example.com
+FOF_UPLOAD_AWS_S3_PATH_STYLE_ENDPOINT=true
+```
+
+### 3. Restart untuk menerapkan
+
+```bash
+sudo docker compose down
+sudo docker compose up -d
+```
+
+### 4. Aktifkan di Admin Panel
+
+Buka admin forum → **FoF Upload** → ubah upload adapter ke **AWS S3**.
+
+> [!NOTE]
+> Jika Anda tidak butuh S3, biarkan saja variabel S3 kosong di `.env`. Upload akan disimpan secara lokal di `flarum-data/` secara default.
+
+---
+
 ## 🖥️ Rekomendasi Hardening VPS
 
 Selain keamanan di level Docker, pastikan VPS Anda juga di-hardening:
 
-| Item | Perintah |
-|------|----------|
-| **Firewall (UFW)** | `sudo ufw allow OpenSSH && sudo ufw enable` |
-| **Disable root login** | `PermitRootLogin no` di `/etc/ssh/sshd_config` |
-| **SSH Key only** | `PasswordAuthentication no` di `/etc/ssh/sshd_config` |
-| **Fail2Ban** | `sudo apt install fail2ban` |
-| **Auto security updates** | `sudo apt install unattended-upgrades` |
+| Item                      | Perintah                                              |
+| ------------------------- | ----------------------------------------------------- |
+| **Firewall (UFW)**        | `sudo ufw allow OpenSSH && sudo ufw enable`           |
+| **Disable root login**    | `PermitRootLogin no` di `/etc/ssh/sshd_config`        |
+| **SSH Key only**          | `PasswordAuthentication no` di `/etc/ssh/sshd_config` |
+| **Fail2Ban**              | `sudo apt install fail2ban`                           |
+| **Auto security updates** | `sudo apt install unattended-upgrades`                |
 
 ---
 
@@ -213,12 +264,12 @@ tar -xzf backup_files.tar.gz
 
 ### Apa saja isi `flarum-data/`?
 
-| Isi | Path |
-|-----|------|
-| Avatar user | `flarum-data/public/assets/avatars/` |
-| File upload | `flarum-data/public/assets/files/` |
-| Extensions | `flarum-data/vendor/` |
-| Config situs | `flarum-data/config.php` |
+| Isi          | Path                                 |
+| ------------ | ------------------------------------ |
+| Avatar user  | `flarum-data/public/assets/avatars/` |
+| File upload  | `flarum-data/public/assets/files/`   |
+| Extensions   | `flarum-data/vendor/`                |
+| Config situs | `flarum-data/config.php`             |
 
 ### Backup Otomatis (Cron)
 
@@ -253,4 +304,3 @@ crontab -e
 # Tambahkan baris ini:
 0 3 * * * ~/backup-flarum.sh >> ~/backups/flarum/backup.log 2>&1
 ```
-
