@@ -104,11 +104,22 @@ Flarum will **auto-install** on the first run.
 
 ### 4. Complete Web Installation
 
-Open your domain in a browser. Flarum will show the installation page. Fill in:
-- **Database Host**: `db`
-- **Database Name**: `flarum` (or as set in `.env`)
-- **Database User**: `flarum` (or as set in `.env`)
-- **Database Password**: (as set in `MYSQL_PASSWORD` in `.env`)
+Open your domain in a browser. Flarum will show the installation page. Fill in the form:
+
+| Field | Value | Notes |
+|-------|-------|-------|
+| **Forum Title** | *(your choice)* | Name of your forum |
+| **MySQL Host** | `db` | ⚠️ **Do NOT use `localhost`** — use `db` (the Docker service name) |
+| **MySQL Database** | `flarum` | Must match `MYSQL_DATABASE` in `.env` |
+| **MySQL Username** | `flarum` | Must match `MYSQL_USER` in `.env` |
+| **MySQL Password** | *(see `.env`)* | Must match `MYSQL_PASSWORD` in `.env` |
+| **Table Prefix** | *(leave empty)* | Optional, leave blank unless you have a reason |
+| **Admin Username** | *(your choice)* | Your forum admin login |
+| **Admin Email** | *(your email)* | Used for notifications and password reset |
+| **Admin Password** | *(your choice)* | Use a strong password |
+
+> [!CAUTION]
+> The default MySQL Host is `localhost`, but this **will not work** in Docker. You must change it to `db`, which is the container name of the MariaDB service defined in `compose.yml`.
 
 ---
 
