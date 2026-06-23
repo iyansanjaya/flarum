@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# Fix ownership on mounted volume (runs as root)
+chown -R www-data:www-data /var/www/flarum
+
 # Auto-install Flarum if not present (first run)
 if [ ! -f /var/www/flarum/composer.json ]; then
     echo "=========================================="

@@ -7,9 +7,9 @@ A complete deployment guide for Flarum (Forum Software) using Docker with a mode
 ## 🏗 Architecture
 
 - **PHP-FPM (Custom Image)**: Runs the Flarum core. Includes Composer and auto-installs Flarum on first run.
-- **Nginx**: Internal web server, only listens on `127.0.0.1:8080`. Equipped with rate limiting, security headers, and read-only filesystem.
+- **Nginx**: Internal web server, only listens on `127.0.0.1:8281`. Equipped with rate limiting, security headers, and read-only filesystem.
 - **MariaDB**: Flarum database. Isolated in an internal network (no internet access). Includes healthcheck.
-- **Cloudflare Tunnel**: Uses `cloudflared` already installed on the VPS (not inside Docker). Routes traffic from your domain to `http://localhost:8080`.
+- **Cloudflare Tunnel**: Uses `cloudflared` already installed on the VPS (not inside Docker). Routes traffic from your domain to `http://localhost:8281`.
 
 ---
 
@@ -77,12 +77,12 @@ Since `cloudflared` is already installed on the VPS, just add a new **Public Hos
 1. Open your active tunnel
 2. Add a new Public Hostname:
    - **Domain**: your forum domain/subdomain
-   - **Service**: `http://localhost:8080`
+   - **Service**: `http://localhost:8281`
 
 **Or via config file** (`/etc/cloudflared/config.yml`):
 ```yaml
 - hostname: forum.yourdomain.com
-  service: http://localhost:8080
+  service: http://localhost:8281
 ```
 
 Then restart cloudflared:

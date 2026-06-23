@@ -7,9 +7,9 @@ Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Softw
 ## 🏗 Arsitektur Sistem
 
 - **PHP-FPM (Custom Image)**: Menjalankan _core_ Flarum. Dilengkapi dengan Composer dan auto-install Flarum saat pertama kali dijalankan.
-- **Nginx**: Web server internal, hanya listen di `127.0.0.1:8080`. Dilengkapi rate limiting, security headers, dan read-only filesystem.
+- **Nginx**: Web server internal, hanya listen di `127.0.0.1:8281`. Dilengkapi rate limiting, security headers, dan read-only filesystem.
 - **MariaDB**: Database untuk Flarum. Terisolasi di network internal (tanpa akses internet). Dilengkapi _healthcheck_.
-- **Cloudflare Tunnel**: Menggunakan `cloudflared` yang sudah terinstall di VPS (bukan di dalam Docker). Meneruskan trafik dari domain Anda ke `http://localhost:8080`.
+- **Cloudflare Tunnel**: Menggunakan `cloudflared` yang sudah terinstall di VPS (bukan di dalam Docker). Meneruskan trafik dari domain Anda ke `http://localhost:8281`.
 
 ---
 
@@ -77,12 +77,12 @@ Karena `cloudflared` sudah terinstall di VPS, cukup tambahkan **Public Hostname*
 1. Buka tunnel yang aktif di VPS Anda
 2. Tambahkan Public Hostname baru:
    - **Domain**: domain/subdomain untuk forum Anda
-   - **Service**: `http://localhost:8080`
+   - **Service**: `http://localhost:8281`
 
 **Atau via config file** (`/etc/cloudflared/config.yml`):
 ```yaml
 - hostname: forum.domainanda.com
-  service: http://localhost:8080
+  service: http://localhost:8281
 ```
 
 Lalu restart cloudflared:
