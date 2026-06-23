@@ -112,7 +112,7 @@ Open your domain in a browser. Flarum will show the installation page. Fill in t
 | **MySQL Host** | `db` | ⚠️ **Do NOT use `localhost`** — use `db` (the Docker service name) |
 | **MySQL Database** | `flarum` | Must match `MYSQL_DATABASE` in `.env` |
 | **MySQL Username** | `flarum` | Must match `MYSQL_USER` in `.env` |
-| **MySQL Password** | *(see `.env`)* | Must match `MYSQL_PASSWORD` in `.env` |
+| **MySQL Password** | *(see `.env`)* | Must match `MYSQL_PASSWORD` in `.env` (**not** `MYSQL_ROOT_PASSWORD`) |
 | **Table Prefix** | *(leave empty)* | Optional, leave blank unless you have a reason |
 | **Admin Username** | *(your choice)* | Your forum admin login |
 | **Admin Email** | *(your email)* | Used for notifications and password reset |
@@ -121,36 +121,47 @@ Open your domain in a browser. Flarum will show the installation page. Fill in t
 > [!CAUTION]
 > The default MySQL Host is `localhost`, but this **will not work** in Docker. You must change it to `db`, which is the container name of the MariaDB service defined in `compose.yml`.
 
+> [!IMPORTANT]
+> **`MYSQL_ROOT_PASSWORD` vs `MYSQL_PASSWORD`** — Your `.env` contains two passwords:
+> - `MYSQL_ROOT_PASSWORD` → Superadmin password for database maintenance/backup only. **Do not use this for Flarum.**
+> - `MYSQL_PASSWORD` → The password for the `flarum` user. **Use this one in the installer.**
+
 ---
 
 ## 🔧 Useful Commands
 
 ```bash
 # Build & start all services
-docker compose build
-docker compose up -d
+sudo docker compose build
+sudo docker compose up -d
 
 # Rebuild from scratch (after Dockerfile changes)
-docker compose build --no-cache
-docker compose up -d
+sudo docker compose build --no-cache
+sudo docker compose up -d
 
 # View all logs
-docker compose logs -f
+sudo docker compose logs -f
 
-# Enter the Flarum container (to install extensions, etc.)
-docker exec -it flarum_app sh
+# Enter the Flarum container
+sudo docker exec -it flarum_app sh
 
 # Install a Flarum extension (example)
-docker exec -it flarum_app su-exec www-data composer require fof/user-bio
+sudo docker exec -it flarum_app su-exec www-data composer require fof/user-bio
+
+# Remove a Flarum extension (example)
+sudo docker exec -it flarum_app su-exec www-data composer remove fof/user-bio
+
+# Clear Flarum cache (run after install/remove extensions)
+sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
 
 # Restart services
-docker compose restart
+sudo docker compose restart
 
 # Stop all services
-docker compose down
+sudo docker compose down
 
 # Stop + delete all data (CAUTION!)
-docker compose down -v
+sudo docker compose down -v
 ```
 
 ---

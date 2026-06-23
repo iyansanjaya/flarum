@@ -112,7 +112,7 @@ Buka domain Anda di browser. Flarum akan menampilkan halaman instalasi. Isi form
 | **MySQL Host** | `db` | ⚠️ **JANGAN gunakan `localhost`** — gunakan `db` (nama service Docker) |
 | **MySQL Database** | `flarum` | Harus sama dengan `MYSQL_DATABASE` di `.env` |
 | **MySQL Username** | `flarum` | Harus sama dengan `MYSQL_USER` di `.env` |
-| **MySQL Password** | *(lihat `.env`)* | Harus sama dengan `MYSQL_PASSWORD` di `.env` |
+| **MySQL Password** | *(lihat `.env`)* | Harus sama dengan `MYSQL_PASSWORD` di `.env` (**bukan** `MYSQL_ROOT_PASSWORD`) |
 | **Table Prefix** | *(kosongkan)* | Opsional, biarkan kosong |
 | **Admin Username** | *(bebas)* | Username admin forum Anda |
 | **Admin Email** | *(email Anda)* | Untuk notifikasi dan reset password |
@@ -121,36 +121,47 @@ Buka domain Anda di browser. Flarum akan menampilkan halaman instalasi. Isi form
 > [!CAUTION]
 > Default MySQL Host adalah `localhost`, tapi ini **tidak akan bekerja** di Docker. Anda harus menggantinya ke `db`, yaitu nama container MariaDB yang didefinisikan di `compose.yml`.
 
+> [!IMPORTANT]
+> **`MYSQL_ROOT_PASSWORD` vs `MYSQL_PASSWORD`** — File `.env` Anda berisi dua password:
+> - `MYSQL_ROOT_PASSWORD` → Password superadmin untuk maintenance/backup database. **Jangan gunakan untuk Flarum.**
+> - `MYSQL_PASSWORD` → Password untuk user `flarum`. **Gunakan ini saat instalasi.**
+
 ---
 
 ## 🔧 Perintah Berguna
 
 ```bash
 # Build & jalankan semua service
-docker compose build
-docker compose up -d
+sudo docker compose build
+sudo docker compose up -d
 
 # Rebuild dari awal (setelah ubah Dockerfile)
-docker compose build --no-cache
-docker compose up -d
+sudo docker compose build --no-cache
+sudo docker compose up -d
 
 # Lihat log semua service
-docker compose logs -f
+sudo docker compose logs -f
 
-# Masuk ke container Flarum (untuk install ekstensi, dll)
-docker exec -it flarum_app sh
+# Masuk ke container Flarum
+sudo docker exec -it flarum_app sh
 
 # Install ekstensi Flarum (contoh)
-docker exec -it flarum_app su-exec www-data composer require fof/user-bio
+sudo docker exec -it flarum_app su-exec www-data composer require fof/user-bio
+
+# Hapus ekstensi Flarum (contoh)
+sudo docker exec -it flarum_app su-exec www-data composer remove fof/user-bio
+
+# Clear cache Flarum (jalankan setelah install/hapus ekstensi)
+sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
 
 # Restart service
-docker compose restart
+sudo docker compose restart
 
 # Matikan semua service
-docker compose down
+sudo docker compose down
 
 # Matikan + hapus data (HATI-HATI!)
-docker compose down -v
+sudo docker compose down -v
 ```
 
 ---
