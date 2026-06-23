@@ -153,6 +153,14 @@ sudo docker exec -it flarum_app su-exec www-data composer remove fof/user-bio
 # Clear cache Flarum (jalankan setelah install/hapus ekstensi)
 sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
 
+# Update Flarum + semua ekstensi ke versi terbaru
+sudo docker exec -it flarum_app su-exec www-data composer update --prefer-dist --no-dev
+sudo docker exec -it flarum_app su-exec www-data php flarum migrate
+sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
+
+# Cek versi Flarum core yang terinstall
+sudo docker exec -it flarum_app su-exec www-data composer show flarum/core
+
 # Restart service
 sudo docker compose restart
 
