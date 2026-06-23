@@ -10,7 +10,7 @@ if [ ! -f /var/www/flarum/composer.json ]; then
     echo " Flarum not detected. Installing..."
     echo "=========================================="
     # Install as www-data for correct permissions
-    su-exec www-data composer create-project flarum/flarum /var/www/flarum --stability=stable --no-interaction
+    su-exec www-data composer create-project flarum/flarum /var/www/flarum --no-interaction
     echo "=========================================="
     echo " Flarum installed successfully!"
     echo " Open your URL to run the web installer."
