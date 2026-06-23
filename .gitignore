@@ -1,0 +1,5 @@
+# Secrets
+.env
+
+# Data (jangan commit data database & flarum ke git)
+flarum-data/
