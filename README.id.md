@@ -24,7 +24,6 @@ Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Softw
 | **Server Tokens Off** | Versi Nginx disembunyikan |
 | **Hidden Files Blocked** | Akses ke `.env`, `.git`, dll diblokir |
 | **No New Privileges** | Semua container tidak bisa eskalasi privilege |
-| **Resource Limits** | CPU & memory dibatasi per container |
 | **Read-only Nginx** | Filesystem Nginx read-only (tmpfs untuk cache) |
 | **Database Terisolasi** | MariaDB di network internal, tidak bisa akses internet |
 | **Secrets di .env** | Password tidak hardcoded di `compose.yml` |

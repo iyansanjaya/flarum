@@ -13,11 +13,6 @@ services:
       - flarum-internal
     security_opt:
       - no-new-privileges:true
-    deploy:
-      resources:
-        limits:
-          memory: 512M
-          cpus: "1.0"
 
   web:
     image: nginx:alpine
@@ -39,11 +34,6 @@ services:
       - /tmp
       - /var/cache/nginx
       - /run
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-          cpus: "0.5"
 
   db:
     image: mariadb:10.11
@@ -60,11 +50,6 @@ services:
       - flarum-internal # DB only on internal network, no internet access
     security_opt:
       - no-new-privileges:true
-    deploy:
-      resources:
-        limits:
-          memory: 512M
-          cpus: "1.0"
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 10s

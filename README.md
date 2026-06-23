@@ -24,7 +24,6 @@ A complete deployment guide for Flarum (Forum Software) using Docker with a mode
 | **Server Tokens Off** | Nginx version hidden from attackers |
 | **Hidden Files Blocked** | Access to `.env`, `.git`, etc. is denied |
 | **No New Privileges** | All containers cannot escalate privileges |
-| **Resource Limits** | CPU & memory capped per container |
 | **Read-only Nginx** | Nginx filesystem is read-only (tmpfs for cache) |
 | **Isolated Database** | MariaDB on internal network, no internet access |
 | **Secrets in .env** | Passwords are not hardcoded in `compose.yml` |
