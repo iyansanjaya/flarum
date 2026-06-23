@@ -184,7 +184,7 @@ Project ini mendukung [FoF Upload](https://github.com/FriendsOfFlarum/upload) de
 ### 1. Install ekstensi
 
 ```bash
-sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*"
+sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*" league/flysystem-aws-s3-v3:"*"
 sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
 ```
 

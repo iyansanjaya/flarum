@@ -184,7 +184,7 @@ This project supports [FoF Upload](https://github.com/FriendsOfFlarum/upload) wi
 ### 1. Install the extension
 
 ```bash
-sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*"
+sudo docker exec -it flarum_app su-exec www-data composer require fof/upload:"*" league/flysystem-aws-s3-v3:"*"
 sudo docker exec -it flarum_app su-exec www-data php flarum cache:clear
 ```
 
