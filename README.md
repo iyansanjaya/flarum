@@ -17,7 +17,7 @@ A complete deployment guide for Flarum (Forum Software) using Docker with a mode
 
 | Feature                  | Detail                                                                             |
 | ------------------------ | ---------------------------------------------------------------------------------- |
-| **Zero Open Ports**      | Nginx only listens on `127.0.0.1:8080` — inaccessible from outside the VPS         |
+| **Zero Open Ports**      | Nginx only listens on `127.0.0.1:8281` — inaccessible from outside the VPS         |
 | **Rate Limiting**        | 10 req/s per IP, burst 20 — prevents brute force & DDoS                            |
 | **Security Headers**     | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
 | **Upload Limit**         | Max 5MB — prevents disk exhaustion                                                 |
@@ -52,7 +52,7 @@ flarum-docker/
 ### 1. Clone & Setup Environment
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/iyansanjaya/flarum.git
 cd flarum-docker
 
 # Copy the environment template

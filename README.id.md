@@ -17,7 +17,7 @@ Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Softw
 
 | Fitur                    | Detail                                                                             |
 | ------------------------ | ---------------------------------------------------------------------------------- |
-| **Zero Open Ports**      | Nginx hanya listen di `127.0.0.1:8080` — tidak bisa diakses dari luar VPS          |
+| **Zero Open Ports**      | Nginx hanya listen di `127.0.0.1:8281` — tidak bisa diakses dari luar VPS          |
 | **Rate Limiting**        | 10 req/detik per IP, burst 20 — mencegah brute force & DDoS                        |
 | **Security Headers**     | `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` |
 | **Upload Limit**         | Max 5MB — mencegah disk penuh                                                      |
@@ -52,7 +52,7 @@ flarum-docker/
 ### 1. Clone & Setup Environment
 
 ```bash
-git clone <url-repo-anda>
+git clone https://github.com/iyansanjaya/flarum.git
 cd flarum-docker
 
 # Salin template environment
