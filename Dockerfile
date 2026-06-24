@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-alpine
+FROM php:8.3-fpm-alpine
 
 # Install system dependencies required by Flarum
 RUN apk add --no-cache \
@@ -6,6 +6,9 @@ RUN apk add --no-cache \
 
 # Install PHP extensions required by Flarum
 RUN docker-php-ext-install pdo_mysql mbstring zip gd exif intl
+
+# Custom PHP config (disable display_errors for clean JSON API responses)
+# COPY php.ini /usr/local/etc/php/conf.d/99-flarum.ini
 
 # Get Composer from official image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
