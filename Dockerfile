@@ -8,7 +8,7 @@ RUN apk add --no-cache \
 RUN docker-php-ext-install pdo_mysql mbstring zip gd exif intl
 
 # Custom PHP config (disable display_errors for clean JSON API responses)
-# COPY php.ini /usr/local/etc/php/conf.d/99-flarum.ini
+COPY php.ini /usr/local/etc/php/conf.d/99-flarum.ini
 
 # Get Composer from official image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
