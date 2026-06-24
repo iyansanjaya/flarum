@@ -1,8 +1,26 @@
 # 🚀 Flarum on Docker + Cloudflare Tunnel + S3 Storage (Optional)
 
+[![Flarum](https://img.shields.io/badge/Flarum-1.x_(Latest_Stable)-59C9A5?logo=flarum&logoColor=white)](https://flarum.org)
+[![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?logo=php&logoColor=white)](https://www.php.net)
+[![MariaDB](https://img.shields.io/badge/MariaDB-11-003545?logo=mariadb&logoColor=white)](https://mariadb.org)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Repositori ini adalah panduan lengkap untuk melakukan _deployment_ Flarum (Software Forum) menggunakan Docker dengan arsitektur modern. Trafik web diakses melalui **Cloudflare Tunnel (`cloudflared`)** yang sudah terinstall di VPS, sehingga tidak ada port yang terekspos ke internet publik.
 
 > 📖 **[Read in English](README.md)**
+
+## 📦 Versi & Kompatibilitas
+
+| Komponen     | Versi            | Keterangan                                                              |
+| ------------ | ---------------- | ----------------------------------------------------------------------- |
+| **Flarum**   | `1.x` (terbaru)  | Selalu menginstall versi stabil terbaru via `composer create-project`    |
+| **PHP**      | `8.3`            | Direkomendasikan oleh Flarum. Berjalan di PHP-FPM Alpine                |
+| **MariaDB**  | `11`             | Kompatibel dengan MySQL. Digunakan sebagai database                     |
+| **Nginx**    | `alpine`         | Reverse proxy ringan dengan security hardening                          |
+| **Composer** | `latest`         | Disertakan di Docker image untuk manajemen ekstensi                     |
+
+> **Catatan**: Flarum **tidak di-pin** ke versi tertentu. Saat pertama kali deploy, `composer create-project` otomatis menginstall rilis stabil terbaru. Untuk upgrade, lihat bagian [Maintenance](#-maintenance). Ekstensi dengan rilis beta-only (contoh: banyak paket FoF) juga didukung berkat pengaturan `minimum-stability: beta` + `prefer-stable: true`.
 
 ## 🏗 Arsitektur Sistem
 

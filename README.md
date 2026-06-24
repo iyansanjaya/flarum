@@ -1,8 +1,26 @@
 # 🚀 Flarum on Docker + Cloudflare Tunnel + S3 Storage (Optional)
 
+[![Flarum](https://img.shields.io/badge/Flarum-1.x_(Latest_Stable)-59C9A5?logo=flarum&logoColor=white)](https://flarum.org)
+[![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?logo=php&logoColor=white)](https://www.php.net)
+[![MariaDB](https://img.shields.io/badge/MariaDB-11-003545?logo=mariadb&logoColor=white)](https://mariadb.org)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 A complete deployment guide for Flarum (Forum Software) using Docker with a modern architecture. Web traffic is routed through **Cloudflare Tunnel (`cloudflared`)** already installed on the VPS, so no ports are exposed to the public internet.
 
 > 📖 **[Baca dalam Bahasa Indonesia](README.id.md)**
+
+## 📦 Version & Compatibility
+
+| Component    | Version         | Note                                                                 |
+| ------------ | --------------- | -------------------------------------------------------------------- |
+| **Flarum**   | `1.x` (latest)  | Always installs the latest stable version via `composer create-project` |
+| **PHP**      | `8.3`           | Recommended by Flarum. Runs on PHP-FPM Alpine                        |
+| **MariaDB**  | `11`            | Compatible with MySQL. Used as the database engine                   |
+| **Nginx**    | `alpine`        | Lightweight reverse proxy with security hardening                    |
+| **Composer** | `latest`        | Bundled in the Docker image for extension management                 |
+
+> **Note**: Flarum is **not pinned** to a specific version. When you first deploy, `composer create-project` automatically installs the latest stable release. To upgrade later, see the [Maintenance](#-maintenance) section. Extensions with beta-only releases (e.g., many FoF packages) are also supported thanks to `minimum-stability: beta` + `prefer-stable: true`.
 
 ## 🏗 Architecture
 
